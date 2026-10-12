@@ -1,0 +1,43 @@
+# Local environments and Python caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+node_modules/
+
+# Downloaded publisher data; keep acquisition provenance
+data/raw/*
+!data/raw/publisher-archive.json
+
+# Reproducible feature/model download caches and local scratch work
+data/cache/
+data/features/
+.cache/
+work/
+tmp/
+output/
+recording/
+**/recording/
+**/internal-browser-qa.png
+**/browser-spec.json
+*.tmp
+*.assembling
+artifacts/.*
+
+# Local credentials and machine configuration
+.env
+.env.*
+!.env.example
+.DS_Store
+
+# Large files are preserved in repository-assets/ with SHA-256 verification.
+# Restore their exact original bytes with: python tools/restore_repository_assets.py
+artifacts/svm-search-042.joblib
+data/manifests/split.csv
+
+# Keep experiment logs, genuine predictions, authentic sample images/masks,
+# final reports, demonstration.mp4, frozen source ZIPs and remaining model weights.
