@@ -1,0 +1,899 @@
+{
+  "partition": "val",
+  "provenance": "SYNTHETIC_DEVELOPMENT_ONLY",
+  "run_id": "ann-smoke",
+  "settings": {
+    "target": "defect logit",
+    "occlusion_fraction": 0.1,
+    "seed": 42
+  },
+  "cases": [
+    {
+      "patch_id": "RAW_FAB_0001_p0_0",
+      "partition": "val",
+      "label": 0,
+      "prediction": 1,
+      "score": 0.501859188079834,
+      "incorrect": true,
+      "error_type": "false_positive",
+      "defect_pixels": 0,
+      "spatial": {
+        "mask_status": "empty",
+        "pointing_hit": null,
+        "attribution_mass_in_mask": null
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 0.0074366191402077675,
+        "logit_drops": {
+          "top": -0.0005320021882653236,
+          "low": -0.0007336242124438286,
+          "random": -0.0005857562646269798
+        },
+        "top_minus_random_drop": 5.375407636165619e-05,
+        "top_minus_low_drop": 0.00020162202417850494,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0000.png",
+      "interpretation": "PENDING student analysis of actual overlay and measured perturbations"
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p0_1",
+      "partition": "val",
+      "label": 0,
+      "prediction": 1,
+      "score": 0.50111323595047,
+      "incorrect": true,
+      "error_type": "false_positive",
+      "defect_pixels": 0,
+      "spatial": {
+        "mask_status": "empty",
+        "pointing_hit": null,
+        "attribution_mass_in_mask": null
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 0.004453003406524658,
+        "logit_drops": {
+          "top": -0.000579511746764183,
+          "low": -0.0008263513445854187,
+          "random": -0.00011508353054523468
+        },
+        "top_minus_random_drop": -0.00046442821621894836,
+        "top_minus_low_drop": 0.00024683959782123566,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0001.png",
+      "interpretation": "PENDING student analysis of actual overlay and measured perturbations"
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p0_2",
+      "partition": "val",
+      "label": 0,
+      "prediction": 0,
+      "score": 0.5000425577163696,
+      "incorrect": false,
+      "error_type": null,
+      "defect_pixels": 0,
+      "spatial": {
+        "mask_status": "empty",
+        "pointing_hit": null,
+        "attribution_mass_in_mask": null
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 0.00017021410167217255,
+        "logit_drops": {
+          "top": -0.0007734131067991257,
+          "low": -0.0011504646390676498,
+          "random": -0.0004891958087682724
+        },
+        "top_minus_random_drop": -0.00028421729803085327,
+        "top_minus_low_drop": 0.00037705153226852417,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0002.png",
+      "interpretation": "PENDING student analysis of actual overlay and measured perturbations"
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p0_3",
+      "partition": "val",
+      "label": 0,
+      "prediction": 0,
+      "score": 0.5001357197761536,
+      "incorrect": false,
+      "error_type": null,
+      "defect_pixels": 0,
+      "spatial": {
+        "mask_status": "empty",
+        "pointing_hit": null,
+        "attribution_mass_in_mask": null
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 0.0005427934229373932,
+        "logit_drops": {
+          "top": -0.0007207151502370834,
+          "low": -0.0010728947818279266,
+          "random": -0.00014861300587654114
+        },
+        "top_minus_random_drop": -0.0005721021443605423,
+        "top_minus_low_drop": 0.0003521796315908432,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0003.png",
+      "interpretation": "PENDING student analysis of actual overlay and measured perturbations"
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p0_4",
+      "partition": "val",
+      "label": 0,
+      "prediction": 0,
+      "score": 0.5001948475837708,
+      "incorrect": false,
+      "error_type": null,
+      "defect_pixels": 0,
+      "spatial": {
+        "mask_status": "empty",
+        "pointing_hit": null,
+        "attribution_mass_in_mask": null
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 0.0007793363183736801,
+        "logit_drops": {
+          "top": -0.0007084701210260391,
+          "low": -0.0010775700211524963,
+          "random": -0.00040668807923793793
+        },
+        "top_minus_random_drop": -0.0003017820417881012,
+        "top_minus_low_drop": 0.0003690999001264572,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0004.png",
+      "interpretation": "PENDING student analysis of actual overlay and measured perturbations"
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p0_5",
+      "partition": "val",
+      "label": 0,
+      "prediction": 1,
+      "score": 0.5005722641944885,
+      "incorrect": true,
+      "error_type": "false_positive",
+      "defect_pixels": 0,
+      "spatial": {
+        "mask_status": "empty",
+        "pointing_hit": null,
+        "attribution_mass_in_mask": null
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 0.0022890493273735046,
+        "logit_drops": {
+          "top": -0.000763237476348877,
+          "low": -0.0010331813246011734,
+          "random": -0.0008370634168386459
+        },
+        "top_minus_random_drop": 7.382594048976898e-05,
+        "top_minus_low_drop": 0.00026994384825229645,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0005.png",
+      "interpretation": "PENDING student analysis of actual overlay and measured perturbations"
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p0_6",
+      "partition": "val",
+      "label": 0,
+      "prediction": 1,
+      "score": 0.5023877620697021,
+      "incorrect": true,
+      "error_type": "false_positive",
+      "defect_pixels": 0,
+      "spatial": {
+        "mask_status": "empty",
+        "pointing_hit": null,
+        "attribution_mass_in_mask": null
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 0.009551256895065308,
+        "logit_drops": {
+          "top": -0.000360315665602684,
+          "low": -0.0005285106599330902,
+          "random": 9.279418736696243e-05
+        },
+        "top_minus_random_drop": -0.00045310985296964645,
+        "top_minus_low_drop": 0.0001681949943304062,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0006.png",
+      "interpretation": "PENDING student analysis of actual overlay and measured perturbations"
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p1_0",
+      "partition": "val",
+      "label": 0,
+      "prediction": 1,
+      "score": 0.5018013119697571,
+      "incorrect": true,
+      "error_type": "false_positive",
+      "defect_pixels": 0,
+      "spatial": {
+        "mask_status": "empty",
+        "pointing_hit": null,
+        "attribution_mass_in_mask": null
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 0.007205246016383171,
+        "logit_drops": {
+          "top": -0.0006366623565554619,
+          "low": -0.0007707634940743446,
+          "random": -0.0006952406838536263
+        },
+        "top_minus_random_drop": 5.857832729816437e-05,
+        "top_minus_low_drop": 0.00013410113751888275,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0007.png",
+      "interpretation": "PENDING student analysis of actual overlay and measured perturbations"
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p1_1",
+      "partition": "val",
+      "label": 1,
+      "prediction": 1,
+      "score": 0.5018534660339355,
+      "incorrect": false,
+      "error_type": null,
+      "defect_pixels": 843,
+      "spatial": {
+        "mask_status": "positive",
+        "pointing_hit": true,
+        "attribution_mass_in_mask": 0.3876570678978831,
+        "uniform_mass_reference": 0.0128631591796875,
+        "random_point_hit_expectation": 0.0128631591796875,
+        "zero_cam": false
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 0.007413837127387524,
+        "logit_drops": {
+          "top": 0.0022228052839636803,
+          "low": -0.0008989255875349045,
+          "random": -0.0007856013253331184
+        },
+        "top_minus_random_drop": 0.0030084066092967987,
+        "top_minus_low_drop": 0.0031217308714985847,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0008.png",
+      "interpretation": "PENDING student analysis of actual overlay and measured perturbations"
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p1_2",
+      "partition": "val",
+      "label": 0,
+      "prediction": 0,
+      "score": 0.5000343918800353,
+      "incorrect": false,
+      "error_type": null,
+      "defect_pixels": 0,
+      "spatial": {
+        "mask_status": "empty",
+        "pointing_hit": null,
+        "attribution_mass_in_mask": null
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 0.00013760849833488464,
+        "logit_drops": {
+          "top": -0.001018887385725975,
+          "low": -0.0009128674864768982,
+          "random": -0.0005740635097026825
+        },
+        "top_minus_random_drop": -0.00044482387602329254,
+        "top_minus_low_drop": -0.00010601989924907684,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0009.png",
+      "interpretation": "PENDING student analysis of actual overlay and measured perturbations"
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p1_3",
+      "partition": "val",
+      "label": 0,
+      "prediction": 0,
+      "score": 0.5001271963119507,
+      "incorrect": false,
+      "error_type": null,
+      "defect_pixels": 0,
+      "spatial": {
+        "mask_status": "empty",
+        "pointing_hit": null,
+        "attribution_mass_in_mask": null
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 0.0005086660385131836,
+        "logit_drops": {
+          "top": -0.0009475387632846832,
+          "low": -0.0009090173989534378,
+          "random": -0.00015168264508247375
+        },
+        "top_minus_random_drop": -0.0007958561182022095,
+        "top_minus_low_drop": -3.852136433124542e-05,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0010.png",
+      "interpretation": "PENDING student analysis of actual overlay and measured perturbations"
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p1_4",
+      "partition": "val",
+      "label": 0,
+      "prediction": 0,
+      "score": 0.5001704096794128,
+      "incorrect": false,
+      "error_type": null,
+      "defect_pixels": 0,
+      "spatial": {
+        "mask_status": "empty",
+        "pointing_hit": null,
+        "attribution_mass_in_mask": null
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 0.0006815437227487564,
+        "logit_drops": {
+          "top": -0.0009461306035518646,
+          "low": -0.0008956547826528549,
+          "random": -0.0004379972815513611
+        },
+        "top_minus_random_drop": -0.0005081333220005035,
+        "top_minus_low_drop": -5.0475820899009705e-05,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0011.png",
+      "interpretation": "PENDING student analysis of actual overlay and measured perturbations"
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p1_5",
+      "partition": "val",
+      "label": 0,
+      "prediction": 1,
+      "score": 0.5005943775177002,
+      "incorrect": true,
+      "error_type": "false_positive",
+      "defect_pixels": 0,
+      "spatial": {
+        "mask_status": "empty",
+        "pointing_hit": null,
+        "attribution_mass_in_mask": null
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 0.0023775584995746613,
+        "logit_drops": {
+          "top": -0.0010423101484775543,
+          "low": -0.000796101987361908,
+          "random": -0.0008350014686584473
+        },
+        "top_minus_random_drop": -0.00020730867981910706,
+        "top_minus_low_drop": -0.00024620816111564636,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0012.png",
+      "interpretation": "PENDING student analysis of actual overlay and measured perturbations"
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p1_6",
+      "partition": "val",
+      "label": 0,
+      "prediction": 1,
+      "score": 0.502345085144043,
+      "incorrect": true,
+      "error_type": "false_positive",
+      "defect_pixels": 0,
+      "spatial": {
+        "mask_status": "empty",
+        "pointing_hit": null,
+        "attribution_mass_in_mask": null
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 0.009380271658301353,
+        "logit_drops": {
+          "top": -0.0005354955792427063,
+          "low": -0.00044619757682085037,
+          "random": -3.7688761949539185e-05
+        },
+        "top_minus_random_drop": -0.0004978068172931671,
+        "top_minus_low_drop": -8.929800242185593e-05,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0013.png",
+      "interpretation": "PENDING student analysis of actual overlay and measured perturbations"
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p2_0",
+      "partition": "val",
+      "label": 0,
+      "prediction": 1,
+      "score": 0.5018670558929443,
+      "incorrect": true,
+      "error_type": "false_positive",
+      "defect_pixels": 0,
+      "spatial": {
+        "mask_status": "empty",
+        "pointing_hit": null,
+        "attribution_mass_in_mask": null
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 0.007468280382454395,
+        "logit_drops": {
+          "top": -0.0006774561479687691,
+          "low": -0.0006592599675059319,
+          "random": -0.0006755385547876358
+        },
+        "top_minus_random_drop": -1.9175931811332703e-06,
+        "top_minus_low_drop": -1.819618046283722e-05,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0014.png",
+      "interpretation": "PENDING student analysis of actual overlay and measured perturbations"
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p2_1",
+      "partition": "val",
+      "label": 1,
+      "prediction": 1,
+      "score": 0.5015097856521606,
+      "incorrect": false,
+      "error_type": null,
+      "defect_pixels": 623,
+      "spatial": {
+        "mask_status": "positive",
+        "pointing_hit": false,
+        "attribution_mass_in_mask": 0.29982584795277034,
+        "uniform_mass_reference": 0.0095062255859375,
+        "random_point_hit_expectation": 0.0095062255859375,
+        "zero_cam": false
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 0.006039276719093323,
+        "logit_drops": {
+          "top": 0.000752592459321022,
+          "low": -0.0008702203631401062,
+          "random": -0.0004711095243692398
+        },
+        "top_minus_random_drop": 0.0012237019836902618,
+        "top_minus_low_drop": 0.0016228128224611282,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0015.png",
+      "interpretation": "PENDING student analysis of actual overlay and measured perturbations"
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p2_2",
+      "partition": "val",
+      "label": 0,
+      "prediction": 0,
+      "score": 0.5000205039978027,
+      "incorrect": false,
+      "error_type": null,
+      "defect_pixels": 0,
+      "spatial": {
+        "mask_status": "empty",
+        "pointing_hit": null,
+        "attribution_mass_in_mask": null
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 8.204951882362366e-05,
+        "logit_drops": {
+          "top": -0.0010481886565685272,
+          "low": -0.001003023236989975,
+          "random": -0.0008027181029319763
+        },
+        "top_minus_random_drop": -0.0002454705536365509,
+        "top_minus_low_drop": -4.5165419578552246e-05,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0016.png",
+      "interpretation": "PENDING student analysis of actual overlay and measured perturbations"
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p2_3",
+      "partition": "val",
+      "label": 1,
+      "prediction": 1,
+      "score": 0.5003148317337037,
+      "incorrect": false,
+      "error_type": null,
+      "defect_pixels": 403,
+      "spatial": {
+        "mask_status": "positive",
+        "pointing_hit": true,
+        "attribution_mass_in_mask": 0.30755582420353433,
+        "uniform_mass_reference": 0.0061492919921875,
+        "random_point_hit_expectation": 0.0061492919921875,
+        "zero_cam": false
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 0.0012593641877174377,
+        "logit_drops": {
+          "top": 5.383417010307312e-05,
+          "low": -0.0010155830532312393,
+          "random": -0.0002235323190689087
+        },
+        "top_minus_random_drop": 0.0002773664891719818,
+        "top_minus_low_drop": 0.0010694172233343124,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0017.png",
+      "interpretation": "PENDING student analysis of actual overlay and measured perturbations"
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p2_4",
+      "partition": "val",
+      "label": 0,
+      "prediction": 0,
+      "score": 0.5001693964004517,
+      "incorrect": false,
+      "error_type": null,
+      "defect_pixels": 0,
+      "spatial": {
+        "mask_status": "empty",
+        "pointing_hit": null,
+        "attribution_mass_in_mask": null
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 0.0006775632500648499,
+        "logit_drops": {
+          "top": -0.001005660742521286,
+          "low": -0.000963997095823288,
+          "random": -0.00042154639959335327
+        },
+        "top_minus_random_drop": -0.0005841143429279327,
+        "top_minus_low_drop": -4.166364669799805e-05,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0018.png",
+      "interpretation": "PENDING student analysis of actual overlay and measured perturbations"
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p2_5",
+      "partition": "val",
+      "label": 0,
+      "prediction": 1,
+      "score": 0.5006503462791443,
+      "incorrect": true,
+      "error_type": "false_positive",
+      "defect_pixels": 0,
+      "spatial": {
+        "mask_status": "empty",
+        "pointing_hit": null,
+        "attribution_mass_in_mask": null
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 0.0026013925671577454,
+        "logit_drops": {
+          "top": -0.0009351279586553574,
+          "low": -0.0009162556380033493,
+          "random": -0.0006689615547657013
+        },
+        "top_minus_random_drop": -0.00026616640388965607,
+        "top_minus_low_drop": -1.8872320652008057e-05,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0019.png",
+      "interpretation": "PENDING student analysis of actual overlay and measured perturbations"
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p2_6",
+      "partition": "val",
+      "label": 0,
+      "prediction": 1,
+      "score": 0.5023300051689148,
+      "incorrect": true,
+      "error_type": "false_positive",
+      "defect_pixels": 0,
+      "spatial": {
+        "mask_status": "empty",
+        "pointing_hit": null,
+        "attribution_mass_in_mask": null
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 0.009320039302110672,
+        "logit_drops": {
+          "top": -0.0005213003605604172,
+          "low": -0.0004983870312571526,
+          "random": -6.537511944770813e-05
+        },
+        "top_minus_random_drop": -0.00045592524111270905,
+        "top_minus_low_drop": -2.2913329303264618e-05,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0020.png",
+      "interpretation": "PENDING student analysis of actual overlay and measured perturbations"
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p3_0",
+      "partition": "val",
+      "label": 0,
+      "prediction": 1,
+      "score": 0.5018470287322998,
+      "incorrect": true,
+      "error_type": "false_positive",
+      "defect_pixels": 0,
+      "spatial": {
+        "mask_status": "empty",
+        "pointing_hit": null,
+        "attribution_mass_in_mask": null
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 0.0073881810531020164,
+        "logit_drops": {
+          "top": -0.0005050525069236755,
+          "low": -0.0007603336125612259,
+          "random": -0.0006311284378170967
+        },
+        "top_minus_random_drop": 0.00012607593089342117,
+        "top_minus_low_drop": 0.00025528110563755035,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0021.png",
+      "interpretation": "PENDING student analysis of actual overlay and measured perturbations"
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p3_1",
+      "partition": "val",
+      "label": 0,
+      "prediction": 1,
+      "score": 0.5011199712753296,
+      "incorrect": true,
+      "error_type": "false_positive",
+      "defect_pixels": 0,
+      "spatial": {
+        "mask_status": "empty",
+        "pointing_hit": null,
+        "attribution_mass_in_mask": null
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 0.004479978233575821,
+        "logit_drops": {
+          "top": -0.0006312690675258636,
+          "low": -0.000860113650560379,
+          "random": -4.4932588934898376e-05
+        },
+        "top_minus_random_drop": -0.0005863364785909653,
+        "top_minus_low_drop": 0.00022884458303451538,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0022.png",
+      "interpretation": "PENDING student analysis of actual overlay and measured perturbations"
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p3_2",
+      "partition": "val",
+      "label": 1,
+      "prediction": 1,
+      "score": 0.5004267692565918,
+      "incorrect": false,
+      "error_type": null,
+      "defect_pixels": 794,
+      "spatial": {
+        "mask_status": "positive",
+        "pointing_hit": true,
+        "attribution_mass_in_mask": 0.49968020491663645,
+        "uniform_mass_reference": 0.012115478515625,
+        "random_point_hit_expectation": 0.012115478515625,
+        "zero_cam": false
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 0.0017069727182388306,
+        "logit_drops": {
+          "top": 0.0005587320774793625,
+          "low": -0.001018911600112915,
+          "random": -0.0010197237133979797
+        },
+        "top_minus_random_drop": 0.0015784557908773422,
+        "top_minus_low_drop": 0.0015776436775922775,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0023.png",
+      "interpretation": "PENDING student analysis of actual overlay and measured perturbations"
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p3_3",
+      "partition": "val",
+      "label": 0,
+      "prediction": 0,
+      "score": 0.5001609921455383,
+      "incorrect": false,
+      "error_type": null,
+      "defect_pixels": 0,
+      "spatial": {
+        "mask_status": "empty",
+        "pointing_hit": null,
+        "attribution_mass_in_mask": null
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 0.0006438829004764557,
+        "logit_drops": {
+          "top": -0.0007584020495414734,
+          "low": -0.000989530235528946,
+          "random": -0.00012609362602233887
+        },
+        "top_minus_random_drop": -0.0006323084235191345,
+        "top_minus_low_drop": 0.00023112818598747253,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0024.png",
+      "interpretation": "PENDING student analysis of actual overlay and measured perturbations"
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p3_4",
+      "partition": "val",
+      "label": 0,
+      "prediction": 0,
+      "score": 0.5001801252365112,
+      "incorrect": false,
+      "error_type": null,
+      "defect_pixels": 0,
+      "spatial": {
+        "mask_status": "empty",
+        "pointing_hit": null,
+        "attribution_mass_in_mask": null
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 0.000720389187335968,
+        "logit_drops": {
+          "top": -0.0007770117372274399,
+          "low": -0.001102164387702942,
+          "random": -0.000493023544549942
+        },
+        "top_minus_random_drop": -0.00028398819267749786,
+        "top_minus_low_drop": 0.000325152650475502,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0025.png",
+      "interpretation": "PENDING student analysis of actual overlay and measured perturbations"
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p3_5",
+      "partition": "val",
+      "label": 0,
+      "prediction": 1,
+      "score": 0.5006213188171386,
+      "incorrect": true,
+      "error_type": "false_positive",
+      "defect_pixels": 0,
+      "spatial": {
+        "mask_status": "empty",
+        "pointing_hit": null,
+        "attribution_mass_in_mask": null
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 0.0024852845817804337,
+        "logit_drops": {
+          "top": -0.0007435176521539688,
+          "low": -0.001068904995918274,
+          "random": -0.0006803218275308609
+        },
+        "top_minus_random_drop": -6.319582462310791e-05,
+        "top_minus_low_drop": 0.0003253873437643051,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0026.png",
+      "interpretation": "PENDING student analysis of actual overlay and measured perturbations"
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p3_6",
+      "partition": "val",
+      "label": 1,
+      "prediction": 1,
+      "score": 0.5025956034660339,
+      "incorrect": false,
+      "error_type": null,
+      "defect_pixels": 365,
+      "spatial": {
+        "mask_status": "positive",
+        "pointing_hit": false,
+        "attribution_mass_in_mask": 0.2275719983300857,
+        "uniform_mass_reference": 0.0055694580078125,
+        "random_point_hit_expectation": 0.0055694580078125,
+        "zero_cam": false
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 0.010382559150457382,
+        "logit_drops": {
+          "top": 0.0006713056936860085,
+          "low": -0.0005013523623347282,
+          "random": -0.0002800505608320236
+        },
+        "top_minus_random_drop": 0.0009513562545180321,
+        "top_minus_low_drop": 0.0011726580560207367,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0027.png",
+      "interpretation": "PENDING student analysis of actual overlay and measured perturbations"
+    }
+  ],
+  "genuine_error_count": 13,
+  "three_error_requirement": "AVAILABLE FOR ANALYSIS",
+  "sanity_check_cases": 28,
+  "limitations": "Mask correspondence is not faithfulness; coarse maps and mean-fill occlusion can mislead"
+}

@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "run_id": "ann-search-018",
+  "checkpoint": "ann-search-018.pt",
+  "checkpoint_sha256": "8726ee0f5dfbc27783f45702c148b95fe757de891a5e41c7f250385e1a6cfe8a",
+  "split_sha256": "af7daf13d0854ceeba004f1a06182bac778ac716021dec3d8fc40edf265aa76f",
+  "provenance": "RAW-FABRID_V1",
+  "preprocessing": {
+    "version": 1,
+    "size": [
+      256,
+      256
+    ],
+    "grayscale": true,
+    "channels": 3,
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "resize": false,
+    "center_crop": false
+  },
+  "classification_threshold": 0.8952339208126068,
+  "recommendation_thresholds": {
+    "low": 0.8447646290063858,
+    "high": 0.9988340735435486,
+    "assumed_costs": {
+      "missed_routine_defect": 10,
+      "manual_review": 1,
+      "normal_priority_hold": 3
+    },
+    "validation_mean_cost": 0.11607142857142858,
+    "validation_review_or_hold_fraction": 0.05011520737327189,
+    "validation_routine_missed_defects": 23
+  },
+  "temperature": 1.0,
+  "score_kind": "uncalibrated_model_score",
+  "selection_policy": "Validation F2, then average precision, then smaller parameter count",
+  "validation_metrics": {
+    "n": 3472,
+    "tp": 27,
+    "tn": 3377,
+    "fp": 43,
+    "fn": 25,
+    "precision": 0.38571428571428573,
+    "recall": 0.5192307692307693,
+    "f1": 0.4426229508196721,
+    "f2": 0.4856115107913669,
+    "accuracy": 0.9804147465437788,
+    "false_positive_rate": 0.012573099415204679,
+    "unresolved_count": 0,
+    "average_precision": 0.49912980686044034,
+    "roc_auc": 0.8690452091767881
+  },
+  "code_sha256_at_selection": "08e46d00d79c02adb5d37bdf77a37ecaf9a45b1a42bf4f763e88ad8545fe19db",
+  "initial_ann_run_id": "ann-search-000",
+  "seed_repeat_protocol": {
+    "seeds": [
+      42,
+      123,
+      2026
+    ],
+    "rule": "Repeat selected configuration on train/val before freeze; report spread and record whether variation is material"
+  },
+  "calibration": {
+    "fit_partition": "not fitted",
+    "raw_brier": 0.37738084643347114,
+    "adjusted_brier": 0.37738084643347114,
+    "reliability_bins": [
+      {
+        "low": 0.0,
+        "high": 0.1,
+        "n": 0,
+        "mean_score": null,
+        "defect_fraction": null
+      },
+      {
+        "low": 0.1,
+        "high": 0.2,
+        "n": 6,
+        "mean_score": 0.16941744337479273,
+        "defect_fraction": 0.0
+      },
+      {
+        "low": 0.2,
+        "high": 0.30000000000000004,
+        "n": 17,
+        "mean_score": 0.2741781411802067,
+        "defect_fraction": 0.0
+      },
+      {
+        "low": 0.30000000000000004,
+        "high": 0.4,
+        "n": 312,
+        "mean_score": 0.3625215094249982,
+        "defect_fraction": 0.0
+      },
+      {
+        "low": 0.4,
+        "high": 0.5,
+        "n": 537,
+        "mean_score": 0.4498097386551081,
+        "defect_fraction": 0.0037243947858473
+      },
+      {
+        "low": 0.5,
+        "high": 0.6000000000000001,
+        "n": 765,
+        "mean_score": 0.5522510714001125,
+        "defect_fraction": 0.00261437908496732
+      },
+      {
+        "low": 0.6000000000000001,
+        "high": 0.7000000000000001,
+        "n": 902,
+        "mean_score": 0.648980699000496,
+        "defect_fraction": 0.005543237250554324
+      },
+      {
+        "low": 0.7000000000000001,
+        "high": 0.8,
+        "n": 610,
+        "mean_score": 0.7453352486500975,
+        "defect_fraction": 0.018032786885245903
+      },
+      {
+        "low": 0.8,
+        "high": 0.9,
+        "n": 257,
+        "mean_score": 0.8401506705506766,
+        "defect_fraction": 0.019455252918287938
+      },
+      {
+        "low": 0.9,
+        "high": 1.0,
+        "n": 66,
+        "mean_score": 0.9438781079017755,
+        "defect_fraction": 0.4090909090909091
+      }
+    ],
+    "limitation": "Validation reliability/calibration estimates share selection data; do not establish guaranteed confidence"
+  }
+}

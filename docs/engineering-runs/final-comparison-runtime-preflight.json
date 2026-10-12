@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "timestamp": "2026-10-11T20:56:09.764170+00:00",
+  "partition": "val",
+  "patch_id": "Rollo6A_0000002_D_08-07-2024_11-18-23.246_0_0.png",
+  "cpu_threads": 1,
+  "torch_default_dtype": "torch.float32",
+  "ann_parameter_dtype": "torch.float32",
+  "vlm_dtype": "torch.bfloat16",
+  "actual_vlm_response": {
+    "raw_response": " Defective.",
+    "latency_ms": 1456.5535359997739,
+    "input_tokens": 66,
+    "output_tokens": 4,
+    "resolved_revision": "7e3e67edbbed1bf9888184d9df282b700a323964"
+  },
+  "ann_score": 0.6388802528381348,
+  "scope": "Shared-process real VLM + real initial ANN loading and authentic validation-image inference. No test image/prediction and no selection change."
+}

@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "run_id": "ann-smoke",
+  "checkpoint": "ann-smoke.pt",
+  "checkpoint_sha256": "dc44226cebc125f9fada775e5b9366890ed514615a267d9397ea1245fce93d6a",
+  "split_sha256": "d709923c602c4acdbcf1dce5dbe9ff7036f540a683f00258aadfe40ef3d56ece",
+  "provenance": "SYNTHETIC_DEVELOPMENT_ONLY",
+  "preprocessing": {
+    "version": 1,
+    "size": [
+      256,
+      256
+    ],
+    "grayscale": true,
+    "channels": 1,
+    "mean": [
+      0.5
+    ],
+    "std": [
+      0.5
+    ],
+    "resize": false,
+    "center_crop": false
+  },
+  "classification_threshold": 0.5003136318922043,
+  "recommendation_thresholds": {
+    "low": 0.5002488404512406,
+    "high": 0.5025956034660339,
+    "assumed_costs": {
+      "missed_routine_defect": 10,
+      "manual_review": 1,
+      "normal_priority_hold": 3
+    },
+    "validation_mean_cost": 0.6071428571428571,
+    "validation_review_or_hold_fraction": 0.6428571428571428,
+    "validation_routine_missed_defects": 0
+  },
+  "temperature": 1.0,
+  "score_kind": "uncalibrated_model_score",
+  "selection_policy": "Validation F2, then average precision, then smaller parameter count",
+  "validation_metrics": {
+    "n": 28,
+    "tp": 5,
+    "tn": 10,
+    "fp": 13,
+    "fn": 0,
+    "precision": 0.2777777777777778,
+    "recall": 1.0,
+    "f1": 0.43478260869565216,
+    "f2": 0.6578947368421053,
+    "accuracy": 0.5357142857142857,
+    "false_positive_rate": 0.5652173913043478,
+    "unresolved_count": 0,
+    "average_precision": 0.41975723622782446,
+    "roc_auc": 0.6695652173913044
+  },
+  "code_sha256_at_selection": "140b378a120aeffc3f43c4d301ae0fb1c21a13d493561741417ee4b4b917c7f9",
+  "initial_ann_run_id": "ann-smoke",
+  "seed_repeat_protocol": {
+    "seeds": [
+      42,
+      123,
+      2026
+    ],
+    "rule": "Repeat selected configuration on train/val before freeze; report spread and record whether variation is material"
+  },
+  "calibration": {
+    "fit_partition": "not fitted",
+    "raw_brier": 0.25048898975675093,
+    "adjusted_brier": 0.25048898975675093,
+    "reliability_bins": [
+      {
+        "low": 0.0,
+        "high": 0.1,
+        "n": 0,
+        "mean_score": null,
+        "defect_fraction": null
+      },
+      {
+        "low": 0.1,
+        "high": 0.2,
+        "n": 0,
+        "mean_score": null,
+        "defect_fraction": null
+      },
+      {
+        "low": 0.2,
+        "high": 0.30000000000000004,
+        "n": 0,
+        "mean_score": null,
+        "defect_fraction": null
+      },
+      {
+        "low": 0.30000000000000004,
+        "high": 0.4,
+        "n": 0,
+        "mean_score": null,
+        "defect_fraction": null
+      },
+      {
+        "low": 0.4,
+        "high": 0.5,
+        "n": 0,
+        "mean_score": null,
+        "defect_fraction": null
+      },
+      {
+        "low": 0.5,
+        "high": 0.6000000000000001,
+        "n": 28,
+        "mean_score": 0.5009659102984837,
+        "defect_fraction": 0.17857142857142858
+      },
+      {
+        "low": 0.6000000000000001,
+        "high": 0.7000000000000001,
+        "n": 0,
+        "mean_score": null,
+        "defect_fraction": null
+      },
+      {
+        "low": 0.7000000000000001,
+        "high": 0.8,
+        "n": 0,
+        "mean_score": null,
+        "defect_fraction": null
+      },
+      {
+        "low": 0.8,
+        "high": 0.9,
+        "n": 0,
+        "mean_score": null,
+        "defect_fraction": null
+      },
+      {
+        "low": 0.9,
+        "high": 1.0,
+        "n": 0,
+        "mean_score": null,
+        "defect_fraction": null
+      }
+    ],
+    "limitation": "Validation reliability/calibration estimates share selection data; do not establish guaranteed confidence"
+  }
+}

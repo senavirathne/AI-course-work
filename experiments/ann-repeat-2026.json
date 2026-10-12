@@ -1,0 +1,2550 @@
+{
+  "run_id": "ann-repeat-2026",
+  "started_at": "2026-10-11T21:27:05.485336+00:00",
+  "status": "COMPLETE",
+  "code_sha256": "351c100577969134ae95ac2cd0323b29a5cc84e5787b970ca40c446928506c50",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "packages": {
+      "torch": "2.9.1+cpu",
+      "torchvision": "0.24.1+cpu",
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "scikit-learn": "1.8.0",
+      "scikit-image": "0.25.2",
+      "fastapi": "0.115.12",
+      "transformers": "4.57.1"
+    }
+  },
+  "device": "cpu",
+  "split_sha256": "af7daf13d0854ceeba004f1a06182bac778ac716021dec3d8fc40edf265aa76f",
+  "provenance": "RAW-FABRID_V1",
+  "config": {
+    "model": {
+      "name": "mobilenet"
+    },
+    "optimizer": "adamw",
+    "learning_rate": 0.0003,
+    "batch_size": 32,
+    "epochs": 4,
+    "patience": 3,
+    "cpu_threads": 8,
+    "memory_format": "channels_last",
+    "seed": 2026,
+    "augment": false,
+    "weighted_loss": true,
+    "pretrained": true,
+    "hypothesis": "Repeat the selected architecture to assess training seed variability"
+  },
+  "hypothesis": "Repeat the selected architecture to assess training seed variability",
+  "pos_weight_from_train_only": 23.83116883116883,
+  "architecture": {
+    "layers": [
+      {
+        "layer": "network.features.0.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          3,
+          256,
+          256
+        ],
+        "output": [
+          1,
+          16,
+          128,
+          128
+        ],
+        "parameters": 432
+      },
+      {
+        "layer": "network.features.0.1",
+        "type": "BatchNorm2d",
+        "input": [
+          1,
+          16,
+          128,
+          128
+        ],
+        "output": [
+          1,
+          16,
+          128,
+          128
+        ],
+        "parameters": 32
+      },
+      {
+        "layer": "network.features.0.2",
+        "type": "Hardswish",
+        "input": [
+          1,
+          16,
+          128,
+          128
+        ],
+        "output": [
+          1,
+          16,
+          128,
+          128
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.1.block.0.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          16,
+          128,
+          128
+        ],
+        "output": [
+          1,
+          16,
+          64,
+          64
+        ],
+        "parameters": 144
+      },
+      {
+        "layer": "network.features.1.block.0.1",
+        "type": "BatchNorm2d",
+        "input": [
+          1,
+          16,
+          64,
+          64
+        ],
+        "output": [
+          1,
+          16,
+          64,
+          64
+        ],
+        "parameters": 32
+      },
+      {
+        "layer": "network.features.1.block.0.2",
+        "type": "ReLU",
+        "input": [
+          1,
+          16,
+          64,
+          64
+        ],
+        "output": [
+          1,
+          16,
+          64,
+          64
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.1.block.1.avgpool",
+        "type": "AdaptiveAvgPool2d",
+        "input": [
+          1,
+          16,
+          64,
+          64
+        ],
+        "output": [
+          1,
+          16,
+          1,
+          1
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.1.block.1.fc1",
+        "type": "Conv2d",
+        "input": [
+          1,
+          16,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          8,
+          1,
+          1
+        ],
+        "parameters": 136
+      },
+      {
+        "layer": "network.features.1.block.1.activation",
+        "type": "ReLU",
+        "input": [
+          1,
+          8,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          8,
+          1,
+          1
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.1.block.1.fc2",
+        "type": "Conv2d",
+        "input": [
+          1,
+          8,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          16,
+          1,
+          1
+        ],
+        "parameters": 144
+      },
+      {
+        "layer": "network.features.1.block.1.scale_activation",
+        "type": "Hardsigmoid",
+        "input": [
+          1,
+          16,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          16,
+          1,
+          1
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.1.block.2.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          16,
+          64,
+          64
+        ],
+        "output": [
+          1,
+          16,
+          64,
+          64
+        ],
+        "parameters": 256
+      },
+      {
+        "layer": "network.features.1.block.2.1",
+        "type": "BatchNorm2d",
+        "input": [
+          1,
+          16,
+          64,
+          64
+        ],
+        "output": [
+          1,
+          16,
+          64,
+          64
+        ],
+        "parameters": 32
+      },
+      {
+        "layer": "network.features.2.block.0.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          16,
+          64,
+          64
+        ],
+        "output": [
+          1,
+          72,
+          64,
+          64
+        ],
+        "parameters": 1152
+      },
+      {
+        "layer": "network.features.2.block.0.1",
+        "type": "BatchNorm2d",
+        "input": [
+          1,
+          72,
+          64,
+          64
+        ],
+        "output": [
+          1,
+          72,
+          64,
+          64
+        ],
+        "parameters": 144
+      },
+      {
+        "layer": "network.features.2.block.0.2",
+        "type": "ReLU",
+        "input": [
+          1,
+          72,
+          64,
+          64
+        ],
+        "output": [
+          1,
+          72,
+          64,
+          64
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.2.block.1.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          72,
+          64,
+          64
+        ],
+        "output": [
+          1,
+          72,
+          32,
+          32
+        ],
+        "parameters": 648
+      },
+      {
+        "layer": "network.features.2.block.1.1",
+        "type": "BatchNorm2d",
+        "input": [
+          1,
+          72,
+          32,
+          32
+        ],
+        "output": [
+          1,
+          72,
+          32,
+          32
+        ],
+        "parameters": 144
+      },
+      {
+        "layer": "network.features.2.block.1.2",
+        "type": "ReLU",
+        "input": [
+          1,
+          72,
+          32,
+          32
+        ],
+        "output": [
+          1,
+          72,
+          32,
+          32
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.2.block.2.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          72,
+          32,
+          32
+        ],
+        "output": [
+          1,
+          24,
+          32,
+          32
+        ],
+        "parameters": 1728
+      },
+      {
+        "layer": "network.features.2.block.2.1",
+        "type": "BatchNorm2d",
+        "input": [
+          1,
+          24,
+          32,
+          32
+        ],
+        "output": [
+          1,
+          24,
+          32,
+          32
+        ],
+        "parameters": 48
+      },
+      {
+        "layer": "network.features.3.block.0.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          24,
+          32,
+          32
+        ],
+        "output": [
+          1,
+          88,
+          32,
+          32
+        ],
+        "parameters": 2112
+      },
+      {
+        "layer": "network.features.3.block.0.1",
+        "type": "BatchNorm2d",
+        "input": [
+          1,
+          88,
+          32,
+          32
+        ],
+        "output": [
+          1,
+          88,
+          32,
+          32
+        ],
+        "parameters": 176
+      },
+      {
+        "layer": "network.features.3.block.0.2",
+        "type": "ReLU",
+        "input": [
+          1,
+          88,
+          32,
+          32
+        ],
+        "output": [
+          1,
+          88,
+          32,
+          32
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.3.block.1.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          88,
+          32,
+          32
+        ],
+        "output": [
+          1,
+          88,
+          32,
+          32
+        ],
+        "parameters": 792
+      },
+      {
+        "layer": "network.features.3.block.1.1",
+        "type": "BatchNorm2d",
+        "input": [
+          1,
+          88,
+          32,
+          32
+        ],
+        "output": [
+          1,
+          88,
+          32,
+          32
+        ],
+        "parameters": 176
+      },
+      {
+        "layer": "network.features.3.block.1.2",
+        "type": "ReLU",
+        "input": [
+          1,
+          88,
+          32,
+          32
+        ],
+        "output": [
+          1,
+          88,
+          32,
+          32
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.3.block.2.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          88,
+          32,
+          32
+        ],
+        "output": [
+          1,
+          24,
+          32,
+          32
+        ],
+        "parameters": 2112
+      },
+      {
+        "layer": "network.features.3.block.2.1",
+        "type": "BatchNorm2d",
+        "input": [
+          1,
+          24,
+          32,
+          32
+        ],
+        "output": [
+          1,
+          24,
+          32,
+          32
+        ],
+        "parameters": 48
+      },
+      {
+        "layer": "network.features.4.block.0.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          24,
+          32,
+          32
+        ],
+        "output": [
+          1,
+          96,
+          32,
+          32
+        ],
+        "parameters": 2304
+      },
+      {
+        "layer": "network.features.4.block.0.1",
+        "type": "BatchNorm2d",
+        "input": [
+          1,
+          96,
+          32,
+          32
+        ],
+        "output": [
+          1,
+          96,
+          32,
+          32
+        ],
+        "parameters": 192
+      },
+      {
+        "layer": "network.features.4.block.0.2",
+        "type": "Hardswish",
+        "input": [
+          1,
+          96,
+          32,
+          32
+        ],
+        "output": [
+          1,
+          96,
+          32,
+          32
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.4.block.1.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          96,
+          32,
+          32
+        ],
+        "output": [
+          1,
+          96,
+          16,
+          16
+        ],
+        "parameters": 2400
+      },
+      {
+        "layer": "network.features.4.block.1.1",
+        "type": "BatchNorm2d",
+        "input": [
+          1,
+          96,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          96,
+          16,
+          16
+        ],
+        "parameters": 192
+      },
+      {
+        "layer": "network.features.4.block.1.2",
+        "type": "Hardswish",
+        "input": [
+          1,
+          96,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          96,
+          16,
+          16
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.4.block.2.avgpool",
+        "type": "AdaptiveAvgPool2d",
+        "input": [
+          1,
+          96,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          96,
+          1,
+          1
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.4.block.2.fc1",
+        "type": "Conv2d",
+        "input": [
+          1,
+          96,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          24,
+          1,
+          1
+        ],
+        "parameters": 2328
+      },
+      {
+        "layer": "network.features.4.block.2.activation",
+        "type": "ReLU",
+        "input": [
+          1,
+          24,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          24,
+          1,
+          1
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.4.block.2.fc2",
+        "type": "Conv2d",
+        "input": [
+          1,
+          24,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          96,
+          1,
+          1
+        ],
+        "parameters": 2400
+      },
+      {
+        "layer": "network.features.4.block.2.scale_activation",
+        "type": "Hardsigmoid",
+        "input": [
+          1,
+          96,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          96,
+          1,
+          1
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.4.block.3.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          96,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          40,
+          16,
+          16
+        ],
+        "parameters": 3840
+      },
+      {
+        "layer": "network.features.4.block.3.1",
+        "type": "BatchNorm2d",
+        "input": [
+          1,
+          40,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          40,
+          16,
+          16
+        ],
+        "parameters": 80
+      },
+      {
+        "layer": "network.features.5.block.0.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          40,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          240,
+          16,
+          16
+        ],
+        "parameters": 9600
+      },
+      {
+        "layer": "network.features.5.block.0.1",
+        "type": "BatchNorm2d",
+        "input": [
+          1,
+          240,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          240,
+          16,
+          16
+        ],
+        "parameters": 480
+      },
+      {
+        "layer": "network.features.5.block.0.2",
+        "type": "Hardswish",
+        "input": [
+          1,
+          240,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          240,
+          16,
+          16
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.5.block.1.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          240,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          240,
+          16,
+          16
+        ],
+        "parameters": 6000
+      },
+      {
+        "layer": "network.features.5.block.1.1",
+        "type": "BatchNorm2d",
+        "input": [
+          1,
+          240,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          240,
+          16,
+          16
+        ],
+        "parameters": 480
+      },
+      {
+        "layer": "network.features.5.block.1.2",
+        "type": "Hardswish",
+        "input": [
+          1,
+          240,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          240,
+          16,
+          16
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.5.block.2.avgpool",
+        "type": "AdaptiveAvgPool2d",
+        "input": [
+          1,
+          240,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          240,
+          1,
+          1
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.5.block.2.fc1",
+        "type": "Conv2d",
+        "input": [
+          1,
+          240,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          64,
+          1,
+          1
+        ],
+        "parameters": 15424
+      },
+      {
+        "layer": "network.features.5.block.2.activation",
+        "type": "ReLU",
+        "input": [
+          1,
+          64,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          64,
+          1,
+          1
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.5.block.2.fc2",
+        "type": "Conv2d",
+        "input": [
+          1,
+          64,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          240,
+          1,
+          1
+        ],
+        "parameters": 15600
+      },
+      {
+        "layer": "network.features.5.block.2.scale_activation",
+        "type": "Hardsigmoid",
+        "input": [
+          1,
+          240,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          240,
+          1,
+          1
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.5.block.3.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          240,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          40,
+          16,
+          16
+        ],
+        "parameters": 9600
+      },
+      {
+        "layer": "network.features.5.block.3.1",
+        "type": "BatchNorm2d",
+        "input": [
+          1,
+          40,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          40,
+          16,
+          16
+        ],
+        "parameters": 80
+      },
+      {
+        "layer": "network.features.6.block.0.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          40,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          240,
+          16,
+          16
+        ],
+        "parameters": 9600
+      },
+      {
+        "layer": "network.features.6.block.0.1",
+        "type": "BatchNorm2d",
+        "input": [
+          1,
+          240,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          240,
+          16,
+          16
+        ],
+        "parameters": 480
+      },
+      {
+        "layer": "network.features.6.block.0.2",
+        "type": "Hardswish",
+        "input": [
+          1,
+          240,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          240,
+          16,
+          16
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.6.block.1.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          240,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          240,
+          16,
+          16
+        ],
+        "parameters": 6000
+      },
+      {
+        "layer": "network.features.6.block.1.1",
+        "type": "BatchNorm2d",
+        "input": [
+          1,
+          240,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          240,
+          16,
+          16
+        ],
+        "parameters": 480
+      },
+      {
+        "layer": "network.features.6.block.1.2",
+        "type": "Hardswish",
+        "input": [
+          1,
+          240,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          240,
+          16,
+          16
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.6.block.2.avgpool",
+        "type": "AdaptiveAvgPool2d",
+        "input": [
+          1,
+          240,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          240,
+          1,
+          1
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.6.block.2.fc1",
+        "type": "Conv2d",
+        "input": [
+          1,
+          240,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          64,
+          1,
+          1
+        ],
+        "parameters": 15424
+      },
+      {
+        "layer": "network.features.6.block.2.activation",
+        "type": "ReLU",
+        "input": [
+          1,
+          64,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          64,
+          1,
+          1
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.6.block.2.fc2",
+        "type": "Conv2d",
+        "input": [
+          1,
+          64,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          240,
+          1,
+          1
+        ],
+        "parameters": 15600
+      },
+      {
+        "layer": "network.features.6.block.2.scale_activation",
+        "type": "Hardsigmoid",
+        "input": [
+          1,
+          240,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          240,
+          1,
+          1
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.6.block.3.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          240,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          40,
+          16,
+          16
+        ],
+        "parameters": 9600
+      },
+      {
+        "layer": "network.features.6.block.3.1",
+        "type": "BatchNorm2d",
+        "input": [
+          1,
+          40,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          40,
+          16,
+          16
+        ],
+        "parameters": 80
+      },
+      {
+        "layer": "network.features.7.block.0.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          40,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          120,
+          16,
+          16
+        ],
+        "parameters": 4800
+      },
+      {
+        "layer": "network.features.7.block.0.1",
+        "type": "BatchNorm2d",
+        "input": [
+          1,
+          120,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          120,
+          16,
+          16
+        ],
+        "parameters": 240
+      },
+      {
+        "layer": "network.features.7.block.0.2",
+        "type": "Hardswish",
+        "input": [
+          1,
+          120,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          120,
+          16,
+          16
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.7.block.1.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          120,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          120,
+          16,
+          16
+        ],
+        "parameters": 3000
+      },
+      {
+        "layer": "network.features.7.block.1.1",
+        "type": "BatchNorm2d",
+        "input": [
+          1,
+          120,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          120,
+          16,
+          16
+        ],
+        "parameters": 240
+      },
+      {
+        "layer": "network.features.7.block.1.2",
+        "type": "Hardswish",
+        "input": [
+          1,
+          120,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          120,
+          16,
+          16
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.7.block.2.avgpool",
+        "type": "AdaptiveAvgPool2d",
+        "input": [
+          1,
+          120,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          120,
+          1,
+          1
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.7.block.2.fc1",
+        "type": "Conv2d",
+        "input": [
+          1,
+          120,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          32,
+          1,
+          1
+        ],
+        "parameters": 3872
+      },
+      {
+        "layer": "network.features.7.block.2.activation",
+        "type": "ReLU",
+        "input": [
+          1,
+          32,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          32,
+          1,
+          1
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.7.block.2.fc2",
+        "type": "Conv2d",
+        "input": [
+          1,
+          32,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          120,
+          1,
+          1
+        ],
+        "parameters": 3960
+      },
+      {
+        "layer": "network.features.7.block.2.scale_activation",
+        "type": "Hardsigmoid",
+        "input": [
+          1,
+          120,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          120,
+          1,
+          1
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.7.block.3.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          120,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          48,
+          16,
+          16
+        ],
+        "parameters": 5760
+      },
+      {
+        "layer": "network.features.7.block.3.1",
+        "type": "BatchNorm2d",
+        "input": [
+          1,
+          48,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          48,
+          16,
+          16
+        ],
+        "parameters": 96
+      },
+      {
+        "layer": "network.features.8.block.0.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          48,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          144,
+          16,
+          16
+        ],
+        "parameters": 6912
+      },
+      {
+        "layer": "network.features.8.block.0.1",
+        "type": "BatchNorm2d",
+        "input": [
+          1,
+          144,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          144,
+          16,
+          16
+        ],
+        "parameters": 288
+      },
+      {
+        "layer": "network.features.8.block.0.2",
+        "type": "Hardswish",
+        "input": [
+          1,
+          144,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          144,
+          16,
+          16
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.8.block.1.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          144,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          144,
+          16,
+          16
+        ],
+        "parameters": 3600
+      },
+      {
+        "layer": "network.features.8.block.1.1",
+        "type": "BatchNorm2d",
+        "input": [
+          1,
+          144,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          144,
+          16,
+          16
+        ],
+        "parameters": 288
+      },
+      {
+        "layer": "network.features.8.block.1.2",
+        "type": "Hardswish",
+        "input": [
+          1,
+          144,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          144,
+          16,
+          16
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.8.block.2.avgpool",
+        "type": "AdaptiveAvgPool2d",
+        "input": [
+          1,
+          144,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          144,
+          1,
+          1
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.8.block.2.fc1",
+        "type": "Conv2d",
+        "input": [
+          1,
+          144,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          40,
+          1,
+          1
+        ],
+        "parameters": 5800
+      },
+      {
+        "layer": "network.features.8.block.2.activation",
+        "type": "ReLU",
+        "input": [
+          1,
+          40,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          40,
+          1,
+          1
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.8.block.2.fc2",
+        "type": "Conv2d",
+        "input": [
+          1,
+          40,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          144,
+          1,
+          1
+        ],
+        "parameters": 5904
+      },
+      {
+        "layer": "network.features.8.block.2.scale_activation",
+        "type": "Hardsigmoid",
+        "input": [
+          1,
+          144,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          144,
+          1,
+          1
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.8.block.3.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          144,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          48,
+          16,
+          16
+        ],
+        "parameters": 6912
+      },
+      {
+        "layer": "network.features.8.block.3.1",
+        "type": "BatchNorm2d",
+        "input": [
+          1,
+          48,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          48,
+          16,
+          16
+        ],
+        "parameters": 96
+      },
+      {
+        "layer": "network.features.9.block.0.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          48,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          288,
+          16,
+          16
+        ],
+        "parameters": 13824
+      },
+      {
+        "layer": "network.features.9.block.0.1",
+        "type": "BatchNorm2d",
+        "input": [
+          1,
+          288,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          288,
+          16,
+          16
+        ],
+        "parameters": 576
+      },
+      {
+        "layer": "network.features.9.block.0.2",
+        "type": "Hardswish",
+        "input": [
+          1,
+          288,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          288,
+          16,
+          16
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.9.block.1.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          288,
+          16,
+          16
+        ],
+        "output": [
+          1,
+          288,
+          8,
+          8
+        ],
+        "parameters": 7200
+      },
+      {
+        "layer": "network.features.9.block.1.1",
+        "type": "BatchNorm2d",
+        "input": [
+          1,
+          288,
+          8,
+          8
+        ],
+        "output": [
+          1,
+          288,
+          8,
+          8
+        ],
+        "parameters": 576
+      },
+      {
+        "layer": "network.features.9.block.1.2",
+        "type": "Hardswish",
+        "input": [
+          1,
+          288,
+          8,
+          8
+        ],
+        "output": [
+          1,
+          288,
+          8,
+          8
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.9.block.2.avgpool",
+        "type": "AdaptiveAvgPool2d",
+        "input": [
+          1,
+          288,
+          8,
+          8
+        ],
+        "output": [
+          1,
+          288,
+          1,
+          1
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.9.block.2.fc1",
+        "type": "Conv2d",
+        "input": [
+          1,
+          288,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          72,
+          1,
+          1
+        ],
+        "parameters": 20808
+      },
+      {
+        "layer": "network.features.9.block.2.activation",
+        "type": "ReLU",
+        "input": [
+          1,
+          72,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          72,
+          1,
+          1
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.9.block.2.fc2",
+        "type": "Conv2d",
+        "input": [
+          1,
+          72,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          288,
+          1,
+          1
+        ],
+        "parameters": 21024
+      },
+      {
+        "layer": "network.features.9.block.2.scale_activation",
+        "type": "Hardsigmoid",
+        "input": [
+          1,
+          288,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          288,
+          1,
+          1
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.9.block.3.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          288,
+          8,
+          8
+        ],
+        "output": [
+          1,
+          96,
+          8,
+          8
+        ],
+        "parameters": 27648
+      },
+      {
+        "layer": "network.features.9.block.3.1",
+        "type": "BatchNorm2d",
+        "input": [
+          1,
+          96,
+          8,
+          8
+        ],
+        "output": [
+          1,
+          96,
+          8,
+          8
+        ],
+        "parameters": 192
+      },
+      {
+        "layer": "network.features.10.block.0.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          96,
+          8,
+          8
+        ],
+        "output": [
+          1,
+          576,
+          8,
+          8
+        ],
+        "parameters": 55296
+      },
+      {
+        "layer": "network.features.10.block.0.1",
+        "type": "BatchNorm2d",
+        "input": [
+          1,
+          576,
+          8,
+          8
+        ],
+        "output": [
+          1,
+          576,
+          8,
+          8
+        ],
+        "parameters": 1152
+      },
+      {
+        "layer": "network.features.10.block.0.2",
+        "type": "Hardswish",
+        "input": [
+          1,
+          576,
+          8,
+          8
+        ],
+        "output": [
+          1,
+          576,
+          8,
+          8
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.10.block.1.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          576,
+          8,
+          8
+        ],
+        "output": [
+          1,
+          576,
+          8,
+          8
+        ],
+        "parameters": 14400
+      },
+      {
+        "layer": "network.features.10.block.1.1",
+        "type": "BatchNorm2d",
+        "input": [
+          1,
+          576,
+          8,
+          8
+        ],
+        "output": [
+          1,
+          576,
+          8,
+          8
+        ],
+        "parameters": 1152
+      },
+      {
+        "layer": "network.features.10.block.1.2",
+        "type": "Hardswish",
+        "input": [
+          1,
+          576,
+          8,
+          8
+        ],
+        "output": [
+          1,
+          576,
+          8,
+          8
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.10.block.2.avgpool",
+        "type": "AdaptiveAvgPool2d",
+        "input": [
+          1,
+          576,
+          8,
+          8
+        ],
+        "output": [
+          1,
+          576,
+          1,
+          1
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.10.block.2.fc1",
+        "type": "Conv2d",
+        "input": [
+          1,
+          576,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          144,
+          1,
+          1
+        ],
+        "parameters": 83088
+      },
+      {
+        "layer": "network.features.10.block.2.activation",
+        "type": "ReLU",
+        "input": [
+          1,
+          144,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          144,
+          1,
+          1
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.10.block.2.fc2",
+        "type": "Conv2d",
+        "input": [
+          1,
+          144,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          576,
+          1,
+          1
+        ],
+        "parameters": 83520
+      },
+      {
+        "layer": "network.features.10.block.2.scale_activation",
+        "type": "Hardsigmoid",
+        "input": [
+          1,
+          576,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          576,
+          1,
+          1
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.10.block.3.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          576,
+          8,
+          8
+        ],
+        "output": [
+          1,
+          96,
+          8,
+          8
+        ],
+        "parameters": 55296
+      },
+      {
+        "layer": "network.features.10.block.3.1",
+        "type": "BatchNorm2d",
+        "input": [
+          1,
+          96,
+          8,
+          8
+        ],
+        "output": [
+          1,
+          96,
+          8,
+          8
+        ],
+        "parameters": 192
+      },
+      {
+        "layer": "network.features.11.block.0.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          96,
+          8,
+          8
+        ],
+        "output": [
+          1,
+          576,
+          8,
+          8
+        ],
+        "parameters": 55296
+      },
+      {
+        "layer": "network.features.11.block.0.1",
+        "type": "BatchNorm2d",
+        "input": [
+          1,
+          576,
+          8,
+          8
+        ],
+        "output": [
+          1,
+          576,
+          8,
+          8
+        ],
+        "parameters": 1152
+      },
+      {
+        "layer": "network.features.11.block.0.2",
+        "type": "Hardswish",
+        "input": [
+          1,
+          576,
+          8,
+          8
+        ],
+        "output": [
+          1,
+          576,
+          8,
+          8
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.11.block.1.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          576,
+          8,
+          8
+        ],
+        "output": [
+          1,
+          576,
+          8,
+          8
+        ],
+        "parameters": 14400
+      },
+      {
+        "layer": "network.features.11.block.1.1",
+        "type": "BatchNorm2d",
+        "input": [
+          1,
+          576,
+          8,
+          8
+        ],
+        "output": [
+          1,
+          576,
+          8,
+          8
+        ],
+        "parameters": 1152
+      },
+      {
+        "layer": "network.features.11.block.1.2",
+        "type": "Hardswish",
+        "input": [
+          1,
+          576,
+          8,
+          8
+        ],
+        "output": [
+          1,
+          576,
+          8,
+          8
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.11.block.2.avgpool",
+        "type": "AdaptiveAvgPool2d",
+        "input": [
+          1,
+          576,
+          8,
+          8
+        ],
+        "output": [
+          1,
+          576,
+          1,
+          1
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.11.block.2.fc1",
+        "type": "Conv2d",
+        "input": [
+          1,
+          576,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          144,
+          1,
+          1
+        ],
+        "parameters": 83088
+      },
+      {
+        "layer": "network.features.11.block.2.activation",
+        "type": "ReLU",
+        "input": [
+          1,
+          144,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          144,
+          1,
+          1
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.11.block.2.fc2",
+        "type": "Conv2d",
+        "input": [
+          1,
+          144,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          576,
+          1,
+          1
+        ],
+        "parameters": 83520
+      },
+      {
+        "layer": "network.features.11.block.2.scale_activation",
+        "type": "Hardsigmoid",
+        "input": [
+          1,
+          576,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          576,
+          1,
+          1
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.features.11.block.3.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          576,
+          8,
+          8
+        ],
+        "output": [
+          1,
+          96,
+          8,
+          8
+        ],
+        "parameters": 55296
+      },
+      {
+        "layer": "network.features.11.block.3.1",
+        "type": "BatchNorm2d",
+        "input": [
+          1,
+          96,
+          8,
+          8
+        ],
+        "output": [
+          1,
+          96,
+          8,
+          8
+        ],
+        "parameters": 192
+      },
+      {
+        "layer": "network.features.12.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          96,
+          8,
+          8
+        ],
+        "output": [
+          1,
+          576,
+          8,
+          8
+        ],
+        "parameters": 55296
+      },
+      {
+        "layer": "network.features.12.1",
+        "type": "BatchNorm2d",
+        "input": [
+          1,
+          576,
+          8,
+          8
+        ],
+        "output": [
+          1,
+          576,
+          8,
+          8
+        ],
+        "parameters": 1152
+      },
+      {
+        "layer": "network.features.12.2",
+        "type": "Hardswish",
+        "input": [
+          1,
+          576,
+          8,
+          8
+        ],
+        "output": [
+          1,
+          576,
+          8,
+          8
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.avgpool",
+        "type": "AdaptiveAvgPool2d",
+        "input": [
+          1,
+          576,
+          8,
+          8
+        ],
+        "output": [
+          1,
+          576,
+          1,
+          1
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.classifier.0",
+        "type": "Linear",
+        "input": [
+          1,
+          576
+        ],
+        "output": [
+          1,
+          1024
+        ],
+        "parameters": 590848
+      },
+      {
+        "layer": "network.classifier.1",
+        "type": "Hardswish",
+        "input": [
+          1,
+          1024
+        ],
+        "output": [
+          1,
+          1024
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.classifier.2",
+        "type": "Dropout",
+        "input": [
+          1,
+          1024
+        ],
+        "output": [
+          1,
+          1024
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "network.classifier.3",
+        "type": "Linear",
+        "input": [
+          1,
+          1024
+        ],
+        "output": [
+          1,
+          1
+        ],
+        "parameters": 1025
+      }
+    ],
+    "total_parameters": 1518881,
+    "trainable_parameters": 1518881
+  },
+  "determinism": "Fixed seeds; deterministic algorithms requested with warnings for unsupported kernels",
+  "finished_at": "2026-10-11T21:38:38.579211+00:00",
+  "epochs_completed": 4,
+  "selected_epoch": 2,
+  "early_stopped": false,
+  "training_seconds": 693.0483331920004,
+  "validation_threshold": 0.7804527789354324,
+  "validation_metrics": {
+    "n": 3472,
+    "tp": 22,
+    "tn": 3407,
+    "fp": 13,
+    "fn": 30,
+    "precision": 0.6285714285714286,
+    "recall": 0.4230769230769231,
+    "f1": 0.5057471264367817,
+    "f2": 0.45267489711934156,
+    "accuracy": 0.9876152073732719,
+    "false_positive_rate": 0.003801169590643275,
+    "unresolved_count": 0,
+    "average_precision": 0.4523212108483376,
+    "roc_auc": 0.7103126405757985
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.8899862396097155,
+      "val_loss": 0.8236334137103525,
+      "val_f2": 0.08643268727082241,
+      "threshold": 0.3384095960855484,
+      "val_metrics": {
+        "n": 3472,
+        "tp": 33,
+        "tn": 1752,
+        "fp": 1668,
+        "fn": 19,
+        "precision": 0.019400352733686066,
+        "recall": 0.6346153846153846,
+        "f1": 0.037649743297204795,
+        "f2": 0.08643268727082241,
+        "accuracy": 0.5141129032258065,
+        "false_positive_rate": 0.48771929824561405,
+        "unresolved_count": 0,
+        "average_precision": 0.020395105821901127,
+        "roc_auc": 0.5549538911381017
+      }
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.4750189631999216,
+      "val_loss": 0.6997190426846254,
+      "val_f2": 0.45267489711934156,
+      "threshold": 0.7804527789354324,
+      "val_metrics": {
+        "n": 3472,
+        "tp": 22,
+        "tn": 3407,
+        "fp": 13,
+        "fn": 30,
+        "precision": 0.6285714285714286,
+        "recall": 0.4230769230769231,
+        "f1": 0.5057471264367817,
+        "f2": 0.45267489711934156,
+        "accuracy": 0.9876152073732719,
+        "false_positive_rate": 0.003801169590643275,
+        "unresolved_count": 0,
+        "average_precision": 0.4523212108483376,
+        "roc_auc": 0.7103126405757985
+      }
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.3066339793671268,
+      "val_loss": 0.6772719509041254,
+      "val_f2": 0.43209876543209874,
+      "threshold": 0.884458180069923,
+      "val_metrics": {
+        "n": 3472,
+        "tp": 21,
+        "tn": 3406,
+        "fp": 14,
+        "fn": 31,
+        "precision": 0.6,
+        "recall": 0.40384615384615385,
+        "f1": 0.4827586206896552,
+        "f2": 0.43209876543209874,
+        "accuracy": 0.9870391705069125,
+        "false_positive_rate": 0.004093567251461989,
+        "unresolved_count": 0,
+        "average_precision": 0.4396650695711299,
+        "roc_auc": 0.753559379217274
+      }
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.1990478399426226,
+      "val_loss": 1.0988472652737447,
+      "val_f2": 0.39094650205761317,
+      "threshold": 0.21578481689095497,
+      "val_metrics": {
+        "n": 3472,
+        "tp": 19,
+        "tn": 3404,
+        "fp": 16,
+        "fn": 33,
+        "precision": 0.5428571428571428,
+        "recall": 0.36538461538461536,
+        "f1": 0.4367816091954023,
+        "f2": 0.39094650205761317,
+        "accuracy": 0.9858870967741935,
+        "false_positive_rate": 0.004678362573099415,
+        "unresolved_count": 0,
+        "average_precision": 0.38882577835842297,
+        "roc_auc": 0.7451754385964913
+      }
+    }
+  ],
+  "checkpoint": "artifacts/ann-repeat-2026.pt",
+  "checkpoint_sha256": "8531816784468d59799665df31f356d652304e4b46ebb62019b628ad9bd7c94f",
+  "outcome": "Measured validation evidence; no test-driven changes",
+  "lesson": "Validation F2=0.4527, AP=0.4523, TP/FP/FN=22/13/30. Difference from initial ANN F2=+0.3604; best epoch 2 of 4. Recorded mean training loss 0.8900 to 0.1990. Real ImageNet transfer is tested with all layers fine-tuned, replicated grayscale and no crop. Domain mismatch and this early-training budget limit the conclusion. Train/validation prevalence differs, so a raw loss gap alone does not diagnose overfitting."
+}

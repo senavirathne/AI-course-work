@@ -1,0 +1,7 @@
+{
+  "status": "INTERRUPTED_CPU_SCHEDULING",
+  "timestamp": "2026-10-11T16:27:33.015117+00:00",
+  "actual_examples_logged": 750,
+  "reason": "A train/validation-only CPU probe found eight-thread single-image generation slower than one-thread generation under the shared CPU allocation. Configure one common CPU inference thread for VLM validation and all final model timing; preserve original responses without using partial metrics for prompt selection.",
+  "scientific_failed_approach": false
+}

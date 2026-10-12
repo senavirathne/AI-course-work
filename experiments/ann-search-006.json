@@ -1,0 +1,366 @@
+{
+  "run_id": "ann-search-006",
+  "started_at": "2026-10-11T19:01:27.898858+00:00",
+  "status": "COMPLETE",
+  "code_sha256": "64482fb682ceb2d84b38990916785333c67b4d6283134b3ad8fb21e8912edb5f",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "packages": {
+      "torch": "2.9.1+cpu",
+      "torchvision": "0.24.1+cpu",
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "scikit-learn": "1.8.0",
+      "scikit-image": "0.25.2",
+      "fastapi": "0.115.12",
+      "transformers": "4.57.1"
+    }
+  },
+  "device": "cpu",
+  "split_sha256": "af7daf13d0854ceeba004f1a06182bac778ac716021dec3d8fc40edf265aa76f",
+  "provenance": "RAW-FABRID_V1",
+  "config": {
+    "model": {
+      "name": "custom",
+      "depth": 2,
+      "width": 8,
+      "dropout": 0.2
+    },
+    "optimizer": "adamw",
+    "learning_rate": 0.001,
+    "batch_size": 32,
+    "epochs": 4,
+    "patience": 3,
+    "cpu_threads": 8,
+    "memory_format": "channels_last",
+    "seed": 42,
+    "augment": true,
+    "weighted_loss": true,
+    "pretrained": false,
+    "hypothesis": "Actual custom network depth 2 blocks"
+  },
+  "hypothesis": "Actual custom network depth 2 blocks",
+  "pos_weight_from_train_only": 23.83116883116883,
+  "architecture": {
+    "layers": [
+      {
+        "layer": "features.0.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          1,
+          256,
+          256
+        ],
+        "output": [
+          1,
+          8,
+          256,
+          256
+        ],
+        "parameters": 72
+      },
+      {
+        "layer": "features.0.1",
+        "type": "BatchNorm2d",
+        "input": [
+          1,
+          8,
+          256,
+          256
+        ],
+        "output": [
+          1,
+          8,
+          256,
+          256
+        ],
+        "parameters": 16
+      },
+      {
+        "layer": "features.0.2",
+        "type": "ReLU",
+        "input": [
+          1,
+          8,
+          256,
+          256
+        ],
+        "output": [
+          1,
+          8,
+          256,
+          256
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "features.0.3",
+        "type": "MaxPool2d",
+        "input": [
+          1,
+          8,
+          256,
+          256
+        ],
+        "output": [
+          1,
+          8,
+          128,
+          128
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "features.1.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          8,
+          128,
+          128
+        ],
+        "output": [
+          1,
+          16,
+          128,
+          128
+        ],
+        "parameters": 1152
+      },
+      {
+        "layer": "features.1.1",
+        "type": "BatchNorm2d",
+        "input": [
+          1,
+          16,
+          128,
+          128
+        ],
+        "output": [
+          1,
+          16,
+          128,
+          128
+        ],
+        "parameters": 32
+      },
+      {
+        "layer": "features.1.2",
+        "type": "ReLU",
+        "input": [
+          1,
+          16,
+          128,
+          128
+        ],
+        "output": [
+          1,
+          16,
+          128,
+          128
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "features.1.3",
+        "type": "MaxPool2d",
+        "input": [
+          1,
+          16,
+          128,
+          128
+        ],
+        "output": [
+          1,
+          16,
+          64,
+          64
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "pool",
+        "type": "AdaptiveAvgPool2d",
+        "input": [
+          1,
+          16,
+          64,
+          64
+        ],
+        "output": [
+          1,
+          16,
+          1,
+          1
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "classifier.0",
+        "type": "Flatten",
+        "input": [
+          1,
+          16,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          16
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "classifier.1",
+        "type": "Dropout",
+        "input": [
+          1,
+          16
+        ],
+        "output": [
+          1,
+          16
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "classifier.2",
+        "type": "Linear",
+        "input": [
+          1,
+          16
+        ],
+        "output": [
+          1,
+          1
+        ],
+        "parameters": 17
+      }
+    ],
+    "total_parameters": 1289,
+    "trainable_parameters": 1289
+  },
+  "determinism": "Fixed seeds; deterministic algorithms requested with warnings for unsupported kernels",
+  "finished_at": "2026-10-11T19:08:01.676746+00:00",
+  "epochs_completed": 4,
+  "selected_epoch": 1,
+  "early_stopped": false,
+  "training_seconds": 393.76565532899986,
+  "validation_threshold": 0.5018866622447967,
+  "validation_metrics": {
+    "n": 3472,
+    "tp": 38,
+    "tn": 1271,
+    "fp": 2149,
+    "fn": 14,
+    "precision": 0.017375400091449476,
+    "recall": 0.7307692307692307,
+    "f1": 0.03394372487717731,
+    "f2": 0.07933194154488518,
+    "accuracy": 0.37701612903225806,
+    "false_positive_rate": 0.6283625730994152,
+    "unresolved_count": 0,
+    "average_precision": 0.013909014356643667,
+    "roc_auc": 0.4998256860098965
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 1.2840764147752213,
+      "val_loss": 0.9270464929018153,
+      "val_f2": 0.07933194154488518,
+      "threshold": 0.5018866622447967,
+      "val_metrics": {
+        "n": 3472,
+        "tp": 38,
+        "tn": 1271,
+        "fp": 2149,
+        "fn": 14,
+        "precision": 0.017375400091449476,
+        "recall": 0.7307692307692307,
+        "f1": 0.03394372487717731,
+        "f2": 0.07933194154488518,
+        "accuracy": 0.37701612903225806,
+        "false_positive_rate": 0.6283625730994152,
+        "unresolved_count": 0,
+        "average_precision": 0.013909014356643667,
+        "roc_auc": 0.4998256860098965
+      }
+    },
+    {
+      "epoch": 2,
+      "train_loss": 1.2732436963703841,
+      "val_loss": 0.9966884499870687,
+      "val_f2": 0.07913896802785692,
+      "threshold": 0.5169087976217269,
+      "val_metrics": {
+        "n": 3472,
+        "tp": 50,
+        "tn": 519,
+        "fp": 2901,
+        "fn": 2,
+        "precision": 0.016943409013893594,
+        "recall": 0.9615384615384616,
+        "f1": 0.033300033300033303,
+        "f2": 0.07913896802785692,
+        "accuracy": 0.16388248847926268,
+        "false_positive_rate": 0.8482456140350877,
+        "unresolved_count": 0,
+        "average_precision": 0.013871964022660827,
+        "roc_auc": 0.47409469185784975
+      }
+    },
+    {
+      "epoch": 3,
+      "train_loss": 1.2612404409312803,
+      "val_loss": 1.0231429190130277,
+      "val_f2": 0.07913896802785692,
+      "threshold": 0.5302316844463348,
+      "val_metrics": {
+        "n": 3472,
+        "tp": 50,
+        "tn": 519,
+        "fp": 2901,
+        "fn": 2,
+        "precision": 0.016943409013893594,
+        "recall": 0.9615384615384616,
+        "f1": 0.033300033300033303,
+        "f2": 0.07913896802785692,
+        "accuracy": 0.16388248847926268,
+        "false_positive_rate": 0.8482456140350877,
+        "unresolved_count": 0,
+        "average_precision": 0.012715004518980598,
+        "roc_auc": 0.45362685560053984
+      }
+    },
+    {
+      "epoch": 4,
+      "train_loss": 1.2807004673354154,
+      "val_loss": 0.9609206458939935,
+      "val_f2": 0.07827175954915466,
+      "threshold": 0.4468136942386629,
+      "val_metrics": {
+        "n": 3472,
+        "tp": 50,
+        "tn": 484,
+        "fp": 2936,
+        "fn": 2,
+        "precision": 0.016744809109176157,
+        "recall": 0.9615384615384616,
+        "f1": 0.032916392363396975,
+        "f2": 0.07827175954915466,
+        "accuracy": 0.15380184331797234,
+        "false_positive_rate": 0.8584795321637427,
+        "unresolved_count": 0,
+        "average_precision": 0.014739330146753325,
+        "roc_auc": 0.5145917678812415
+      }
+    }
+  ],
+  "checkpoint": "artifacts/ann-search-006.pt",
+  "checkpoint_sha256": "156bd528609394f7f89fd7aee0e90acb1a4193275b9d54a70ea99c87eb1d889b",
+  "outcome": "Measured validation evidence; no test-driven changes",
+  "lesson": "Validation F2=0.0793, AP=0.0139, TP/FP/FN=38/2149/14. Difference from initial ANN F2=-0.0129; best epoch 1 of 4. Recorded mean training loss 1.2841 to 1.2807. Capacity/depth/dropout changed; use the recorded layer table and matched controls. More parameters are not evidence of better generalisation. Train/validation prevalence differs, so a raw loss gap alone does not diagnose overfitting."
+}

@@ -1,0 +1,28 @@
+{
+  "audited_at": "2026-10-11T20:14:22.504803+00:00",
+  "status": "PASS",
+  "records": [
+    {
+      "file": "docs/engineering-runs/vlm-8-thread-interrupted.responses.jsonl",
+      "examples": 750,
+      "partitions": [
+        "val"
+      ]
+    },
+    {
+      "file": "docs/engineering-runs/vlm-eight-thread-final-partial.responses.jsonl",
+      "examples": 748,
+      "partitions": [
+        "val"
+      ]
+    },
+    {
+      "file": "docs/engineering-runs/vlm-validation-0-recovered.responses.jsonl",
+      "examples": 986,
+      "partitions": [
+        "val"
+      ]
+    }
+  ],
+  "interpretation": "Every retained interrupted/recovered VLM response is validation-only. The filename final-partial refers to the final interrupted log copy, not a held-out evaluation. No partial response metrics choose prompts."
+}

@@ -1,0 +1,56 @@
+{
+  "run_id": "svm-smoke-000",
+  "status": "COMPLETE",
+  "started_at": "2026-10-11T07:59:29.432898+00:00",
+  "finished_at": "2026-10-11T07:59:30.311286+00:00",
+  "code_sha256": "140b378a120aeffc3f43c4d301ae0fb1c21a13d493561741417ee4b4b917c7f9",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "packages": {
+      "torch": "2.9.1+cpu",
+      "torchvision": "0.24.1+cpu",
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "scikit-learn": "1.8.0",
+      "scikit-image": "0.25.2",
+      "fastapi": "0.115.12",
+      "transformers": "4.57.1"
+    }
+  },
+  "device": "cpu",
+  "split_sha256": "d709923c602c4acdbcf1dce5dbe9ff7036f540a683f00258aadfe40ef3d56ece",
+  "provenance": "SYNTHETIC_DEVELOPMENT_ONLY",
+  "seed": 42,
+  "config": {
+    "features": "lbp",
+    "kernel": "rbf",
+    "C": 1.0,
+    "class_weight": "balanced",
+    "gamma": "scale"
+  },
+  "hypothesis": "Local texture histograms may be competitive when independent source coverage is limited",
+  "training_seconds": 0.7638725310002883,
+  "timing_note": "Feature extraction is charged on first use; later configurations reuse features",
+  "validation_threshold": -0.4533267254029391,
+  "validation_metrics": {
+    "n": 28,
+    "tp": 5,
+    "tn": 0,
+    "fp": 23,
+    "fn": 0,
+    "precision": 0.17857142857142858,
+    "recall": 1.0,
+    "f1": 0.30303030303030304,
+    "f2": 0.5208333333333334,
+    "accuracy": 0.17857142857142858,
+    "false_positive_rate": 1.0,
+    "unresolved_count": 0,
+    "average_precision": 0.1732142857142857,
+    "roc_auc": 0.391304347826087
+  },
+  "checkpoint": "artifacts/svm-smoke-000.joblib",
+  "checkpoint_sha256": "23ebff72642bf739e70fa548e68b3395c836dfcd7a084d8b7777e2f4bf744f8e",
+  "outcome": "Measured; compare with control before interpreting",
+  "lesson": "PENDING evidence-based student interpretation"
+}

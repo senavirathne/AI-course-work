@@ -1,0 +1,34 @@
+{
+  "run_id": "svm-search-039",
+  "status": "INTERRUPTED_ENGINEERING",
+  "started_at": "2026-10-11T19:43:56.924826+00:00",
+  "code_sha256": "64482fb682ceb2d84b38990916785333c67b4d6283134b3ad8fb21e8912edb5f",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "packages": {
+      "torch": "2.9.1+cpu",
+      "torchvision": "0.24.1+cpu",
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "scikit-learn": "1.8.0",
+      "scikit-image": "0.25.2",
+      "fastapi": "0.115.12",
+      "transformers": "4.57.1"
+    }
+  },
+  "device": "cpu",
+  "split_sha256": "af7daf13d0854ceeba004f1a06182bac778ac716021dec3d8fc40edf265aa76f",
+  "provenance": "RAW-FABRID_V1",
+  "seed": 42,
+  "config": {
+    "features": "hog_lbp",
+    "kernel": "linear",
+    "C": 1.0,
+    "class_weight": "balanced",
+    "gamma": "scale"
+  },
+  "hypothesis": "Local texture histograms may be competitive with limited independent sources",
+  "interrupted_utc": "2026-10-11T19:54:17.069503+00:00",
+  "reason": "Owned exec session 89979 interrupted before test access for a training-only numerical efficiency amendment. Converged dual attempt or unchanged original solver fallback; completed configurations preserved."
+}

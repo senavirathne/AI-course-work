@@ -1,0 +1,31 @@
+{
+  "partition": "train",
+  "provenance": "RAW-FABRID_V1",
+  "split_sha256": "af7daf13d0854ceeba004f1a06182bac778ac716021dec3d8fc40edf265aa76f",
+  "patches": 13384,
+  "positives": 539,
+  "positive_fraction": 0.040271966527196654,
+  "independent_groups": 4,
+  "source_images": 478,
+  "source_images_containing_positive_patches": 146,
+  "defect_area_fraction_quantiles": {
+    "min": 1.52587890625e-05,
+    "q25": 0.013916015625,
+    "median": 0.0471954345703125,
+    "q75": 0.06044769287109375,
+    "max": 0.22369384765625
+  },
+  "brightness_range": [
+    68.59941101074219,
+    222.099365234375
+  ],
+  "contrast_range": [
+    29.350550397105888,
+    57.262533240877175
+  ],
+  "texture_total_variation_range": [
+    29.575045955882352,
+    82.30418198529412
+  ],
+  "group_metadata_limit": "Publisher roll_id is an anonymised fabric-origin field joined through HighRes metadata; groups are conservatively kept intact. Beyond this field, physical-roll, fabric-type and manufacturer relationships are not established."
+}

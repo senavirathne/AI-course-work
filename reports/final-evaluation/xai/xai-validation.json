@@ -1,0 +1,1194 @@
+{
+  "partition": "test",
+  "provenance": "RAW-FABRID_V1",
+  "run_id": "ann-search-018",
+  "settings": {
+    "target": "defect logit",
+    "occlusion_fraction": 0.1,
+    "seed": 42
+  },
+  "explanation_selection": "At most nine per confusion category; prefer distinct source images, deterministic filename order. Explanation sampling only; model metrics retain all examples.",
+  "prediction_population": 2996,
+  "population_confusion_categories": {
+    "label_1_prediction_1": 68,
+    "label_1_prediction_0": 28,
+    "label_0_prediction_1": 42,
+    "label_0_prediction_0": 2858
+  },
+  "cases": [
+    {
+      "patch_id": "Rollo1A_0000001_D_07-05-2024_10-30-55.085_0_1.png",
+      "partition": "test",
+      "label": 1,
+      "prediction": 1,
+      "score": 0.9953402280807495,
+      "incorrect": false,
+      "error_type": null,
+      "defect_pixels": 1141,
+      "spatial": {
+        "mask_status": "positive",
+        "pointing_hit": false,
+        "attribution_mass_in_mask": 0.09450104184308011,
+        "uniform_mass_reference": 0.0174102783203125,
+        "random_point_hit_expectation": 0.0174102783203125,
+        "zero_cam": false
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 5.364127159118652,
+        "logit_drops": {
+          "top": 5.09214460849762,
+          "low": 5.195260256528854,
+          "random": -0.2839069366455078
+        },
+        "top_minus_random_drop": 5.376051545143127,
+        "top_minus_low_drop": -0.10311564803123474,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0000.png",
+      "interpretation": "Measured defect-logit drops: top=+5.092145, low=+5.195260, random=-0.283907. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
+    },
+    {
+      "patch_id": "Rollo1A_0000002_D_07-05-2024_10-30-56.352_3_0.png",
+      "partition": "test",
+      "label": 1,
+      "prediction": 1,
+      "score": 0.9990620017051696,
+      "incorrect": false,
+      "error_type": null,
+      "defect_pixels": 5252,
+      "spatial": {
+        "mask_status": "positive",
+        "pointing_hit": true,
+        "attribution_mass_in_mask": 0.5189811570444782,
+        "uniform_mass_reference": 0.08013916015625,
+        "random_point_hit_expectation": 0.08013916015625,
+        "zero_cam": false
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 6.97087287902832,
+        "logit_drops": {
+          "top": 6.521844446659088,
+          "low": 1.03361177444458,
+          "random": 0.8655924797058105
+        },
+        "top_minus_random_drop": 5.656251966953278,
+        "top_minus_low_drop": 5.488232672214508,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0001.png",
+      "interpretation": "Measured defect-logit drops: top=+6.521844, low=+1.033612, random=+0.865592. Nondegenerate top-region deletion decreases the logit more than both controls: True. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
+    },
+    {
+      "patch_id": "Rollo1A_0000005_D_07-05-2024_10-31-00.029_3_1.png",
+      "partition": "test",
+      "label": 1,
+      "prediction": 1,
+      "score": 0.9373269081115722,
+      "incorrect": false,
+      "error_type": null,
+      "defect_pixels": 2801,
+      "spatial": {
+        "mask_status": "positive",
+        "pointing_hit": false,
+        "attribution_mass_in_mask": 0.20016926401223506,
+        "uniform_mass_reference": 0.0427398681640625,
+        "random_point_hit_expectation": 0.0427398681640625,
+        "zero_cam": false
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 2.705099582672119,
+        "logit_drops": {
+          "top": 2.948694720864296,
+          "low": 1.7316142916679382,
+          "random": 2.1670305728912354
+        },
+        "top_minus_random_drop": 0.7816641479730606,
+        "top_minus_low_drop": 1.2170804291963577,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0002.png",
+      "interpretation": "Measured defect-logit drops: top=+2.948695, low=+1.731614, random=+2.167031. Nondegenerate top-region deletion decreases the logit more than both controls: True. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
+    },
+    {
+      "patch_id": "Rollo1A_0000018_D_07-05-2024_10-31-14.432_1_0.png",
+      "partition": "test",
+      "label": 1,
+      "prediction": 1,
+      "score": 0.9979581832885742,
+      "incorrect": false,
+      "error_type": null,
+      "defect_pixels": 3113,
+      "spatial": {
+        "mask_status": "positive",
+        "pointing_hit": false,
+        "attribution_mass_in_mask": 0.1857358243535874,
+        "uniform_mass_reference": 0.0475006103515625,
+        "random_point_hit_expectation": 0.0475006103515625,
+        "zero_cam": false
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 6.1918840408325195,
+        "logit_drops": {
+          "top": 5.51537150144577,
+          "low": 2.2670693397521973,
+          "random": 2.042818546295166
+        },
+        "top_minus_random_drop": 3.4725529551506042,
+        "top_minus_low_drop": 3.248302161693573,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0003.png",
+      "interpretation": "Measured defect-logit drops: top=+5.515372, low=+2.267069, random=+2.042819. Nondegenerate top-region deletion decreases the logit more than both controls: True. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
+    },
+    {
+      "patch_id": "Rollo1A_0000020_D_07-05-2024_10-31-16.483_2_0.png",
+      "partition": "test",
+      "label": 1,
+      "prediction": 1,
+      "score": 0.9969984292984008,
+      "incorrect": false,
+      "error_type": null,
+      "defect_pixels": 652,
+      "spatial": {
+        "mask_status": "positive",
+        "pointing_hit": false,
+        "attribution_mass_in_mask": 0.1150632447647425,
+        "uniform_mass_reference": 0.00994873046875,
+        "random_point_hit_expectation": 0.00994873046875,
+        "zero_cam": false
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 5.805622577667236,
+        "logit_drops": {
+          "top": 6.006925940513611,
+          "low": 0.45050668716430664,
+          "random": 0.18938493728637695
+        },
+        "top_minus_random_drop": 5.817541003227234,
+        "top_minus_low_drop": 5.556419253349304,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0004.png",
+      "interpretation": "Measured defect-logit drops: top=+6.006926, low=+0.450507, random=+0.189385. Nondegenerate top-region deletion decreases the logit more than both controls: True. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
+    },
+    {
+      "patch_id": "Rollo1A_0000028_D_07-05-2024_10-31-24.702_2_5.png",
+      "partition": "test",
+      "label": 1,
+      "prediction": 1,
+      "score": 0.9582261443138123,
+      "incorrect": false,
+      "error_type": null,
+      "defect_pixels": 624,
+      "spatial": {
+        "mask_status": "positive",
+        "pointing_hit": false,
+        "attribution_mass_in_mask": 0.224800214458722,
+        "uniform_mass_reference": 0.009521484375,
+        "random_point_hit_expectation": 0.009521484375,
+        "zero_cam": false
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 3.1328139305114746,
+        "logit_drops": {
+          "top": 3.9923062920570374,
+          "low": 3.1615586802363396,
+          "random": 0.9265487194061279
+        },
+        "top_minus_random_drop": 3.0657575726509094,
+        "top_minus_low_drop": 0.8307476118206978,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0005.png",
+      "interpretation": "Measured defect-logit drops: top=+3.992306, low=+3.161559, random=+0.926549. Nondegenerate top-region deletion decreases the logit more than both controls: True. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
+    },
+    {
+      "patch_id": "Rollo1A_0000041_D_07-05-2024_10-31-36.937_3_6.png",
+      "partition": "test",
+      "label": 1,
+      "prediction": 1,
+      "score": 0.9930965304374695,
+      "incorrect": false,
+      "error_type": null,
+      "defect_pixels": 3708,
+      "spatial": {
+        "mask_status": "positive",
+        "pointing_hit": true,
+        "attribution_mass_in_mask": 0.3698931165273217,
+        "uniform_mass_reference": 0.05657958984375,
+        "random_point_hit_expectation": 0.05657958984375,
+        "zero_cam": false
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 4.968804836273193,
+        "logit_drops": {
+          "top": 5.158219218254089,
+          "low": 5.786752164363861,
+          "random": 1.7556638717651367
+        },
+        "top_minus_random_drop": 3.4025553464889526,
+        "top_minus_low_drop": -0.6285329461097717,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0006.png",
+      "interpretation": "Measured defect-logit drops: top=+5.158219, low=+5.786752, random=+1.755664. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
+    },
+    {
+      "patch_id": "Rollo1A_0000042_D_07-05-2024_10-31-38.385_0_0.png",
+      "partition": "test",
+      "label": 1,
+      "prediction": 1,
+      "score": 0.968159019947052,
+      "incorrect": false,
+      "error_type": null,
+      "defect_pixels": 3888,
+      "spatial": {
+        "mask_status": "positive",
+        "pointing_hit": false,
+        "attribution_mass_in_mask": 0.24184119963240988,
+        "uniform_mass_reference": 0.059326171875,
+        "random_point_hit_expectation": 0.059326171875,
+        "zero_cam": false
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 3.4146413803100586,
+        "logit_drops": {
+          "top": 4.4974517822265625,
+          "low": 3.424349434673786,
+          "random": 1.3169183731079102
+        },
+        "top_minus_random_drop": 3.1805334091186523,
+        "top_minus_low_drop": 1.0731023475527763,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0007.png",
+      "interpretation": "Measured defect-logit drops: top=+4.497452, low=+3.424349, random=+1.316918. Nondegenerate top-region deletion decreases the logit more than both controls: True. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
+    },
+    {
+      "patch_id": "Rollo1A_0000049_D_07-05-2024_10-31-48.962_2_5.png",
+      "partition": "test",
+      "label": 1,
+      "prediction": 1,
+      "score": 0.9972212314605713,
+      "incorrect": false,
+      "error_type": null,
+      "defect_pixels": 1233,
+      "spatial": {
+        "mask_status": "positive",
+        "pointing_hit": false,
+        "attribution_mass_in_mask": 0.18638084540692726,
+        "uniform_mass_reference": 0.0188140869140625,
+        "random_point_hit_expectation": 0.0188140869140625,
+        "zero_cam": false
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 5.882960319519043,
+        "logit_drops": {
+          "top": 5.552818655967712,
+          "low": 5.016073048114777,
+          "random": -0.42702150344848633
+        },
+        "top_minus_random_drop": 5.979840159416199,
+        "top_minus_low_drop": 0.5367456078529358,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0008.png",
+      "interpretation": "Measured defect-logit drops: top=+5.552819, low=+5.016073, random=-0.427022. Nondegenerate top-region deletion decreases the logit more than both controls: True. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
+    },
+    {
+      "patch_id": "Rollo1A_0000005_D_07-05-2024_10-31-00.029_2_5.png",
+      "partition": "test",
+      "label": 1,
+      "prediction": 0,
+      "score": 0.7905393838882447,
+      "incorrect": true,
+      "error_type": "false_negative",
+      "defect_pixels": 103,
+      "spatial": {
+        "mask_status": "positive",
+        "pointing_hit": false,
+        "attribution_mass_in_mask": 1.335637913787653e-05,
+        "uniform_mass_reference": 0.0015716552734375,
+        "random_point_hit_expectation": 0.0015716552734375,
+        "zero_cam": false
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 1.3281800746917725,
+        "logit_drops": {
+          "top": 1.5917399227619171,
+          "low": 2.7042598724365234,
+          "random": 0.49841707944869995
+        },
+        "top_minus_random_drop": 1.0933228433132172,
+        "top_minus_low_drop": -1.1125199496746063,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0009.png",
+      "interpretation": "Measured defect-logit drops: top=+1.591740, low=+2.704260, random=+0.498417. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
+    },
+    {
+      "patch_id": "Rollo1A_0000018_D_07-05-2024_10-31-14.432_2_0.png",
+      "partition": "test",
+      "label": 1,
+      "prediction": 0,
+      "score": 0.2046449929475784,
+      "incorrect": true,
+      "error_type": "false_negative",
+      "defect_pixels": 1764,
+      "spatial": {
+        "mask_status": "positive",
+        "pointing_hit": false,
+        "attribution_mass_in_mask": 0.2131905881595677,
+        "uniform_mass_reference": 0.02691650390625,
+        "random_point_hit_expectation": 0.02691650390625,
+        "zero_cam": false
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": -1.3575118780136108,
+        "logit_drops": {
+          "top": -0.42747950553894043,
+          "low": -0.42196160554885864,
+          "random": -0.6412292122840881
+        },
+        "top_minus_random_drop": 0.2137497067451477,
+        "top_minus_low_drop": -0.005517899990081787,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0010.png",
+      "interpretation": "Measured defect-logit drops: top=-0.427480, low=-0.421962, random=-0.641229. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
+    },
+    {
+      "patch_id": "Rollo1A_0000041_D_07-05-2024_10-31-36.937_3_5.png",
+      "partition": "test",
+      "label": 1,
+      "prediction": 0,
+      "score": 0.5957462787628174,
+      "incorrect": true,
+      "error_type": "false_negative",
+      "defect_pixels": 608,
+      "spatial": {
+        "mask_status": "positive",
+        "pointing_hit": false,
+        "attribution_mass_in_mask": 0.0014828061005981049,
+        "uniform_mass_reference": 0.00927734375,
+        "random_point_hit_expectation": 0.00927734375,
+        "zero_cam": false
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 0.38777226209640503,
+        "logit_drops": {
+          "top": -0.0494999885559082,
+          "low": 1.8246740698814392,
+          "random": 1.6158997416496277
+        },
+        "top_minus_random_drop": -1.6653997302055359,
+        "top_minus_low_drop": -1.8741740584373474,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0011.png",
+      "interpretation": "Measured defect-logit drops: top=-0.049500, low=+1.824674, random=+1.615900. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
+    },
+    {
+      "patch_id": "Rollo1A_0000042_D_07-05-2024_10-31-38.385_0_4.png",
+      "partition": "test",
+      "label": 1,
+      "prediction": 0,
+      "score": 0.5435166954994202,
+      "incorrect": true,
+      "error_type": "false_negative",
+      "defect_pixels": 3923,
+      "spatial": {
+        "mask_status": "positive",
+        "pointing_hit": false,
+        "attribution_mass_in_mask": 0.21818373028258312,
+        "uniform_mass_reference": 0.0598602294921875,
+        "random_point_hit_expectation": 0.0598602294921875,
+        "zero_cam": false
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 0.1745082587003708,
+        "logit_drops": {
+          "top": 1.1033865064382553,
+          "low": 0.660339966416359,
+          "random": 0.06698961555957794
+        },
+        "top_minus_random_drop": 1.0363968908786774,
+        "top_minus_low_drop": 0.44304654002189636,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0012.png",
+      "interpretation": "Measured defect-logit drops: top=+1.103387, low=+0.660340, random=+0.066990. Nondegenerate top-region deletion decreases the logit more than both controls: True. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
+    },
+    {
+      "patch_id": "Rollo1A_0000049_D_07-05-2024_10-31-48.962_1_5.png",
+      "partition": "test",
+      "label": 1,
+      "prediction": 0,
+      "score": 0.4561410546302796,
+      "incorrect": true,
+      "error_type": "false_negative",
+      "defect_pixels": 238,
+      "spatial": {
+        "mask_status": "positive",
+        "pointing_hit": false,
+        "attribution_mass_in_mask": 0.04825017466853394,
+        "uniform_mass_reference": 0.003631591796875,
+        "random_point_hit_expectation": 0.003631591796875,
+        "zero_cam": false
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": -0.17588789761066437,
+        "logit_drops": {
+          "top": 0.9794353693723679,
+          "low": 1.2701414078474045,
+          "random": -0.6551947444677353
+        },
+        "top_minus_random_drop": 1.6346301138401031,
+        "top_minus_low_drop": -0.2907060384750366,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0013.png",
+      "interpretation": "Measured defect-logit drops: top=+0.979435, low=+1.270141, random=-0.655195. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
+    },
+    {
+      "patch_id": "Rollo1A_0000054_D_07-05-2024_10-31-56.712_1_3.png",
+      "partition": "test",
+      "label": 1,
+      "prediction": 0,
+      "score": 0.11963298916816713,
+      "incorrect": true,
+      "error_type": "false_negative",
+      "defect_pixels": 118,
+      "spatial": {
+        "mask_status": "positive",
+        "pointing_hit": false,
+        "attribution_mass_in_mask": 0.0,
+        "uniform_mass_reference": 0.001800537109375,
+        "random_point_hit_expectation": 0.001800537109375,
+        "zero_cam": false
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": -1.9959101676940918,
+        "logit_drops": {
+          "top": -0.8431483507156372,
+          "low": -1.2301235795021057,
+          "random": -1.7271394431591034
+        },
+        "top_minus_random_drop": 0.8839910924434662,
+        "top_minus_low_drop": 0.3869752287864685,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0014.png",
+      "interpretation": "Measured defect-logit drops: top=-0.843148, low=-1.230124, random=-1.727139. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
+    },
+    {
+      "patch_id": "Rollo1A_0000062_D_07-05-2024_10-32-09.235_0_6.png",
+      "partition": "test",
+      "label": 1,
+      "prediction": 0,
+      "score": 0.4220194518566131,
+      "incorrect": true,
+      "error_type": "false_negative",
+      "defect_pixels": 1767,
+      "spatial": {
+        "mask_status": "positive",
+        "pointing_hit": false,
+        "attribution_mass_in_mask": 0.01400919539194607,
+        "uniform_mass_reference": 0.0269622802734375,
+        "random_point_hit_expectation": 0.0269622802734375,
+        "zero_cam": false
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": -0.31448879837989807,
+        "logit_drops": {
+          "top": -0.49155081808567047,
+          "low": 0.15949538350105286,
+          "random": -0.24014359712600708
+        },
+        "top_minus_random_drop": -0.2514072209596634,
+        "top_minus_low_drop": -0.6510462015867233,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0015.png",
+      "interpretation": "Measured defect-logit drops: top=-0.491551, low=+0.159495, random=-0.240144. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
+    },
+    {
+      "patch_id": "Rollo1A_0000074_D_07-05-2024_10-32-28.223_0_6.png",
+      "partition": "test",
+      "label": 1,
+      "prediction": 0,
+      "score": 0.34374502301216125,
+      "incorrect": true,
+      "error_type": "false_negative",
+      "defect_pixels": 544,
+      "spatial": {
+        "mask_status": "positive",
+        "pointing_hit": false,
+        "attribution_mass_in_mask": 0.03335276490160968,
+        "uniform_mass_reference": 0.00830078125,
+        "random_point_hit_expectation": 0.00830078125,
+        "zero_cam": false
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": -0.6466492414474487,
+        "logit_drops": {
+          "top": -1.2284277081489563,
+          "low": 0.3180011510848999,
+          "random": -1.517512559890747
+        },
+        "top_minus_random_drop": 0.28908485174179077,
+        "top_minus_low_drop": -1.5464288592338562,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0016.png",
+      "interpretation": "Measured defect-logit drops: top=-1.228428, low=+0.318001, random=-1.517513. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
+    },
+    {
+      "patch_id": "Rollo1A_0000083_D_07-05-2024_10-32-42.561_3_0.png",
+      "partition": "test",
+      "label": 1,
+      "prediction": 0,
+      "score": 0.24494829773902893,
+      "incorrect": true,
+      "error_type": "false_negative",
+      "defect_pixels": 778,
+      "spatial": {
+        "mask_status": "positive",
+        "pointing_hit": false,
+        "attribution_mass_in_mask": 0.053067396425398435,
+        "uniform_mass_reference": 0.011871337890625,
+        "random_point_hit_expectation": 0.011871337890625,
+        "zero_cam": false
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": -1.1257390975952148,
+        "logit_drops": {
+          "top": -0.49325281381607056,
+          "low": 0.35430216789245605,
+          "random": -0.32705026865005493
+        },
+        "top_minus_random_drop": -0.16620254516601562,
+        "top_minus_low_drop": -0.8475549817085266,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0017.png",
+      "interpretation": "Measured defect-logit drops: top=-0.493253, low=+0.354302, random=-0.327050. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
+    },
+    {
+      "patch_id": "Rollo1A_0000002_D_07-05-2024_10-30-56.352_3_4.png",
+      "partition": "test",
+      "label": 0,
+      "prediction": 1,
+      "score": 0.925760269165039,
+      "incorrect": true,
+      "error_type": "false_positive",
+      "defect_pixels": 0,
+      "spatial": {
+        "mask_status": "empty",
+        "pointing_hit": null,
+        "attribution_mass_in_mask": null
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 2.523315906524658,
+        "logit_drops": {
+          "top": 2.7795287370681763,
+          "low": 3.0009138882160187,
+          "random": -0.5926909446716309
+        },
+        "top_minus_random_drop": 3.372219681739807,
+        "top_minus_low_drop": -0.2213851511478424,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0018.png",
+      "interpretation": "Measured defect-logit drops: top=+2.779529, low=+3.000914, random=-0.592691. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
+    },
+    {
+      "patch_id": "Rollo1A_0000003_D_07-05-2024_10-30-57.587_3_5.png",
+      "partition": "test",
+      "label": 0,
+      "prediction": 1,
+      "score": 0.9679075479507446,
+      "incorrect": true,
+      "error_type": "false_positive",
+      "defect_pixels": 0,
+      "spatial": {
+        "mask_status": "empty",
+        "pointing_hit": null,
+        "attribution_mass_in_mask": null
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 3.4065158367156982,
+        "logit_drops": {
+          "top": 3.45204034820199,
+          "low": 3.9752917885780334,
+          "random": 1.0999066829681396
+        },
+        "top_minus_random_drop": 2.3521336652338505,
+        "top_minus_low_drop": -0.5232514403760433,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0019.png",
+      "interpretation": "Measured defect-logit drops: top=+3.452040, low=+3.975292, random=+1.099907. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
+    },
+    {
+      "patch_id": "Rollo1A_0000004_D_07-05-2024_10-30-58.817_1_5.png",
+      "partition": "test",
+      "label": 0,
+      "prediction": 1,
+      "score": 0.9645503759384155,
+      "incorrect": true,
+      "error_type": "false_positive",
+      "defect_pixels": 0,
+      "spatial": {
+        "mask_status": "empty",
+        "pointing_hit": null,
+        "attribution_mass_in_mask": null
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 3.3035495281219482,
+        "logit_drops": {
+          "top": 4.036186873912811,
+          "low": 3.6711978018283844,
+          "random": -0.2718942165374756
+        },
+        "top_minus_random_drop": 4.308081090450287,
+        "top_minus_low_drop": 0.3649890720844269,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0020.png",
+      "interpretation": "Measured defect-logit drops: top=+4.036187, low=+3.671198, random=-0.271894. Nondegenerate top-region deletion decreases the logit more than both controls: True. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
+    },
+    {
+      "patch_id": "Rollo1A_0000008_D_07-05-2024_10-31-03.591_3_5.png",
+      "partition": "test",
+      "label": 0,
+      "prediction": 1,
+      "score": 0.9587081670761107,
+      "incorrect": true,
+      "error_type": "false_positive",
+      "defect_pixels": 0,
+      "spatial": {
+        "mask_status": "empty",
+        "pointing_hit": null,
+        "attribution_mass_in_mask": null
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 3.1449217796325684,
+        "logit_drops": {
+          "top": 3.6897501349449158,
+          "low": 3.323121652007103,
+          "random": 1.8888825178146362
+        },
+        "top_minus_random_drop": 1.8008676171302795,
+        "top_minus_low_drop": 0.3666284829378128,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0021.png",
+      "interpretation": "Measured defect-logit drops: top=+3.689750, low=+3.323122, random=+1.888883. Nondegenerate top-region deletion decreases the logit more than both controls: True. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
+    },
+    {
+      "patch_id": "Rollo1A_0000019_D_07-05-2024_10-31-15.508_0_1.png",
+      "partition": "test",
+      "label": 0,
+      "prediction": 1,
+      "score": 0.975225031375885,
+      "incorrect": true,
+      "error_type": "false_positive",
+      "defect_pixels": 0,
+      "spatial": {
+        "mask_status": "empty",
+        "pointing_hit": null,
+        "attribution_mass_in_mask": null
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 3.672835111618042,
+        "logit_drops": {
+          "top": 4.560038805007935,
+          "low": 4.4581597447395325,
+          "random": 0.3498837947845459
+        },
+        "top_minus_random_drop": 4.210155010223389,
+        "top_minus_low_drop": 0.1018790602684021,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0022.png",
+      "interpretation": "Measured defect-logit drops: top=+4.560039, low=+4.458160, random=+0.349884. Nondegenerate top-region deletion decreases the logit more than both controls: True. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
+    },
+    {
+      "patch_id": "Rollo1A_0000021_D_07-05-2024_10-31-17.486_2_5.png",
+      "partition": "test",
+      "label": 0,
+      "prediction": 1,
+      "score": 0.9197635650634767,
+      "incorrect": true,
+      "error_type": "false_positive",
+      "defect_pixels": 0,
+      "spatial": {
+        "mask_status": "empty",
+        "pointing_hit": null,
+        "attribution_mass_in_mask": null
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 2.439138889312744,
+        "logit_drops": {
+          "top": 2.698800563812256,
+          "low": 3.489711284637451,
+          "random": 2.5303570330142975
+        },
+        "top_minus_random_drop": 0.16844353079795837,
+        "top_minus_low_drop": -0.7909107208251953,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0023.png",
+      "interpretation": "Measured defect-logit drops: top=+2.698801, low=+3.489711, random=+2.530357. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
+    },
+    {
+      "patch_id": "Rollo1A_0000031_D_07-05-2024_10-31-27.470_1_2.png",
+      "partition": "test",
+      "label": 0,
+      "prediction": 1,
+      "score": 0.9536352753639221,
+      "incorrect": true,
+      "error_type": "false_positive",
+      "defect_pixels": 0,
+      "spatial": {
+        "mask_status": "empty",
+        "pointing_hit": null,
+        "attribution_mass_in_mask": null
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 3.0237419605255127,
+        "logit_drops": {
+          "top": 3.8191306591033936,
+          "low": 3.716505527496338,
+          "random": 1.3161875009536743
+        },
+        "top_minus_random_drop": 2.5029431581497192,
+        "top_minus_low_drop": 0.10262513160705566,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0024.png",
+      "interpretation": "Measured defect-logit drops: top=+3.819131, low=+3.716506, random=+1.316188. Nondegenerate top-region deletion decreases the logit more than both controls: True. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
+    },
+    {
+      "patch_id": "Rollo1A_0000034_D_07-05-2024_10-31-30.153_3_4.png",
+      "partition": "test",
+      "label": 0,
+      "prediction": 1,
+      "score": 0.9171138405799866,
+      "incorrect": true,
+      "error_type": "false_positive",
+      "defect_pixels": 0,
+      "spatial": {
+        "mask_status": "empty",
+        "pointing_hit": null,
+        "attribution_mass_in_mask": null
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 2.4037625789642334,
+        "logit_drops": {
+          "top": 2.9646844267845154,
+          "low": 2.7909528613090515,
+          "random": -1.033747911453247
+        },
+        "top_minus_random_drop": 3.9984323382377625,
+        "top_minus_low_drop": 0.17373156547546387,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0025.png",
+      "interpretation": "Measured defect-logit drops: top=+2.964684, low=+2.790953, random=-1.033748. Nondegenerate top-region deletion decreases the logit more than both controls: True. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
+    },
+    {
+      "patch_id": "Rollo1A_0000038_D_07-05-2024_10-31-33.569_2_2.png",
+      "partition": "test",
+      "label": 0,
+      "prediction": 1,
+      "score": 0.9311019778251648,
+      "incorrect": true,
+      "error_type": "false_positive",
+      "defect_pixels": 0,
+      "spatial": {
+        "mask_status": "empty",
+        "pointing_hit": null,
+        "attribution_mass_in_mask": null
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": 2.6037421226501465,
+        "logit_drops": {
+          "top": 2.7804931849241257,
+          "low": 2.792443126440048,
+          "random": -0.09174823760986328
+        },
+        "top_minus_random_drop": 2.872241422533989,
+        "top_minus_low_drop": -0.011949941515922546,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0026.png",
+      "interpretation": "Measured defect-logit drops: top=+2.780493, low=+2.792443, random=-0.091748. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
+    },
+    {
+      "patch_id": "Rollo1A_0000001_D_07-05-2024_10-30-55.085_0_0.png",
+      "partition": "test",
+      "label": 0,
+      "prediction": 0,
+      "score": 0.12496597319841385,
+      "incorrect": false,
+      "error_type": null,
+      "defect_pixels": 0,
+      "spatial": {
+        "mask_status": "empty",
+        "pointing_hit": null,
+        "attribution_mass_in_mask": null
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": -1.9462213516235352,
+        "logit_drops": {
+          "top": -0.9193651676177979,
+          "low": -1.2872909903526306,
+          "random": -0.23745262622833252
+        },
+        "top_minus_random_drop": -0.6819125413894653,
+        "top_minus_low_drop": 0.36792582273483276,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0027.png",
+      "interpretation": "Measured defect-logit drops: top=-0.919365, low=-1.287291, random=-0.237453. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
+    },
+    {
+      "patch_id": "Rollo1A_0000002_D_07-05-2024_10-30-56.352_0_0.png",
+      "partition": "test",
+      "label": 0,
+      "prediction": 0,
+      "score": 0.11900641769170764,
+      "incorrect": false,
+      "error_type": null,
+      "defect_pixels": 0,
+      "spatial": {
+        "mask_status": "empty",
+        "pointing_hit": null,
+        "attribution_mass_in_mask": null
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": -2.001873016357422,
+        "logit_drops": {
+          "top": -1.5484927594661713,
+          "low": -1.1708881258964539,
+          "random": -1.6118508279323578
+        },
+        "top_minus_random_drop": 0.06335806846618652,
+        "top_minus_low_drop": -0.3776046335697174,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0028.png",
+      "interpretation": "Measured defect-logit drops: top=-1.548493, low=-1.170888, random=-1.611851. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
+    },
+    {
+      "patch_id": "Rollo1A_0000003_D_07-05-2024_10-30-57.587_0_0.png",
+      "partition": "test",
+      "label": 0,
+      "prediction": 0,
+      "score": 0.07593541592359541,
+      "incorrect": false,
+      "error_type": null,
+      "defect_pixels": 0,
+      "spatial": {
+        "mask_status": "empty",
+        "pointing_hit": null,
+        "attribution_mass_in_mask": null
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": -2.49889874458313,
+        "logit_drops": {
+          "top": -1.619231641292572,
+          "low": -1.845127820968628,
+          "random": -0.5833364725112915
+        },
+        "top_minus_random_drop": -1.0358951687812805,
+        "top_minus_low_drop": 0.2258961796760559,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0029.png",
+      "interpretation": "Measured defect-logit drops: top=-1.619232, low=-1.845128, random=-0.583336. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
+    },
+    {
+      "patch_id": "Rollo1A_0000004_D_07-05-2024_10-30-58.817_0_0.png",
+      "partition": "test",
+      "label": 0,
+      "prediction": 0,
+      "score": 0.4220685362815857,
+      "incorrect": false,
+      "error_type": null,
+      "defect_pixels": 0,
+      "spatial": {
+        "mask_status": "empty",
+        "pointing_hit": null,
+        "attribution_mass_in_mask": null
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": -0.31428754329681396,
+        "logit_drops": {
+          "top": -0.17587314546108246,
+          "low": 0.4809557795524597,
+          "random": 0.4572998881340027
+        },
+        "top_minus_random_drop": -0.6331730335950851,
+        "top_minus_low_drop": -0.6568289250135422,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0030.png",
+      "interpretation": "Measured defect-logit drops: top=-0.175873, low=+0.480956, random=+0.457300. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
+    },
+    {
+      "patch_id": "Rollo1A_0000005_D_07-05-2024_10-31-00.029_0_0.png",
+      "partition": "test",
+      "label": 0,
+      "prediction": 0,
+      "score": 0.08244042843580245,
+      "incorrect": false,
+      "error_type": null,
+      "defect_pixels": 0,
+      "spatial": {
+        "mask_status": "empty",
+        "pointing_hit": null,
+        "attribution_mass_in_mask": null
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": -2.4096415042877197,
+        "logit_drops": {
+          "top": -1.7097213864326477,
+          "low": -0.8129081726074219,
+          "random": 0.13178491592407227
+        },
+        "top_minus_random_drop": -1.84150630235672,
+        "top_minus_low_drop": -0.8968132138252258,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0031.png",
+      "interpretation": "Measured defect-logit drops: top=-1.709721, low=-0.812908, random=+0.131785. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
+    },
+    {
+      "patch_id": "Rollo1A_0000006_D_07-05-2024_10-31-01.223_0_0.png",
+      "partition": "test",
+      "label": 0,
+      "prediction": 0,
+      "score": 0.1892072409391403,
+      "incorrect": false,
+      "error_type": null,
+      "defect_pixels": 0,
+      "spatial": {
+        "mask_status": "empty",
+        "pointing_hit": null,
+        "attribution_mass_in_mask": null
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": -1.4551695585250854,
+        "logit_drops": {
+          "top": -1.4955511540174484,
+          "low": 0.1226578950881958,
+          "random": -0.3116050958633423
+        },
+        "top_minus_random_drop": -1.1839460581541061,
+        "top_minus_low_drop": -1.6182090491056442,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0032.png",
+      "interpretation": "Measured defect-logit drops: top=-1.495551, low=+0.122658, random=-0.311605. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
+    },
+    {
+      "patch_id": "Rollo1A_0000007_D_07-05-2024_10-31-02.401_0_0.png",
+      "partition": "test",
+      "label": 0,
+      "prediction": 0,
+      "score": 0.10957989841699602,
+      "incorrect": false,
+      "error_type": null,
+      "defect_pixels": 0,
+      "spatial": {
+        "mask_status": "empty",
+        "pointing_hit": null,
+        "attribution_mass_in_mask": null
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": -2.0950393676757812,
+        "logit_drops": {
+          "top": -0.9830203056335449,
+          "low": -0.8913537263870239,
+          "random": 0.1303730010986328
+        },
+        "top_minus_random_drop": -1.1133933067321777,
+        "top_minus_low_drop": -0.091666579246521,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0033.png",
+      "interpretation": "Measured defect-logit drops: top=-0.983020, low=-0.891354, random=+0.130373. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
+    },
+    {
+      "patch_id": "Rollo1A_0000008_D_07-05-2024_10-31-03.591_0_0.png",
+      "partition": "test",
+      "label": 0,
+      "prediction": 0,
+      "score": 0.13485310971736908,
+      "incorrect": false,
+      "error_type": null,
+      "defect_pixels": 0,
+      "spatial": {
+        "mask_status": "empty",
+        "pointing_hit": null,
+        "attribution_mass_in_mask": null
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": -1.8587132692337036,
+        "logit_drops": {
+          "top": -1.3514020442962646,
+          "low": -1.211271584033966,
+          "random": -0.7918548583984375
+        },
+        "top_minus_random_drop": -0.5595471858978271,
+        "top_minus_low_drop": -0.14013046026229858,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0034.png",
+      "interpretation": "Measured defect-logit drops: top=-1.351402, low=-1.211272, random=-0.791855. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
+    },
+    {
+      "patch_id": "Rollo1A_0000009_D_07-05-2024_10-31-04.715_0_0.png",
+      "partition": "test",
+      "label": 0,
+      "prediction": 0,
+      "score": 0.1412639021873474,
+      "incorrect": false,
+      "error_type": null,
+      "defect_pixels": 0,
+      "spatial": {
+        "mask_status": "empty",
+        "pointing_hit": null,
+        "attribution_mass_in_mask": null
+      },
+      "occlusion": {
+        "area_fraction": 0.0999908447265625,
+        "seed": 42,
+        "original_defect_logit": -1.804831862449646,
+        "logit_drops": {
+          "top": -0.9308763146400452,
+          "low": -0.4926612377166748,
+          "random": -0.25062429904937744
+        },
+        "top_minus_random_drop": -0.6802520155906677,
+        "top_minus_low_drop": -0.43821507692337036,
+        "degenerate_zero_cam": false,
+        "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
+      },
+      "overlay": "case-0035.png",
+      "interpretation": "Measured defect-logit drops: top=-0.930876, low=-0.492661, random=-0.250624. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
+    }
+  ],
+  "genuine_error_count": 18,
+  "three_error_requirement": "ANALYSED IN docs/three-xai-errors.json",
+  "sanity_check_cases": 36,
+  "limitations": "Mask correspondence is not faithfulness; coarse maps and mean-fill occlusion can mislead"
+}

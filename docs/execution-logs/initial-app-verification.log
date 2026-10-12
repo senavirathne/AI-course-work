@@ -1,0 +1,143 @@
+browserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+<launching> /workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --no-sandbox --disable-dev-shm-usage --user-data-dir=/tmp/playwright_chromiumdev_profile-Uo8yPQ --remote-debugging-pipe --no-startup-window
+<launched> pid=19
+[pid=19][err] [19:19:1011/184330.267706:FATAL:chrome/browser/process_singleton_posix.cc:297] Check failed: . socket() failed: Operation not permitted (1)
+[pid=19][err] [1011/184330.270793:ERROR:third_party/crashpad/crashpad/util/linux/scoped_ptrace_attach.cc:27] ptrace: Operation not permitted (1)
+[pid=19][err] [1011/184330.270914:ERROR:third_party/crashpad/crashpad/util/file/directory_reader_posix.cc:43] opendir /proc/19/task: No such file or directory (2)
+[pid=19][err] Received signal 6
+[pid=19][err] #0 0x562803008fc3 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0x6aecfc2)
+[pid=19][err] #1 0x562807fd7174 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0xbabb173)
+[pid=19][err] #2 0x7f778c727330 (/usr/lib/x86_64-linux-gnu/libc.so.6+0x4532f)
+[pid=19][err] #3 0x7f778c72727e (/usr/lib/x86_64-linux-gnu/libc.so.6+0x4527d)
+[pid=19][err] #4 0x7f778c70a8ff (/usr/lib/x86_64-linux-gnu/libc.so.6+0x288fe)
+[pid=19][err] #5 0x562807fcded5 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0xbab1ed4)
+[pid=19][err] #6 0x562807f8db8d (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0xba71b8c)
+[pid=19][err] #7 0x562807f8dadd (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0xba71adc)
+[pid=19][err] #8 0x562802cd2c12 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0x67b6c11)
+[pid=19][err] #9 0x5628014e34e9 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0x4fc74e8)
+[pid=19][err] #10 0x562807f8dd00 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0xba71cff)
+[pid=19][err] #11 0x562802743539 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0x6227538)
+[pid=19][err] #12 0x562802f5ccd8 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0x6a40cd7)
+[pid=19][err] #13 0x562802f5b9d7 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0x6a3f9d6)
+[pid=19][err] #14 0x562802f5b7e1 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0x6a3f7e0)
+[pid=19][err] #15 0x562802f5b784 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0x6a3f783)
+[pid=19][err] #16 0x562802f4a5c9 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0x6a2e5c8)
+[pid=19][err] #17 0x562802f4ad73 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0x6a2ed72)
+[pid=19][err] #18 0x562802443230 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0x5f2722f)
+[pid=19][err] #19 0x562802442a2e (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0x5f26a2d)
+[pid=19][err] #20 0x562802442060 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0x5f2605f)
+[pid=19][err] #21 0x7f778c70c1ca (/usr/lib/x86_64-linux-gnu/libc.so.6+0x2a1c9)
+[pid=19][err] #22 0x7f778c70c28b (/usr/lib/x86_64-linux-gnu/libc.so.6+0x2a28a)
+[pid=19][err] #23 0x5628032c236a (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0x6da6369)
+[pid=19][err]   r8: 000016c00006850b  r9: 0000000000000001 r10: 0000000000000008 r11: 0000000000000246
+[pid=19][err]  r12: 0000000000000006 r13: 000016c000068480 r14: 0000000000000016 r15: 000016c0000d0500
+[pid=19][err]   di: 0000000000000013  si: 0000000000000013  bp: 00007fff084ed4d0  bx: 0000000000000013
+[pid=19][err]   dx: 0000000000000006  ax: 0000000000000000  cx: 00007f778c780b2c  sp: 00007fff084ed490
+[pid=19][err]   ip: 00007f778c780b2c efl: 0000000000000246 cgf: 002b000000000033 erf: 0000000000000000
+[pid=19][err]  trp: 0000000000000000 msk: 0000000000000000 cr2: 0000000000000000
+[pid=19][err] [end of stack trace]
+Call log:
+[2m  - <launching> /workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --no-sandbox --disable-dev-shm-usage --user-data-dir=/tmp/playwright_chromiumdev_profile-Uo8yPQ --remote-debugging-pipe --no-startup-window[22m
+[2m  - <launched> pid=19[22m
+[2m  - [pid=19][err] [19:19:1011/184330.267706:FATAL:chrome/browser/process_singleton_posix.cc:297] Check failed: . socket() failed: Operation not permitted (1)[22m
+[2m  - [pid=19][err] [1011/184330.270793:ERROR:third_party/crashpad/crashpad/util/linux/scoped_ptrace_attach.cc:27] ptrace: Operation not permitted (1)[22m
+[2m  - [pid=19][err] [1011/184330.270914:ERROR:third_party/crashpad/crashpad/util/file/directory_reader_posix.cc:43] opendir /proc/19/task: No such file or directory (2)[22m
+[2m  - [pid=19][err] Received signal 6[22m
+[2m  - [pid=19][err] #0 0x562803008fc3 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0x6aecfc2)[22m
+[2m  - [pid=19][err] #1 0x562807fd7174 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0xbabb173)[22m
+[2m  - [pid=19][err] #2 0x7f778c727330 (/usr/lib/x86_64-linux-gnu/libc.so.6+0x4532f)[22m
+[2m  - [pid=19][err] #3 0x7f778c72727e (/usr/lib/x86_64-linux-gnu/libc.so.6+0x4527d)[22m
+[2m  - [pid=19][err] #4 0x7f778c70a8ff (/usr/lib/x86_64-linux-gnu/libc.so.6+0x288fe)[22m
+[2m  - [pid=19][err] #5 0x562807fcded5 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0xbab1ed4)[22m
+[2m  - [pid=19][err] #6 0x562807f8db8d (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0xba71b8c)[22m
+[2m  - [pid=19][err] #7 0x562807f8dadd (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0xba71adc)[22m
+[2m  - [pid=19][err] #8 0x562802cd2c12 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0x67b6c11)[22m
+[2m  - [pid=19][err] #9 0x5628014e34e9 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0x4fc74e8)[22m
+[2m  - [pid=19][err] #10 0x562807f8dd00 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0xba71cff)[22m
+[2m  - [pid=19][err] #11 0x562802743539 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0x6227538)[22m
+[2m  - [pid=19][err] #12 0x562802f5ccd8 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0x6a40cd7)[22m
+[2m  - [pid=19][err] #13 0x562802f5b9d7 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0x6a3f9d6)[22m
+[2m  - [pid=19][err] #14 0x562802f5b7e1 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0x6a3f7e0)[22m
+[2m  - [pid=19][err] #15 0x562802f5b784 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0x6a3f783)[22m
+[2m  - [pid=19][err] #16 0x562802f4a5c9 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0x6a2e5c8)[22m
+[2m  - [pid=19][err] #17 0x562802f4ad73 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0x6a2ed72)[22m
+[2m  - [pid=19][err] #18 0x562802443230 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0x5f2722f)[22m
+[2m  - [pid=19][err] #19 0x562802442a2e (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0x5f26a2d)[22m
+[2m  - [pid=19][err] #20 0x562802442060 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0x5f2605f)[22m
+[2m  - [pid=19][err] #21 0x7f778c70c1ca (/usr/lib/x86_64-linux-gnu/libc.so.6+0x2a1c9)[22m
+[2m  - [pid=19][err] #22 0x7f778c70c28b (/usr/lib/x86_64-linux-gnu/libc.so.6+0x2a28a)[22m
+[2m  - [pid=19][err] #23 0x5628032c236a (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0x6da6369)[22m
+[2m  - [pid=19][err]   r8: 000016c00006850b  r9: 0000000000000001 r10: 0000000000000008 r11: 0000000000000246[22m
+[2m  - [pid=19][err]  r12: 0000000000000006 r13: 000016c000068480 r14: 0000000000000016 r15: 000016c0000d0500[22m
+[2m  - [pid=19][err]   di: 0000000000000013  si: 0000000000000013  bp: 00007fff084ed4d0  bx: 0000000000000013[22m
+[2m  - [pid=19][err]   dx: 0000000000000006  ax: 0000000000000000  cx: 00007f778c780b2c  sp: 00007fff084ed490[22m
+[2m  - [pid=19][err]   ip: 00007f778c780b2c efl: 0000000000000246 cgf: 002b000000000033 erf: 0000000000000000[22m
+[2m  - [pid=19][err]  trp: 0000000000000000 msk: 0000000000000000 cr2: 0000000000000000[22m
+[2m  - [pid=19][err] [end of stack trace][22m
+[2m  - [pid=19] <gracefully close start>[22m
+[2m  - [pid=19] <kill>[22m
+[2m  - [pid=19] <will force kill>[22m
+[2m  - [pid=19] <process did exit: exitCode=null, signal=SIGABRT>[22m
+[2m  - [pid=19] starting temporary directories cleanup[22m
+[2m  - [pid=19] finished temporary directories cleanup[22m
+[2m  - [pid=19] <gracefully close end>[22m
+
+    at main (/workspace/scratch/881bf92802b6/fabric_defect_detection_coursework3/tools/browser_walkthrough.cjs:10:45)
+    at Object.<anonymous> (/workspace/scratch/881bf92802b6/fabric_defect_detection_coursework3/tools/browser_walkthrough.cjs:107:1) {
+  log: [
+    '  - <launching> /workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --no-sandbox --disable-dev-shm-usage --user-data-dir=/tmp/playwright_chromiumdev_profile-Uo8yPQ --remote-debugging-pipe --no-startup-window',
+    '  - <launched> pid=19',
+    '  - [pid=19][err] [19:19:1011/184330.267706:FATAL:chrome/browser/process_singleton_posix.cc:297] Check failed: . socket() failed: Operation not permitted (1)',
+    '  - [pid=19][err] [1011/184330.270793:ERROR:third_party/crashpad/crashpad/util/linux/scoped_ptrace_attach.cc:27] ptrace: Operation not permitted (1)',
+    '  - [pid=19][err] [1011/184330.270914:ERROR:third_party/crashpad/crashpad/util/file/directory_reader_posix.cc:43] opendir /proc/19/task: No such file or directory (2)',
+    '  - [pid=19][err] Received signal 6',
+    '  - [pid=19][err] #0 0x562803008fc3 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0x6aecfc2)',
+    '  - [pid=19][err] #1 0x562807fd7174 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0xbabb173)',
+    '  - [pid=19][err] #2 0x7f778c727330 (/usr/lib/x86_64-linux-gnu/libc.so.6+0x4532f)',
+    '  - [pid=19][err] #3 0x7f778c72727e (/usr/lib/x86_64-linux-gnu/libc.so.6+0x4527d)',
+    '  - [pid=19][err] #4 0x7f778c70a8ff (/usr/lib/x86_64-linux-gnu/libc.so.6+0x288fe)',
+    '  - [pid=19][err] #5 0x562807fcded5 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0xbab1ed4)',
+    '  - [pid=19][err] #6 0x562807f8db8d (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0xba71b8c)',
+    '  - [pid=19][err] #7 0x562807f8dadd (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0xba71adc)',
+    '  - [pid=19][err] #8 0x562802cd2c12 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0x67b6c11)',
+    '  - [pid=19][err] #9 0x5628014e34e9 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0x4fc74e8)',
+    '  - [pid=19][err] #10 0x562807f8dd00 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0xba71cff)',
+    '  - [pid=19][err] #11 0x562802743539 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0x6227538)',
+    '  - [pid=19][err] #12 0x562802f5ccd8 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0x6a40cd7)',
+    '  - [pid=19][err] #13 0x562802f5b9d7 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0x6a3f9d6)',
+    '  - [pid=19][err] #14 0x562802f5b7e1 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0x6a3f7e0)',
+    '  - [pid=19][err] #15 0x562802f5b784 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0x6a3f783)',
+    '  - [pid=19][err] #16 0x562802f4a5c9 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0x6a2e5c8)',
+    '  - [pid=19][err] #17 0x562802f4ad73 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0x6a2ed72)',
+    '  - [pid=19][err] #18 0x562802443230 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0x5f2722f)',
+    '  - [pid=19][err] #19 0x562802442a2e (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0x5f26a2d)',
+    '  - [pid=19][err] #20 0x562802442060 (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0x5f2605f)',
+    '  - [pid=19][err] #21 0x7f778c70c1ca (/usr/lib/x86_64-linux-gnu/libc.so.6+0x2a1c9)',
+    '  - [pid=19][err] #22 0x7f778c70c28b (/usr/lib/x86_64-linux-gnu/libc.so.6+0x2a28a)',
+    '  - [pid=19][err] #23 0x5628032c236a (/workspace/scratch/881bf92802b6/work/browser/chrome-linux64/chrome+0x6da6369)',
+    '  - [pid=19][err]   r8: 000016c00006850b  r9: 0000000000000001 r10: 0000000000000008 r11: 0000000000000246',
+    '  - [pid=19][err]  r12: 0000000000000006 r13: 000016c000068480 r14: 0000000000000016 r15: 000016c0000d0500',
+    '  - [pid=19][err]   di: 0000000000000013  si: 0000000000000013  bp: 00007fff084ed4d0  bx: 0000000000000013',
+    '  - [pid=19][err]   dx: 0000000000000006  ax: 0000000000000000  cx: 00007f778c780b2c  sp: 00007fff084ed490',
+    '  - [pid=19][err]   ip: 00007f778c780b2c efl: 0000000000000246 cgf: 002b000000000033 erf: 0000000000000000',
+    '  - [pid=19][err]  trp: 0000000000000000 msk: 0000000000000000 cr2: 0000000000000000',
+    '  - [pid=19][err] [end of stack trace]',
+    '  - [pid=19] <gracefully close start>',
+    '  - [pid=19] <kill>',
+    '  - [pid=19] <will force kill>',
+    '  - [pid=19] <process did exit: exitCode=null, signal=SIGABRT>',
+    '  - [pid=19] starting temporary directories cleanup',
+    '  - [pid=19] finished temporary directories cleanup',
+    '  - [pid=19] <gracefully close end>'
+  ]
+}
+Traceback (most recent call last):
+  File "/workspace/scratch/881bf92802b6/fabric_defect_detection_coursework3/tools/verify_live_application.py", line 201, in <module>
+    main()
+  File "/workspace/scratch/881bf92802b6/fabric_defect_detection_coursework3/tools/verify_live_application.py", line 164, in main
+    subprocess.run(
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node', 'tools/browser_walkthrough.cjs', '../work/initial-app/verification/browser-spec.json']' returned non-zero exit status 1.

@@ -1,0 +1,57 @@
+{
+  "created_at": "2026-10-11T15:50:51.832344+00:00",
+  "provenance": "RAW-FABRID_V1_REPRESENTATIVE_SAMPLE",
+  "data_root": "../sample",
+  "rows_csv": "split.csv",
+  "split_sha256": "e55a1e6349c832b2a136c735678570a1c000c3923e2fb8d47e3f3999b6a5b1b8",
+  "seed": 42,
+  "integrity_only_split_draws": 128,
+  "selected_draw": 32,
+  "requested_ratios": [
+    0.7,
+    0.15,
+    0.15
+  ],
+  "audit": {
+    "near_candidate_pairs_checked": 324109,
+    "near_match_pairs_joined": 0,
+    "near_full_pixel_checks": 7587,
+    "exact_duplicate_count": 0,
+    "duplicate_limitations": "No guarantee for rotations, nonidentical crops, or unrecorded rolls",
+    "metadata_sha256": "a32dc5c746d36908e88cb44a27c66eec718a3266e5c658066fb8c31c410ea914",
+    "verified_patch_counts": {
+      "0": 19165,
+      "1": 687
+    },
+    "source_images": 709,
+    "label_definition": "At least one exact-white (255) annotated defect pixel; normal status explicitly confirmed",
+    "mask_policy": "Intermediate edge intensities excluded; exact 255 agrees with publisher CSV defect areas. Raw mask bytes preserved.",
+    "physical_roll_information": "Not assumed; only use an explicitly documented group column",
+    "source_metadata_sha256": "72084d69c5c8d6b851f4c8de5a4b7b3a35e2ab5f048956dec437c5ceb7e2179a",
+    "verified_group_field": "roll_id",
+    "verified_source_groups": 7,
+    "group_origin": "Explicit join through publisher HighRes_Metadata.csv; no filename inference"
+  },
+  "counts": {
+    "train": {
+      "patches": 96,
+      "positive": 48,
+      "source_images": 80,
+      "independent_groups": 4
+    },
+    "val": {
+      "patches": 24,
+      "positive": 12,
+      "source_images": 22,
+      "independent_groups": 1
+    },
+    "test": {
+      "patches": 48,
+      "positive": 24,
+      "source_images": 34,
+      "independent_groups": 2
+    }
+  },
+  "sample_of_full_split_sha256": "af7daf13d0854ceeba004f1a06182bac778ac716021dec3d8fc40edf265aa76f",
+  "sample_note": "Authentic engineering sample; retains original full-study assignments. Deliberate class oversampling, not population prevalence. Never assessed final evidence."
+}

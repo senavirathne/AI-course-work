@@ -1,0 +1,20 @@
+{
+  "provenance": "RAW-FABRID_V1",
+  "findings": [
+    {
+      "finding": "Training has 539/13384 defective patches (4.0%).",
+      "constraint": "Compare weighted and unweighted BCE; retain both trivial references and defect-class F2.",
+      "evidence": "train class counts; no test image inspection"
+    },
+    {
+      "finding": "The smallest observed training defect covers 0.002% of a 256x256 patch.",
+      "constraint": "Preserve the patch resolution and avoid cropping/downsampling that can erase small defects; examine coarse CAM limits.",
+      "evidence": "verified training binary masks"
+    },
+    {
+      "finding": "13384 training patches come from 478 source images and 4 independent components.",
+      "constraint": "Restrict CNN capacity, test transfer learning, and use component bootstrap rather than patch-independent uncertainty.",
+      "evidence": "immutable source/duplicate manifest"
+    }
+  ]
+}

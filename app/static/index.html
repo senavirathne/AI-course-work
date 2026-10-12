@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fabric Inspector · Quality review</title>
+  <link rel="stylesheet" href="/static/style.css"><script src="/static/app.js" defer></script>
+</head>
+<body>
+<header><a class="brand" href="/">FI<span>Fabric Inspector</span></a><span class="tag">TEXTILE QUALITY REVIEW</span></header>
+<main>
+  <section class="intro"><p class="eyebrow">A second look at every patch</p><h1>Inspect fabric.<br>Understand the score.</h1>
+    <p>Upload a fabric patch to support your inspection decision. Review the model's score alongside the original patch and visual explanation.</p></section>
+  <div id="status" class="status" role="status" aria-live="polite">Checking the trained model…</div>
+  <div id="development" class="notice" hidden><strong>Development demonstration only.</strong> This checkpoint does not represent the full assessed RAW-FABRID study. Its sample results do not establish real-fabric performance or production suitability.</div>
+  <section class="workspace">
+    <aside class="panel upload-panel"><p class="eyebrow">01 / YOUR INPUT</p><h2>Fabric patch</h2>
+      <label class="drop-zone" for="file"><span class="upload-symbol" aria-hidden="true">↑</span><strong>Choose an image</strong><span>PNG or JPEG · 256 × 256 pixels</span><span>Grayscale or RGB · up to 5 MiB</span></label>
+      <input id="file" type="file" accept="image/png,image/jpeg"><p id="filename" class="muted">No image selected</p>
+      <button id="inspect" disabled>Inspect patch <span aria-hidden="true">→</span></button>
+      <label class="checkbox"><input id="include-explanation" type="checkbox" checked> Include visual explanation</label>
+      <div class="rule"></div><h3>What the score means</h3><p class="small">A higher model score indicates stronger evidence for the defective class. It is not a guaranteed confidence level.</p>
+      <h3>Your judgement comes first</h3><p class="small">Use the recommendation to prioritise review. A low score does not certify defect-free fabric. A patch cannot establish the quality of an entire roll.</p>
+    </aside>
+    <section class="panel result-panel"><div class="result-heading"><div><p class="eyebrow">02 / INSPECTION RESULT</p><h2 id="result-title">Ready for a closer look</h2></div><span id="model" class="model"></span></div>
+      <p id="empty" class="empty">Your image, score and explanation will appear here after inspection.</p>
+      <div id="results" hidden>
+        <div class="metrics"><div><p>Defect model score</p><strong id="score"></strong><small id="score-kind"></small></div><div><p>Binary prediction</p><strong id="prediction"></strong><small id="threshold"></small></div><div><p>Recommended review</p><strong id="recommendation"></strong><small>Inspector retains the decision</small></div></div>
+        <div class="image-grid"><figure><div class="image-frame"><img id="original" alt="Uploaded fabric patch"></div><figcaption>Original patch</figcaption></figure><figure id="explanation-figure"><div class="image-frame explanation-frame"><img id="explain-base" alt="Original fabric behind explanation"><img id="overlay" alt="Grad-CAM overlay showing positive attribution for the defect class"></div><figcaption>Grad-CAM · defect score</figcaption></figure></div>
+        <div id="explanation-controls"><label for="opacity">Overlay opacity <output id="opacity-value">55%</output></label><input id="opacity" type="range" min="0" max="100" value="55"><p class="small">Bright regions show positive model attribution for the defect class and can guide visual inspection. The overlay does not certify a defect boundary or explain production causes.</p><p id="zero-cam" class="notice" hidden>No positive attribution was found for this patch. The explanation does not show a hotspot.</p></div>
+        <p id="timing" class="muted"></p><details><summary>Thresholds and limitations</summary><p id="cutoffs"></p><p>Scores between the two recommendation cutoffs receive manual review. These bands follow validation-selected rules and assumed coursework costs; they are not statistically established uncertainty intervals.</p><p>Training is intended for industrial grayscale fabric patches. Phone photographs, unseen weaves, lighting changes, blur and tiny defects may produce errors. Automatic out-of-distribution detection has not been validated.</p></details>
+      </div>
+    </section>
+  </section>
+  <footer>Risk-aware, explainable fabric defect detection · Individual coursework prototype · Local inference</footer>
+</main>
+</body></html>

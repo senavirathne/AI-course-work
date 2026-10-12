@@ -1,0 +1,17 @@
+{
+  "created_at": "2026-10-11T20:22:45.357148+00:00",
+  "status": "RESOLVED",
+  "standard_kernel_preflight": "FAILED_RUNTIME: ZeroMQ interface discovery returned Operation not permitted; kernel died before kernel_info. No coursework cell executed or model result fabricated by that failure.",
+  "resolution": "Execute actual cells with IPython InteractiveShell.run_cell in a fresh process per notebook, preserve MIME rich outputs and native execution counters, validate nbformat and fail on any exception. Standard nbclient remains available as --engine kernel.",
+  "verified_preflight": "All five real dataset/EDA notebook code cells executed successfully, including all 168 authentic sample image/mask hashes and original-source isolation.",
+  "assessed_notebook_status": "Other three notebooks await complete final artifacts; final four-notebook execution has a separate evidence gate.",
+  "primary_api_reference": "https://ipython.readthedocs.io/en/9.16.0/api/generated/IPython.core.interactiveshell.html",
+  "scientific_configuration_changed": false,
+  "binary_image_serialisation": {
+    "reason": "The actual PIL overlay display produced image/png bytes. nbformat MIME bundles require a base64 string, which prevented notebook 03 outputs from being saved.",
+    "fix": "Encode exact binary rich-display bytes to base64; preserve text and JSON outputs.",
+    "implementation": "tools/run_notebook_cells.py",
+    "verification": "All four actual notebooks will execute again and nbformat schema validation must pass.",
+    "reported_at": "2026-10-12T05:40:51.447548+00:00"
+  }
+}

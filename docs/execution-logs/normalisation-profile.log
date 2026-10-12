@@ -1,0 +1,6 @@
+custom bit-identical True maxdiff 0.0
+{"model": "custom", "method": "torch", "ms_per_image": 0.8362392700018972}
+{"model": "custom", "method": "numpy", "ms_per_image": 0.10603589999846008}
+mobilenet bit-identical True maxdiff 0.0
+{"model": "mobilenet", "method": "torch", "ms_per_image": 0.8338107800000216}
+{"model": "mobilenet", "method": "numpy", "ms_per_image": 0.27612208999926224}

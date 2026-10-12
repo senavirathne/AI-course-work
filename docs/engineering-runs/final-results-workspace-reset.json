@@ -1,0 +1,63 @@
+{
+  "status": "COMPLETE",
+  "recorded_at": "2026-10-12T05:38:43.392665+00:00",
+  "reason": "The temporary workspace was cleared during the user pause. The durable version 8 checkpoint predates test access and contains all completed training/validation and the exact frozen evaluation. Later test, XAI and browser/video artifacts were lost.",
+  "checkpoint_library_file_id": "libfile_0f7ff59417a881919ec58f5a23f6bfdd",
+  "checkpoint_version": 8,
+  "checkpoint_sha256": "cdbe6c50552f67324a5ad5489430f3699918731edeb2873a3b47869b29105740",
+  "verified_checkpoint_content_files": 755,
+  "frozen_manifest_sha256": "604f9d3b1ff587210365ab15b48958d63ba20c8e39203d46b0152f90508099d6",
+  "predictive_source_sha256": "351c100577969134ae95ac2cd0323b29a5cc84e5787b970ca40c446928506c50",
+  "model_selection_changed": false,
+  "training_repeated": false,
+  "threshold_prompt_split_changed": false,
+  "historical_test_completion_observed_by": "2026-10-11T22:30:00Z",
+  "historical_aggregates_source": "Actual tool outputs observed in this conversation before the runtime reset; original per-example files are unavailable. These figures are cross-checks only, never substituted for reconstructed outputs.",
+  "historical_test_confusions_tp_fp_fn": {
+    "initial_ann": [
+      0,
+      0,
+      96
+    ],
+    "final_ann": [
+      68,
+      42,
+      28
+    ],
+    "classical": [
+      5,
+      12,
+      91
+    ],
+    "vlm": [
+      94,
+      2900,
+      2
+    ],
+    "seed_repeat_0": [
+      68,
+      42,
+      28
+    ],
+    "seed_repeat_1": [
+      74,
+      37,
+      22
+    ],
+    "seed_repeat_2": [
+      60,
+      5,
+      36
+    ]
+  },
+  "historical_vlm_unresolved": 48,
+  "historical_transport_interruption": "An earlier exec connection stopped after 2833 actual VLM responses; 163 missing responses were continued unchanged before the lost final files completed.",
+  "physical_test_computation_count": 2,
+  "original_guard_deleted_by_assistant": false,
+  "guard_note": "The original completed guard was lost with the cleared runtime. It is not present in the saved pre-test checkpoint. A fresh execution guard records artifact reconstruction; no test results will drive a new choice.",
+  "timing_note": "New measured timings replace unavailable timings. This is an identical-protocol reconstruction, not an independent validation study or a second selection opportunity.",
+  "reconstruction_started_at": "2026-10-12T05:39:17.424559+00:00",
+  "reconstruction_completed_at": "2026-10-12T06:21:46.598231+00:00",
+  "historical_confusion_crosschecks": "PASS: all six scored outputs and VLM unresolved count match prior observations",
+  "reconstructed_per_example_files": "Actual fresh inference on every frozen test example; no summary or historical value substituted"
+}

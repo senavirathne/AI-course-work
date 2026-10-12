@@ -1,0 +1,73 @@
+{
+  "run_id": "svm-search-025",
+  "status": "COMPLETE",
+  "started_at": "2026-10-11T16:17:54.733813+00:00",
+  "finished_at": "2026-10-11T16:17:55.840466+00:00",
+  "code_sha256": "f99eda01236c780ee67bc3ff8feeb6e9d2d8d99dd451cc20cc3eeed628111400",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "packages": {
+      "torch": "2.9.1+cpu",
+      "torchvision": "0.24.1+cpu",
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "scikit-learn": "1.8.0",
+      "scikit-image": "0.25.2",
+      "fastapi": "0.115.12",
+      "transformers": "4.57.1"
+    }
+  },
+  "device": "cpu",
+  "split_sha256": "af7daf13d0854ceeba004f1a06182bac778ac716021dec3d8fc40edf265aa76f",
+  "provenance": "RAW-FABRID_V1",
+  "seed": 42,
+  "config": {
+    "features": "lbp",
+    "kernel": "linear",
+    "C": 0.1,
+    "class_weight": "balanced",
+    "gamma": "scale"
+  },
+  "hypothesis": "Local texture histograms may be competitive when independent source coverage is limited",
+  "training_seconds": 0.7927531729997099,
+  "timing_note": "Feature extraction is charged on first use; later configurations reuse features",
+  "solver": "LinearSVC",
+  "solver_parameters": {
+    "C": 0.1,
+    "class_weight": "balanced",
+    "dual": "auto",
+    "fit_intercept": true,
+    "intercept_scaling": 1,
+    "loss": "squared_hinge",
+    "max_iter": 10000,
+    "multi_class": "ovr",
+    "penalty": "l2",
+    "random_state": 42,
+    "tol": 0.0001,
+    "verbose": 0
+  },
+  "fit_warnings": [],
+  "iterations": 16,
+  "validation_threshold": 0.539381754806415,
+  "validation_metrics": {
+    "n": 3472,
+    "tp": 36,
+    "tn": 1477,
+    "fp": 1943,
+    "fn": 16,
+    "precision": 0.01819100555836281,
+    "recall": 0.6923076923076923,
+    "f1": 0.03545051698670606,
+    "f2": 0.0823045267489712,
+    "accuracy": 0.43577188940092165,
+    "false_positive_rate": 0.5681286549707603,
+    "unresolved_count": 0,
+    "average_precision": 0.015368889221252957,
+    "roc_auc": 0.5249325236167341
+  },
+  "checkpoint": "artifacts/svm-search-025.joblib",
+  "checkpoint_sha256": "5c8b21fe98bacdf052403adc3c1d1b8d4904d583c8dfd1d518df6f2fffa30c0c",
+  "outcome": "Measured validation evidence; no test-driven changes",
+  "lesson": "Validation F2=0.0823, AP=0.0154, TP/FP/FN=36/1943/16. Matched counterpart svm-search-024 differs in class_weight (None -> balanced): F2 difference +0.0083, AP difference +0.0006. These descriptive differences do not establish a universal setting effect. lbp with LinearSVC, kernel=linear, C=0.1, class_weight=balanced. Descriptor extraction and scaling use train only; the score cutoff uses validation. Interpret kernel/weighting with matched feature/C controls. Only one validation origin is represented, so these are descriptive selection results."
+}

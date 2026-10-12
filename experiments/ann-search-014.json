@@ -1,0 +1,434 @@
+{
+  "run_id": "ann-search-014",
+  "started_at": "2026-10-11T20:01:43.277623+00:00",
+  "status": "COMPLETE",
+  "code_sha256": "5463caeb6591ce5912f229c98b8fb31c6126691258aad0b74a679104002ec526",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "packages": {
+      "torch": "2.9.1+cpu",
+      "torchvision": "0.24.1+cpu",
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "scikit-learn": "1.8.0",
+      "scikit-image": "0.25.2",
+      "fastapi": "0.115.12",
+      "transformers": "4.57.1"
+    }
+  },
+  "device": "cpu",
+  "split_sha256": "af7daf13d0854ceeba004f1a06182bac778ac716021dec3d8fc40edf265aa76f",
+  "provenance": "RAW-FABRID_V1",
+  "config": {
+    "model": {
+      "name": "custom",
+      "depth": 3,
+      "width": 16,
+      "dropout": 0.2
+    },
+    "optimizer": "adamw",
+    "learning_rate": 0.001,
+    "batch_size": 32,
+    "epochs": 4,
+    "patience": 3,
+    "cpu_threads": 8,
+    "memory_format": "channels_last",
+    "seed": 42,
+    "augment": true,
+    "weighted_loss": true,
+    "pretrained": false,
+    "hypothesis": "More channels may recover subtle local features"
+  },
+  "hypothesis": "More channels may recover subtle local features",
+  "pos_weight_from_train_only": 23.83116883116883,
+  "architecture": {
+    "layers": [
+      {
+        "layer": "features.0.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          1,
+          256,
+          256
+        ],
+        "output": [
+          1,
+          16,
+          256,
+          256
+        ],
+        "parameters": 144
+      },
+      {
+        "layer": "features.0.1",
+        "type": "BatchNorm2d",
+        "input": [
+          1,
+          16,
+          256,
+          256
+        ],
+        "output": [
+          1,
+          16,
+          256,
+          256
+        ],
+        "parameters": 32
+      },
+      {
+        "layer": "features.0.2",
+        "type": "ReLU",
+        "input": [
+          1,
+          16,
+          256,
+          256
+        ],
+        "output": [
+          1,
+          16,
+          256,
+          256
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "features.0.3",
+        "type": "MaxPool2d",
+        "input": [
+          1,
+          16,
+          256,
+          256
+        ],
+        "output": [
+          1,
+          16,
+          128,
+          128
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "features.1.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          16,
+          128,
+          128
+        ],
+        "output": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "parameters": 4608
+      },
+      {
+        "layer": "features.1.1",
+        "type": "BatchNorm2d",
+        "input": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "output": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "parameters": 64
+      },
+      {
+        "layer": "features.1.2",
+        "type": "ReLU",
+        "input": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "output": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "features.1.3",
+        "type": "MaxPool2d",
+        "input": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "output": [
+          1,
+          32,
+          64,
+          64
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "features.2.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          32,
+          64,
+          64
+        ],
+        "output": [
+          1,
+          64,
+          64,
+          64
+        ],
+        "parameters": 18432
+      },
+      {
+        "layer": "features.2.1",
+        "type": "BatchNorm2d",
+        "input": [
+          1,
+          64,
+          64,
+          64
+        ],
+        "output": [
+          1,
+          64,
+          64,
+          64
+        ],
+        "parameters": 128
+      },
+      {
+        "layer": "features.2.2",
+        "type": "ReLU",
+        "input": [
+          1,
+          64,
+          64,
+          64
+        ],
+        "output": [
+          1,
+          64,
+          64,
+          64
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "features.2.3",
+        "type": "MaxPool2d",
+        "input": [
+          1,
+          64,
+          64,
+          64
+        ],
+        "output": [
+          1,
+          64,
+          32,
+          32
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "pool",
+        "type": "AdaptiveAvgPool2d",
+        "input": [
+          1,
+          64,
+          32,
+          32
+        ],
+        "output": [
+          1,
+          64,
+          1,
+          1
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "classifier.0",
+        "type": "Flatten",
+        "input": [
+          1,
+          64,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          64
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "classifier.1",
+        "type": "Dropout",
+        "input": [
+          1,
+          64
+        ],
+        "output": [
+          1,
+          64
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "classifier.2",
+        "type": "Linear",
+        "input": [
+          1,
+          64
+        ],
+        "output": [
+          1,
+          1
+        ],
+        "parameters": 65
+      }
+    ],
+    "total_parameters": 23473,
+    "trainable_parameters": 23473
+  },
+  "determinism": "Fixed seeds; deterministic algorithms requested with warnings for unsupported kernels",
+  "finished_at": "2026-10-11T20:12:17.078894+00:00",
+  "epochs_completed": 4,
+  "selected_epoch": 2,
+  "early_stopped": false,
+  "training_seconds": 633.7835309019993,
+  "validation_threshold": 0.8132806062698364,
+  "validation_metrics": {
+    "n": 3472,
+    "tp": 18,
+    "tn": 2743,
+    "fp": 677,
+    "fn": 34,
+    "precision": 0.025899280575539568,
+    "recall": 0.34615384615384615,
+    "f1": 0.04819277108433735,
+    "f2": 0.09966777408637874,
+    "accuracy": 0.7952188940092166,
+    "false_positive_rate": 0.197953216374269,
+    "unresolved_count": 0,
+    "average_precision": 0.018813980536218005,
+    "roc_auc": 0.5685981781376518
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 1.2779973259388295,
+      "val_loss": 1.6983223664595783,
+      "val_f2": 0.08775877587758776,
+      "threshold": 0.8193609571456909,
+      "val_metrics": {
+        "n": 3472,
+        "tp": 39,
+        "tn": 1445,
+        "fp": 1975,
+        "fn": 13,
+        "precision": 0.019364448857994043,
+        "recall": 0.75,
+        "f1": 0.0377541142303969,
+        "f2": 0.08775877587758776,
+        "accuracy": 0.4274193548387097,
+        "false_positive_rate": 0.577485380116959,
+        "unresolved_count": 0,
+        "average_precision": 0.022754577678423937,
+        "roc_auc": 0.5876743139901034
+      }
+    },
+    {
+      "epoch": 2,
+      "train_loss": 1.269583595632723,
+      "val_loss": 1.620350550396651,
+      "val_f2": 0.09966777408637874,
+      "threshold": 0.8132806062698364,
+      "val_metrics": {
+        "n": 3472,
+        "tp": 18,
+        "tn": 2743,
+        "fp": 677,
+        "fn": 34,
+        "precision": 0.025899280575539568,
+        "recall": 0.34615384615384615,
+        "f1": 0.04819277108433735,
+        "f2": 0.09966777408637874,
+        "accuracy": 0.7952188940092166,
+        "false_positive_rate": 0.197953216374269,
+        "unresolved_count": 0,
+        "average_precision": 0.018813980536218005,
+        "roc_auc": 0.5685981781376518
+      }
+    },
+    {
+      "epoch": 3,
+      "train_loss": 1.2597177548816085,
+      "val_loss": 1.6048704402237994,
+      "val_f2": 0.08440913604766634,
+      "threshold": 0.815196081995964,
+      "val_metrics": {
+        "n": 3472,
+        "tp": 17,
+        "tn": 2638,
+        "fp": 782,
+        "fn": 35,
+        "precision": 0.02127659574468085,
+        "recall": 0.3269230769230769,
+        "f1": 0.0399529964747356,
+        "f2": 0.08440913604766634,
+        "accuracy": 0.7646889400921659,
+        "false_positive_rate": 0.22865497076023392,
+        "unresolved_count": 0,
+        "average_precision": 0.017354386875367785,
+        "roc_auc": 0.5486420377867747
+      }
+    },
+    {
+      "epoch": 4,
+      "train_loss": 1.2603861729113983,
+      "val_loss": 1.3065872401136407,
+      "val_f2": 0.09259259259259259,
+      "threshold": 0.7389048171043396,
+      "val_metrics": {
+        "n": 3472,
+        "tp": 18,
+        "tn": 2674,
+        "fp": 746,
+        "fn": 34,
+        "precision": 0.02356020942408377,
+        "recall": 0.34615384615384615,
+        "f1": 0.04411764705882353,
+        "f2": 0.09259259259259259,
+        "accuracy": 0.7753456221198156,
+        "false_positive_rate": 0.21812865497076023,
+        "unresolved_count": 0,
+        "average_precision": 0.017379434461849773,
+        "roc_auc": 0.5427968960863697
+      }
+    }
+  ],
+  "checkpoint": "artifacts/ann-search-014.pt",
+  "checkpoint_sha256": "148a6a24bc46613369c2c4cbc37f53e3f4d14216630aedcb47f908a479ef5704",
+  "outcome": "Measured validation evidence; no test-driven changes",
+  "lesson": "Validation F2=0.0997, AP=0.0188, TP/FP/FN=18/677/34. Difference from initial ANN F2=+0.0074; best epoch 2 of 4. Recorded mean training loss 1.2780 to 1.2604. Capacity/depth/dropout changed; use the recorded layer table and matched controls. More parameters are not evidence of better generalisation. Train/validation prevalence differs, so a raw loss gap alone does not diagnose overfitting."
+}

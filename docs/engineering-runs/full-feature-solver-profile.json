@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-10-11T19:43:47.593906+00:00",
+  "scope": "Train-only engineering timing; 2048 random training rows, not a scientific candidate or held-out metric",
+  "split_sha256": "af7daf13d0854ceeba004f1a06182bac778ac716021dec3d8fc40edf265aa76f",
+  "positives": 92,
+  "feature_dimensions": 8260,
+  "max_iter": 200,
+  "objective": "squared_hinge, C=1, balanced, tol=1e-4",
+  "results": [
+    {
+      "dual": true,
+      "seconds": 5.548128505000022,
+      "iterations": 200,
+      "warnings": [
+        "Liblinear failed to converge, increase the number of iterations."
+      ]
+    },
+    {
+      "dual": false,
+      "seconds": 22.02088523600014,
+      "iterations": 200,
+      "warnings": [
+        "Liblinear failed to converge, increase the number of iterations."
+      ]
+    }
+  ],
+  "limitations": "Subset N/P differs from the full study; this profiles iteration cost, not full-data convergence or validation quality."
+}

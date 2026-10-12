@@ -1,0 +1,75 @@
+ann-search-005 epoch 1/4: train loss=1.2779, val loss=1.0861, val F2=0.0900
+ann-search-005 epoch 2/4: train loss=1.2695, val loss=1.2998, val F2=0.0939
+ann-search-005 epoch 3/4: train loss=1.2532, val loss=1.3422, val F2=0.0804
+ann-search-005 epoch 4/4: train loss=1.2531, val loss=1.3050, val F2=0.0802
+ann-search-005: val F2=0.0939, 405.7s, RAW-FABRID_V1
+ann-search-006 epoch 1/4: train loss=1.2841, val loss=0.9270, val F2=0.0793
+ann-search-006 epoch 2/4: train loss=1.2732, val loss=0.9967, val F2=0.0791
+ann-search-006 epoch 3/4: train loss=1.2612, val loss=1.0231, val F2=0.0791
+ann-search-006 epoch 4/4: train loss=1.2807, val loss=0.9609, val F2=0.0783
+ann-search-006: val F2=0.0793, 393.8s, RAW-FABRID_V1
+ann-search-007 epoch 1/4: train loss=1.2838, val loss=1.0819, val F2=0.1289
+ann-search-007 epoch 2/4: train loss=1.2570, val loss=1.2761, val F2=0.1056
+ann-search-007 epoch 3/4: train loss=1.2364, val loss=1.0012, val F2=0.1441
+ann-search-007 epoch 4/4: train loss=1.2033, val loss=0.8151, val F2=0.1799
+ann-search-007: val F2=0.1799, 481.2s, RAW-FABRID_V1
+ann-search-008 epoch 1/4: train loss=1.2862, val loss=1.0328, val F2=0.0791
+ann-search-008 epoch 2/4: train loss=1.2767, val loss=1.1427, val F2=0.0790
+ann-search-008 epoch 3/4: train loss=1.2675, val loss=1.2746, val F2=0.0804
+ann-search-008 epoch 4/4: train loss=1.2737, val loss=1.1046, val F2=0.0823
+ann-search-008: val F2=0.0823, 455.9s, RAW-FABRID_V1
+ann-search-009 epoch 1/4: train loss=1.3210, val loss=0.9230, val F2=0.0829
+ann-search-009 epoch 2/4: train loss=1.3009, val loss=1.1506, val F2=0.0860
+ann-search-009 epoch 3/4: train loss=1.2646, val loss=1.4084, val F2=0.0808
+ann-search-009 epoch 4/4: train loss=1.2790, val loss=1.0644, val F2=0.0851
+ann-search-009: val F2=0.0860, 453.1s, RAW-FABRID_V1
+ann-search-010 epoch 1/4: train loss=1.3294, val loss=0.9405, val F2=0.0783
+ann-search-010 epoch 2/4: train loss=1.3187, val loss=1.2148, val F2=0.0800
+ann-search-010 epoch 3/4: train loss=1.2815, val loss=1.4399, val F2=0.0834
+ann-search-010 epoch 4/4: train loss=1.3104, val loss=1.2381, val F2=0.0829
+ann-search-010: val F2=0.0834, 461.2s, RAW-FABRID_V1
+ann-search-011 epoch 1/4: train loss=1.4101, val loss=1.0938, val F2=0.1274
+ann-search-011 epoch 2/4: train loss=1.4019, val loss=0.9573, val F2=0.0711
+ann-search-011 epoch 3/4: train loss=1.3599, val loss=0.8774, val F2=0.0707
+ann-search-011 epoch 4/4: train loss=1.3857, val loss=0.9667, val F2=0.0823
+ann-search-011: val F2=0.1274, 466.4s, RAW-FABRID_V1
+ann-search-012 epoch 1/4: train loss=0.1770, val loss=0.2720, val F2=0.0960
+ann-search-012 epoch 2/4: train loss=0.1671, val loss=0.2205, val F2=0.0919
+ann-search-012 epoch 3/4: train loss=0.1663, val loss=0.1876, val F2=0.0859
+ann-search-012 epoch 4/4: train loss=0.1651, val loss=0.1579, val F2=0.0851
+ann-search-012: val F2=0.0960, 451.9s, RAW-FABRID_V1
+ann-search-013 epoch 1/4: train loss=1.2700, val loss=1.1686, val F2=0.0909
+ann-search-013 epoch 2/4: train loss=1.2699, val loss=1.3092, val F2=0.0835
+ann-search-013 epoch 3/4: train loss=1.2531, val loss=1.2647, val F2=0.0802
+ann-search-013 epoch 4/4: train loss=1.2621, val loss=1.1652, val F2=0.0794
+ann-search-013: val F2=0.0909, 419.2s, RAW-FABRID_V1
+ann-search-014 epoch 1/4: train loss=1.2780, val loss=1.6983, val F2=0.0878
+ann-search-014 epoch 2/4: train loss=1.2696, val loss=1.6204, val F2=0.0997
+ann-search-014 epoch 3/4: train loss=1.2597, val loss=1.6049, val F2=0.0844
+ann-search-014 epoch 4/4: train loss=1.2604, val loss=1.3066, val F2=0.0926
+ann-search-014: val F2=0.0997, 633.8s, RAW-FABRID_V1
+ann-search-015 epoch 1/4: train loss=1.2645, val loss=1.1212, val F2=0.1056
+ann-search-015 epoch 2/4: train loss=1.2619, val loss=1.1618, val F2=0.1097
+ann-search-015 epoch 3/4: train loss=1.2474, val loss=1.2729, val F2=0.1020
+ann-search-015 epoch 4/4: train loss=1.2524, val loss=1.1660, val F2=0.1040
+ann-search-015: val F2=0.1097, 356.4s, RAW-FABRID_V1
+ann-search-016 epoch 1/4: train loss=1.0103, val loss=0.9690, val F2=0.1619
+ann-search-016 epoch 2/4: train loss=0.5852, val loss=1.0243, val F2=0.2749
+ann-search-016 epoch 3/4: train loss=0.3490, val loss=1.0145, val F2=0.2738
+ann-search-016 epoch 4/4: train loss=0.2121, val loss=0.7621, val F2=0.2518
+ann-search-016: val F2=0.2749, 639.5s, RAW-FABRID_V1
+ann-search-017 epoch 1/4: train loss=0.9933, val loss=0.9080, val F2=0.1963
+ann-search-017 epoch 2/4: train loss=0.6409, val loss=0.8427, val F2=0.3355
+ann-search-017 epoch 3/4: train loss=0.5522, val loss=0.8163, val F2=0.3237
+ann-search-017 epoch 4/4: train loss=0.5071, val loss=0.7309, val F2=0.2875
+ann-search-017: val F2=0.3355, 657.7s, RAW-FABRID_V1
+ann-search-018 epoch 1/4: train loss=0.9116, val loss=0.7790, val F2=0.3355
+ann-search-018 epoch 2/4: train loss=0.5316, val loss=1.0514, val F2=0.4856
+ann-search-018 epoch 3/4: train loss=0.3139, val loss=1.5073, val F2=0.3834
+ann-search-018 epoch 4/4: train loss=0.2142, val loss=0.5912, val F2=0.3909
+ann-search-018: val F2=0.4856, 625.3s, RAW-FABRID_V1
+ann-search-019 epoch 1/4: train loss=0.8838, val loss=0.7513, val F2=0.1832
+ann-search-019 epoch 2/4: train loss=0.5911, val loss=0.6143, val F2=0.4115
+ann-search-019 epoch 3/4: train loss=0.5009, val loss=0.8574, val F2=0.4137
+ann-search-019 epoch 4/4: train loss=0.4818, val loss=0.9111, val F2=0.2878
+ann-search-019: val F2=0.4137, 670.7s, RAW-FABRID_V1

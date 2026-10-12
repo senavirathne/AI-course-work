@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "checked_at": "2026-10-11T21:22:07.324397+00:00",
+  "code_sha256": "351c100577969134ae95ac2cd0323b29a5cc84e5787b970ca40c446928506c50",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "packages": {
+      "torch": "2.9.1+cpu",
+      "torchvision": "0.24.1+cpu",
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "scikit-learn": "1.8.0",
+      "scikit-image": "0.25.2",
+      "fastapi": "0.115.12",
+      "transformers": "4.57.1"
+    }
+  },
+  "pytest_passed": 52,
+  "pytest_warning_count": 1,
+  "pytest_warning": "Starlette uses a deprecated AnyIO alias; all assertions passed.",
+  "pytest_log": "docs/execution-logs/completion-source-tests.log",
+  "pytest_log_sha256": "240fb57bf96f76fba8566df0bb1a30313c4cf035dbd07ce12d2795bfbf79bff6",
+  "lint": "PASS",
+  "lint_command": "ruff check src app scripts tests tools",
+  "compilation": "PASS",
+  "compilation_command": "python -m compileall -q src app scripts tests tools",
+  "javascript_syntax": "PASS: node --check app/static/app.js and tools/browser_walkthrough.cjs",
+  "scope": "Complete current unit/integration/regression suite, including checkpoint integrity, image contracts, metrics, real-code XAI and refusal paths. Actual final application, notebook, PDF and video evidence have separate gates.",
+  "final_tools_checked_at": "2026-10-11T21:09:32.907625+00:00",
+  "final_tools_scope": "All added completion/report/notebook/video/package tools linted and compiled; model core unchanged since the 52-test run.",
+  "rechecked_at": "2026-10-12T05:40:51.446415+00:00",
+  "restored_runtime": true,
+  "restored_runtime_logs": {
+    "pytest": {
+      "path": "docs/execution-logs/restored-runtime-source-tests.log",
+      "sha256": "8f6b058bb45d62ee9d9479f8de85ed89ac950bcc6fe85227107c0aea15b02ad9"
+    },
+    "lint": {
+      "path": "docs/execution-logs/restored-runtime-lint.log",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    "compile": {
+      "path": "docs/execution-logs/restored-runtime-compilation.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "javascript": {
+      "path": "docs/execution-logs/restored-runtime-javascript.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

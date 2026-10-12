@@ -1,0 +1,8 @@
+{
+  "documented_at": "2026-10-11T21:34:39.812051+00:00",
+  "status": "RESOLVED_IN_PACKAGER",
+  "observed_issue": "In-progress checkpoint audit found two index/content mismatches because an active run record and log changed after their hashes were captured. Archive CRC passed; this was a metadata race, not corrupted training data or weights.",
+  "resolution": "Stream each member from one open file handle and hash exactly the bytes written; serialize the content index last. Exclude temporary model serialization files.",
+  "scientific_configuration_changed": false,
+  "final_verification": "Final deliverable must pass every member hash plus fresh inference in a separately extracted directory."
+}

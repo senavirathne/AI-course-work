@@ -1,0 +1,9 @@
+{
+  "status": "RECOVERING",
+  "saved_project_version": 2,
+  "preserved_completed_ann": 5,
+  "preserved_completed_classical": 17,
+  "preserved_partial_vlm_responses": 986,
+  "test_access_before_reset": false,
+  "source_archive": "docs/source-versions/recovered-checkpoint-sources.zip"
+}

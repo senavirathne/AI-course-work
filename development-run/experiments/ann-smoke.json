@@ -1,0 +1,409 @@
+{
+  "run_id": "ann-smoke",
+  "started_at": "2026-10-11T07:59:22.575849+00:00",
+  "status": "COMPLETE",
+  "code_sha256": "140b378a120aeffc3f43c4d301ae0fb1c21a13d493561741417ee4b4b917c7f9",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "packages": {
+      "torch": "2.9.1+cpu",
+      "torchvision": "0.24.1+cpu",
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "scikit-learn": "1.8.0",
+      "scikit-image": "0.25.2",
+      "fastapi": "0.115.12",
+      "transformers": "4.57.1"
+    }
+  },
+  "device": "cpu",
+  "split_sha256": "d709923c602c4acdbcf1dce5dbe9ff7036f540a683f00258aadfe40ef3d56ece",
+  "provenance": "SYNTHETIC_DEVELOPMENT_ONLY",
+  "config": {
+    "model": {
+      "name": "custom",
+      "depth": 3,
+      "width": 16,
+      "dropout": 0.2
+    },
+    "optimizer": "adamw",
+    "learning_rate": 0.001,
+    "batch_size": 32,
+    "epochs": 3,
+    "patience": 6,
+    "seed": 42,
+    "augment": true,
+    "weighted_loss": true,
+    "pretrained": false,
+    "hypothesis": "A small spatial CNN can learn local weave discontinuities without excessive capacity"
+  },
+  "hypothesis": "A small spatial CNN can learn local weave discontinuities without excessive capacity",
+  "pos_weight_from_train_only": 8.333333333333334,
+  "architecture": {
+    "layers": [
+      {
+        "layer": "features.0.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          1,
+          256,
+          256
+        ],
+        "output": [
+          1,
+          16,
+          256,
+          256
+        ],
+        "parameters": 144
+      },
+      {
+        "layer": "features.0.1",
+        "type": "BatchNorm2d",
+        "input": [
+          1,
+          16,
+          256,
+          256
+        ],
+        "output": [
+          1,
+          16,
+          256,
+          256
+        ],
+        "parameters": 32
+      },
+      {
+        "layer": "features.0.2",
+        "type": "ReLU",
+        "input": [
+          1,
+          16,
+          256,
+          256
+        ],
+        "output": [
+          1,
+          16,
+          256,
+          256
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "features.0.3",
+        "type": "MaxPool2d",
+        "input": [
+          1,
+          16,
+          256,
+          256
+        ],
+        "output": [
+          1,
+          16,
+          128,
+          128
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "features.1.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          16,
+          128,
+          128
+        ],
+        "output": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "parameters": 4608
+      },
+      {
+        "layer": "features.1.1",
+        "type": "BatchNorm2d",
+        "input": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "output": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "parameters": 64
+      },
+      {
+        "layer": "features.1.2",
+        "type": "ReLU",
+        "input": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "output": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "features.1.3",
+        "type": "MaxPool2d",
+        "input": [
+          1,
+          32,
+          128,
+          128
+        ],
+        "output": [
+          1,
+          32,
+          64,
+          64
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "features.2.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          32,
+          64,
+          64
+        ],
+        "output": [
+          1,
+          64,
+          64,
+          64
+        ],
+        "parameters": 18432
+      },
+      {
+        "layer": "features.2.1",
+        "type": "BatchNorm2d",
+        "input": [
+          1,
+          64,
+          64,
+          64
+        ],
+        "output": [
+          1,
+          64,
+          64,
+          64
+        ],
+        "parameters": 128
+      },
+      {
+        "layer": "features.2.2",
+        "type": "ReLU",
+        "input": [
+          1,
+          64,
+          64,
+          64
+        ],
+        "output": [
+          1,
+          64,
+          64,
+          64
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "features.2.3",
+        "type": "MaxPool2d",
+        "input": [
+          1,
+          64,
+          64,
+          64
+        ],
+        "output": [
+          1,
+          64,
+          32,
+          32
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "pool",
+        "type": "AdaptiveAvgPool2d",
+        "input": [
+          1,
+          64,
+          32,
+          32
+        ],
+        "output": [
+          1,
+          64,
+          1,
+          1
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "classifier.0",
+        "type": "Flatten",
+        "input": [
+          1,
+          64,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          64
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "classifier.1",
+        "type": "Dropout",
+        "input": [
+          1,
+          64
+        ],
+        "output": [
+          1,
+          64
+        ],
+        "parameters": 0
+      },
+      {
+        "layer": "classifier.2",
+        "type": "Linear",
+        "input": [
+          1,
+          64
+        ],
+        "output": [
+          1,
+          1
+        ],
+        "parameters": 65
+      }
+    ],
+    "total_parameters": 23473,
+    "trainable_parameters": 23473
+  },
+  "determinism": "Fixed seeds; deterministic algorithms requested with warnings for unsupported kernels",
+  "finished_at": "2026-10-11T07:59:26.844967+00:00",
+  "epochs_completed": 3,
+  "selected_epoch": 1,
+  "early_stopped": false,
+  "training_seconds": 4.253832427999896,
+  "validation_threshold": 0.5003136318922042,
+  "validation_metrics": {
+    "n": 28,
+    "tp": 5,
+    "tn": 10,
+    "fp": 13,
+    "fn": 0,
+    "precision": 0.2777777777777778,
+    "recall": 1.0,
+    "f1": 0.43478260869565216,
+    "f2": 0.6578947368421053,
+    "accuracy": 0.5357142857142857,
+    "false_positive_rate": 0.5652173913043478,
+    "unresolved_count": 0,
+    "average_precision": 0.41975723622782446,
+    "roc_auc": 0.6695652173913044
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 1.0927035808563232,
+      "val_loss": 1.598314881324768,
+      "val_f2": 0.6578947368421053,
+      "threshold": 0.5003136318922042,
+      "val_metrics": {
+        "n": 28,
+        "tp": 5,
+        "tn": 10,
+        "fp": 13,
+        "fn": 0,
+        "precision": 0.2777777777777778,
+        "recall": 1.0,
+        "f1": 0.43478260869565216,
+        "f2": 0.6578947368421053,
+        "accuracy": 0.5357142857142857,
+        "false_positive_rate": 0.5652173913043478,
+        "unresolved_count": 0,
+        "average_precision": 0.41975723622782446,
+        "roc_auc": 0.6695652173913044
+      }
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.9005694389343262,
+      "val_loss": 1.6235121488571167,
+      "val_f2": 0.5952380952380952,
+      "threshold": 0.48070140957832336,
+      "val_metrics": {
+        "n": 28,
+        "tp": 5,
+        "tn": 6,
+        "fp": 17,
+        "fn": 0,
+        "precision": 0.22727272727272727,
+        "recall": 1.0,
+        "f1": 0.37037037037037035,
+        "f2": 0.5952380952380952,
+        "accuracy": 0.39285714285714285,
+        "false_positive_rate": 0.7391304347826086,
+        "unresolved_count": 0,
+        "average_precision": 0.39695781342840164,
+        "roc_auc": 0.6173913043478261
+      }
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.8815401026180812,
+      "val_loss": 1.6566979885101318,
+      "val_f2": 0.5952380952380952,
+      "threshold": 0.4578483295440674,
+      "val_metrics": {
+        "n": 28,
+        "tp": 5,
+        "tn": 6,
+        "fp": 17,
+        "fn": 0,
+        "precision": 0.22727272727272727,
+        "recall": 1.0,
+        "f1": 0.37037037037037035,
+        "f2": 0.5952380952380952,
+        "accuracy": 0.39285714285714285,
+        "false_positive_rate": 0.7391304347826086,
+        "unresolved_count": 0,
+        "average_precision": 0.387994227994228,
+        "roc_auc": 0.5826086956521739
+      }
+    }
+  ],
+  "checkpoint": "artifacts/ann-smoke.pt",
+  "checkpoint_sha256": "dc44226cebc125f9fada775e5b9366890ed514615a267d9397ea1245fce93d6a",
+  "outcome": "Measured; compare with control before describing an improvement or failure",
+  "lesson": "PENDING evidence-based student interpretation"
+}

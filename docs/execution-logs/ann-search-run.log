@@ -1,0 +1,10 @@
+ann-search-000 epoch 1/4: train loss=1.2777, val loss=1.1875, val F2=0.0923
+ann-search-000 epoch 2/4: train loss=1.2706, val loss=1.2792, val F2=0.0847
+ann-search-000 epoch 3/4: train loss=1.2555, val loss=1.2645, val F2=0.0864
+ann-search-000 epoch 4/4: train loss=1.2564, val loss=1.1716, val F2=0.0876
+ann-search-000: val F2=0.0923, 841.2s, RAW-FABRID_V1
+ann-search-001 epoch 1/4: train loss=1.3150, val loss=1.0121, val F2=0.0791
+ann-search-001 epoch 2/4: train loss=1.2714, val loss=1.1212, val F2=0.0793
+ann-search-001 epoch 3/4: train loss=1.2681, val loss=1.2133, val F2=0.0804
+ann-search-001 epoch 4/4: train loss=1.2657, val loss=1.2736, val F2=0.0802
+ann-search-001: val F2=0.0804, 443.1s, RAW-FABRID_V1

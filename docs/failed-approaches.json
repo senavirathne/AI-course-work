@@ -1,0 +1,120 @@
+{
+  "recorded_at": "2026-10-11T16:39:56.289895+00:00",
+  "data_provenance": "RAW-FABRID_V1",
+  "selection_data": "Validation only; no test predictions accessed",
+  "attempts": [
+    {
+      "run_id": "svm-search-024",
+      "control_run_id": "svm-search-036",
+      "substantive": true,
+      "hypothesis": "Spatial LBP alone should capture irregular weave while retaining a small feature vector.",
+      "evidence": {
+        "partition": "val",
+        "examples": 3472,
+        "attempt_f2": 0.07395873880887505,
+        "control_f2": 0.1251564455569462,
+        "f2_delta": -0.05119770674807114,
+        "attempt_average_precision": 0.014787699928240368,
+        "control_average_precision": 0.03314777571968396,
+        "attempt_tp_fp_fn": [
+          38,
+          2323,
+          14
+        ],
+        "control_tp_fp_fn": [
+          20,
+          571,
+          32
+        ]
+      },
+      "controlled_change": "160-dimension spatial LBP versus 8260-dimension HOG plus the same LBP; same LinearSVC C=0.1, no class weighting, train-only scaler and split.",
+      "diagnosis": "The LBP-only approach ranks defects approximately at validation prevalence and creates 2323 false positives. Adding directional gradients raises average precision and F2 while reducing false positives to 571, at the expense of recall. Histograms discard gradient orientation and boundary information; the controlled descriptor change supports the importance of those features. It does not prove that all possible LBP variants fail.",
+      "lesson": "Retain HOG plus LBP as a meaningful tuned alternative and report the recall/inspection-burden tradeoff."
+    },
+    {
+      "run_id": "ann-search-000",
+      "control_run_id": "svm-search-036",
+      "substantive": true,
+      "hypothesis": "A small scratch CNN with weighted BCE can learn local defects from the approved training images.",
+      "evidence": {
+        "partition": "val",
+        "examples": 3472,
+        "attempt_f2": 0.09225922592259225,
+        "control_f2": 0.1251564455569462,
+        "f2_delta": -0.032897219634353936,
+        "attempt_average_precision": 0.018771645044438956,
+        "control_average_precision": 0.03314777571968396,
+        "attempt_tp_fp_fn": [
+          41,
+          1973,
+          11
+        ],
+        "control_tp_fp_fn": [
+          20,
+          571,
+          32
+        ]
+      },
+      "controlled_change": "Whole-method comparison: weighted scratch CNN versus HOG/LBP linear SVM; architecture, features and optimisation differ, so it is not a single-factor causal experiment.",
+      "diagnosis": "The initial CNN produces 1973 validation false positives and average precision 0.0188, only slightly above prevalence 0.0150. Weighted training loss falls from 1.2777 to 1.2564, and the best F2 occurs at epoch one. Within this four-epoch CPU budget it has not learned a selective cross-origin detector. Limited origin diversity, global averaging of tiny defects, and inadequate convergence are plausible contributors; these data do not isolate their separate causes. Weighted train and validation losses have different prevalence contributions, so their raw gap alone is not proof of overfitting.",
+      "lesson": "Test depth/capacity, weighting, augmentation and real pretraining, followed by the declared longer refinement. Treat the small CNN as a genuine initial baseline, not a guaranteed ANN success."
+    },
+    {
+      "run_id": "ann-search-001",
+      "control_run_id": "ann-search-000",
+      "substantive": false,
+      "hypothesis": "Reducing AdamW learning rate from 0.001 to 0.0001 may stabilise training.",
+      "evidence": {
+        "partition": "val",
+        "examples": 3472,
+        "attempt_f2": 0.08040201005025126,
+        "control_f2": 0.09225922592259225,
+        "f2_delta": -0.011857215872340995,
+        "attempt_average_precision": 0.013982060201329327,
+        "control_average_precision": 0.018771645044438956,
+        "attempt_tp_fp_fn": [
+          48,
+          2729,
+          4
+        ],
+        "control_tp_fp_fn": [
+          41,
+          1973,
+          11
+        ]
+      },
+      "controlled_change": "Learning rate only; identical seed, architecture, batch size, augmentation, weighting and four-epoch budget.",
+      "diagnosis": "The lower rate raises recall but causes 2729 false positives and lower F2/AP. Training loss falls slowly from 1.3150 to 1.2657, while validation loss rises from 1.0121 to 1.2736. Within the equal short budget, conservative updates do not improve discriminative ranking. More epochs could change this; the evidence rejects this short-budget tuning attempt, not low learning rates universally.",
+      "lesson": "Learning rate must be judged with a stated optimisation budget and ranking/false-positive evidence."
+    },
+    {
+      "run_id": "ann-search-003",
+      "control_run_id": "ann-search-000",
+      "substantive": false,
+      "hypothesis": "Increasing AdamW learning rate from 0.001 to 0.003 may learn more useful features quickly.",
+      "evidence": {
+        "partition": "val",
+        "examples": 3472,
+        "attempt_f2": 0.088134135855546,
+        "control_f2": 0.09225922592259225,
+        "f2_delta": -0.004125090067046255,
+        "attempt_average_precision": 0.015270795652155176,
+        "control_average_precision": 0.018771645044438956,
+        "attempt_tp_fp_fn": [
+          41,
+          2077,
+          11
+        ],
+        "control_tp_fp_fn": [
+          41,
+          1973,
+          11
+        ]
+      },
+      "controlled_change": "Learning rate only; same tensor values and RNG contract. NumPy normalisation was independently verified bit-identical for all input gray levels. Thread waiting policy affects elapsed time, not the declared model configuration.",
+      "diagnosis": "The higher rate retains the same 41 true positives and 11 false negatives as the initial control but adds 104 false positives. Validation F2 peaks at epoch two and then declines, and validation loss fluctuates. This supports rejecting faster updates within this short study; it does not establish a universal stability threshold or significant difference with only one validation origin.",
+      "lesson": "A larger update size is not an automatic improvement; record the actual specificity and learning trajectory."
+    }
+  ],
+  "scope": "Four genuine unsuccessful measured attempts, two substantive whole approaches. All other successful/unsuccessful runs remain in the complete experiment table. Engineering interruptions and parser checks are not counted."
+}

@@ -1,0 +1,26 @@
+{
+  "partition": "val",
+  "split_sha256": "af7daf13d0854ceeba004f1a06182bac778ac716021dec3d8fc40edf265aa76f",
+  "provenance": "RAW-FABRID_V1",
+  "run_ids": [
+    "ann-search-018",
+    "ann-repeat-123",
+    "ann-repeat-2026"
+  ],
+  "seeds": [
+    42,
+    123,
+    2026
+  ],
+  "f2": [
+    0.4856115107913669,
+    0.37037037037037035,
+    0.45267489711934156
+  ],
+  "mean": 0.4362189260936929,
+  "sample_std": 0.05935679698383919,
+  "range": 0.11524114042099654,
+  "material_variability_rule": "F2 range > 0.02 (predeclared coursework heuristic)",
+  "material": true,
+  "final_test_protocol": "Evaluate all three frozen repetitions in one final evaluation; report mean/spread. Do not choose a seed from test results."
+}

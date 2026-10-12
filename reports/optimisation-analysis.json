@@ -1,0 +1,102 @@
+{
+  "timestamp": "2026-10-12T06:23:07.048043+00:00",
+  "partition": "val",
+  "comparisons": [
+    {
+      "factor": "AdamW learning rate",
+      "run_ids": [
+        "ann-search-000",
+        "ann-search-001",
+        "ann-search-002",
+        "ann-search-003"
+      ],
+      "f2": [
+        0.09225922592259225,
+        0.08040201005025126,
+        0.09413067552602436,
+        0.088134135855546
+      ],
+      "ap": [
+        0.018771645044438956,
+        0.013982060201329327,
+        0.01649643654455813,
+        0.015270795652155176
+      ]
+    },
+    {
+      "factor": "Batch size",
+      "run_ids": [
+        "ann-search-000",
+        "ann-search-004",
+        "ann-search-005"
+      ],
+      "f2": [
+        0.09225922592259225,
+        0.0894805761676124,
+        0.09386733416770963
+      ],
+      "ap": [
+        0.018771645044438956,
+        0.01704242369651628,
+        0.01697806246509232
+      ]
+    },
+    {
+      "factor": "Convolutional blocks",
+      "run_ids": [
+        "ann-search-000",
+        "ann-search-006",
+        "ann-search-007"
+      ],
+      "f2": [
+        0.09225922592259225,
+        0.07933194154488518,
+        0.17985611510791366
+      ],
+      "ap": [
+        0.018771645044438956,
+        0.013909014356643667,
+        0.03679478241749071
+      ]
+    },
+    {
+      "factor": "Optimiser and its learning rate",
+      "run_ids": [
+        "ann-search-000",
+        "ann-search-001",
+        "ann-search-002",
+        "ann-search-003",
+        "ann-search-008",
+        "ann-search-009",
+        "ann-search-010",
+        "ann-search-011"
+      ],
+      "f2": [
+        0.09225922592259225,
+        0.08040201005025126,
+        0.09413067552602436,
+        0.088134135855546,
+        0.0823045267489712,
+        0.08598452278589853,
+        0.0833754421424962,
+        0.12738853503184713
+      ],
+      "ap": [
+        0.018771645044438956,
+        0.013982060201329327,
+        0.01649643654455813,
+        0.015270795652155176,
+        0.018019234529475788,
+        0.015046103638068705,
+        0.01618472392627591,
+        0.03326919351742855
+      ]
+    }
+  ],
+  "cautions": [
+    "Fixed epochs are not fixed gradient-update counts across batch sizes.",
+    "Loss magnitudes from weighted and unweighted BCE are not directly comparable.",
+    "Only one validation origin: these are selection observations, not population causal effects.",
+    "Each optimiser has its own tested learning-rate range; a single rate cannot establish superiority."
+  ]
+}

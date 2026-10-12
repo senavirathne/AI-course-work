@@ -1,0 +1,59 @@
+{
+  "status": "COMPLETE",
+  "split_sha256": "af7daf13d0854ceeba004f1a06182bac778ac716021dec3d8fc40edf265aa76f",
+  "provenance": "RAW-FABRID_V1",
+  "config": {
+    "model_id": "HuggingFaceTB/SmolVLM-256M-Instruct",
+    "revision": "7e3e67edbbed1bf9888184d9df282b700a323964",
+    "prompt": "Classify this fabric patch. Look for a local disruption, hole, stain or anomalous yarn rather than ordinary repeating weave or lighting. Reply with only one label: defective or defect_free.",
+    "prompt_index": 1,
+    "max_new_tokens": 24,
+    "do_sample": false,
+    "quantisation": "none",
+    "dtype": "bfloat16",
+    "device": "cpu",
+    "cpu_threads": 1,
+    "do_image_splitting": false,
+    "processor_longest_edge": 256,
+    "image_seq_len": 16,
+    "response_format": "label",
+    "parsing_policy": "Exact defective/defect_free token or one canonical sentence: The/This fabric (patch) is defective/defect-free. Any extra reasoning or ambiguity is unresolved.",
+    "max_retries": 1,
+    "failure_policy": "Unresolved (-1) counts as an error for its true class; retain every example",
+    "image_processor": "Publisher AutoProcessor at the same immutable revision",
+    "image_size_note": "Underlying 256x256 pixels preserved; no splitting or upscaling. 16 visual tokens = (256/16 patch size)^2 / 4^2 pixel-shuffle factor. Processor token count explicitly matches vision output.",
+    "marginal_api_charge": 0,
+    "compute_cost": "Hardware, electricity and CPU time; not measured as money"
+  },
+  "selected_on": "val",
+  "code_sha256": "5463caeb6591ce5912f229c98b8fb31c6126691258aad0b74a679104002ec526",
+  "validation_metrics": {
+    "n": 3472,
+    "tp": 52,
+    "tn": 0,
+    "fp": 3420,
+    "fn": 0,
+    "precision": 0.014976958525345621,
+    "recall": 1.0,
+    "f1": 0.029511918274687854,
+    "f2": 0.07065217391304347,
+    "accuracy": 0.014976958525345621,
+    "false_positive_rate": 1.0,
+    "unresolved_count": 23
+  },
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "packages": {
+      "torch": "2.9.1+cpu",
+      "torchvision": "0.24.1+cpu",
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "scikit-learn": "1.8.0",
+      "scikit-image": "0.25.2",
+      "fastapi": "0.115.12",
+      "transformers": "4.57.1"
+    }
+  },
+  "prompt_sha256": "e0c8a7c9db71d2e3d6d82221d69bb6749428c7f40e30a7c278805b62ce57130c"
+}

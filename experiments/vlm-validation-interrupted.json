@@ -1,0 +1,31 @@
+{
+  "status": "INTERRUPTED_CPU_CONTENTION",
+  "partition": "val",
+  "provenance": "RAW-FABRID_V1",
+  "config": {
+    "model_id": "HuggingFaceTB/SmolVLM-256M-Instruct",
+    "revision": "7e3e67edbbed1bf9888184d9df282b700a323964",
+    "prompt": "Inspect this fabric patch for a visible manufacturing defect. Reply with only one label: defective or defect_free.",
+    "prompt_index": 0,
+    "max_new_tokens": 24,
+    "do_sample": false,
+    "quantisation": "none",
+    "dtype": "bfloat16",
+    "device": "cpu",
+    "cpu_threads": 8,
+    "do_image_splitting": false,
+    "processor_longest_edge": 256,
+    "image_seq_len": 16,
+    "response_format": "label",
+    "parsing_policy": "Exact defective/defect_free token or one canonical sentence: The/This fabric (patch) is defective/defect-free. Any extra reasoning or ambiguity is unresolved.",
+    "max_retries": 1,
+    "failure_policy": "Unresolved (-1) counts as an error for its true class; retain every example",
+    "image_processor": "Publisher AutoProcessor at the same immutable revision",
+    "image_size_note": "Underlying 256x256 pixels preserved; no splitting or upscaling. 16 visual tokens = (256/16 patch size)^2 / 4^2 pixel-shuffle factor. Processor token count explicitly matches vision output.",
+    "marginal_api_charge": 0,
+    "compute_cost": "Hardware, electricity and CPU time; not measured as money"
+  },
+  "actual_examples_logged": 50,
+  "reason": "Concurrent CPU thread pools produced severe contention. Preserve every response; rerun complete validation with controlled scheduling. Not an assessed scientific failed approach.",
+  "responses": "vlm-validation-interrupted.responses.jsonl"
+}

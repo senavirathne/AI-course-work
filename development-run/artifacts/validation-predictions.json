@@ -1,0 +1,174 @@
+{
+  "partition": "val",
+  "provenance": "SYNTHETIC_DEVELOPMENT_ONLY",
+  "predictions": [
+    {
+      "patch_id": "RAW_FAB_0001_p0_0",
+      "label": 0,
+      "raw_score": 0.501859188079834,
+      "score": 0.501859188079834
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p0_1",
+      "label": 0,
+      "raw_score": 0.50111323595047,
+      "score": 0.50111323595047
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p0_2",
+      "label": 0,
+      "raw_score": 0.5000425577163696,
+      "score": 0.5000425577163696
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p0_3",
+      "label": 0,
+      "raw_score": 0.5001357197761536,
+      "score": 0.5001357197761536
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p0_4",
+      "label": 0,
+      "raw_score": 0.5001948475837708,
+      "score": 0.5001948475837708
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p0_5",
+      "label": 0,
+      "raw_score": 0.5005722641944885,
+      "score": 0.5005722641944885
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p0_6",
+      "label": 0,
+      "raw_score": 0.5023877620697021,
+      "score": 0.5023877620697021
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p1_0",
+      "label": 0,
+      "raw_score": 0.5018013119697571,
+      "score": 0.5018013119697571
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p1_1",
+      "label": 1,
+      "raw_score": 0.5018534660339355,
+      "score": 0.5018534660339355
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p1_2",
+      "label": 0,
+      "raw_score": 0.5000343918800354,
+      "score": 0.5000343918800353
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p1_3",
+      "label": 0,
+      "raw_score": 0.5001271963119507,
+      "score": 0.5001271963119507
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p1_4",
+      "label": 0,
+      "raw_score": 0.5001703500747681,
+      "score": 0.5001703500747681
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p1_5",
+      "label": 0,
+      "raw_score": 0.5005943775177002,
+      "score": 0.5005943775177002
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p1_6",
+      "label": 0,
+      "raw_score": 0.502345085144043,
+      "score": 0.502345085144043
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p2_0",
+      "label": 0,
+      "raw_score": 0.5018670558929443,
+      "score": 0.5018670558929443
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p2_1",
+      "label": 1,
+      "raw_score": 0.5015097856521606,
+      "score": 0.5015097856521606
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p2_2",
+      "label": 0,
+      "raw_score": 0.5000205039978027,
+      "score": 0.5000205039978027
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p2_3",
+      "label": 1,
+      "raw_score": 0.5003148317337036,
+      "score": 0.5003148317337037
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p2_4",
+      "label": 0,
+      "raw_score": 0.5001693964004517,
+      "score": 0.5001693964004517
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p2_5",
+      "label": 0,
+      "raw_score": 0.5006503462791443,
+      "score": 0.5006503462791443
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p2_6",
+      "label": 0,
+      "raw_score": 0.5023300051689148,
+      "score": 0.5023300051689148
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p3_0",
+      "label": 0,
+      "raw_score": 0.5018470287322998,
+      "score": 0.5018470287322998
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p3_1",
+      "label": 0,
+      "raw_score": 0.5011199712753296,
+      "score": 0.5011199712753296
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p3_2",
+      "label": 1,
+      "raw_score": 0.5004267692565918,
+      "score": 0.5004267692565918
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p3_3",
+      "label": 0,
+      "raw_score": 0.5001609921455383,
+      "score": 0.5001609921455383
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p3_4",
+      "label": 0,
+      "raw_score": 0.5001801252365112,
+      "score": 0.5001801252365112
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p3_5",
+      "label": 0,
+      "raw_score": 0.5006213188171387,
+      "score": 0.5006213188171386
+    },
+    {
+      "patch_id": "RAW_FAB_0001_p3_6",
+      "label": 1,
+      "raw_score": 0.5025956034660339,
+      "score": 0.5025956034660339
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "created_at": "2026-10-11T07:36:46.642432+00:00",
+  "provenance": "SYNTHETIC_DEVELOPMENT_ONLY",
+  "data_root": "../development",
+  "rows_csv": "split.csv",
+  "split_sha256": "d709923c602c4acdbcf1dce5dbe9ff7036f540a683f00258aadfe40ef3d56ece",
+  "seed": 42,
+  "integrity_only_split_draws": 128,
+  "selected_draw": 7,
+  "requested_ratios": [
+    0.7,
+    0.15,
+    0.15
+  ],
+  "audit": {
+    "near_candidate_pairs_checked": 556,
+    "near_match_pairs_joined": 0,
+    "exact_duplicate_count": 0,
+    "duplicate_limitations": "No guarantee for rotations, nonidentical crops, or unrecorded rolls",
+    "metadata_sha256": "d45e094e70908fb8b709aff8009164e86f02751eaf4a14eba023f2a2fb5771b0",
+    "verified_patch_counts": {
+      "0": 84,
+      "1": 16
+    },
+    "source_images": 4,
+    "label_definition": "Any nonzero annotated defect pixel; normal status explicitly confirmed",
+    "physical_roll_information": "Not assumed; only use an explicitly documented group column"
+  },
+  "counts": {
+    "train": {
+      "patches": 56,
+      "positive": 6,
+      "source_images": 2,
+      "independent_groups": 2,
+      "actual_ratio": 0.56
+    },
+    "val": {
+      "patches": 28,
+      "positive": 5,
+      "source_images": 1,
+      "independent_groups": 1,
+      "actual_ratio": 0.28
+    },
+    "test": {
+      "patches": 16,
+      "positive": 5,
+      "source_images": 1,
+      "independent_groups": 1,
+      "actual_ratio": 0.16
+    }
+  }
+}

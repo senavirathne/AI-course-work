@@ -1,0 +1,33 @@
+{
+  "documented_at": "2026-10-11T21:02:58.349105+00:00",
+  "implementation": "src/fabric_inspector/training/runner.py",
+  "objective": "BCEWithLogitsLoss, train-only positive weight (12845/539) when weighted, otherwise 1",
+  "weighted_positive_weight": 23.83116883116883,
+  "normalisation": "Shared NumPy float32 preprocessing; custom symmetric grayscale and MobileNet replicated grayscale with ImageNet channel statistics; preserve 256x256",
+  "optimisers": {
+    "AdamW": {
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay_default": 0.0001
+    },
+    "SGD": {
+      "momentum": 0.9,
+      "dampening": 0,
+      "nesterov": false,
+      "weight_decay_default": 0.0001
+    }
+  },
+  "scheduler": null,
+  "data_loader": {
+    "workers": 0,
+    "shuffle_training": true,
+    "drop_last": false,
+    "seeded_training_generator": true,
+    "augmentation": "Horizontal/vertical flips for declared augment=True; validation has no augmentation"
+  },
+  "checkpoint_rule": "Within a training run: best validation F2, tie lower validation loss. Across candidates: F2, AP, fewer parameters.",
+  "metadata_trained_steps_note": "This field counts completed run updates; selected_epoch/history identify how many updates produced the saved selected weights. It is not an exact selected-checkpoint update counter."
+}

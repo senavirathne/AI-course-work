@@ -1,0 +1,107 @@
+{
+  "timestamp": "2026-10-12T06:23:12.072713+00:00",
+  "posthoc_only": true,
+  "selection_changed": false,
+  "run_id": "ann-search-018",
+  "all_test_examples": 2996,
+  "publisher_origin_metrics": [
+    {
+      "publisher_origin": "Rollo1A",
+      "n": 2436,
+      "tp": 38,
+      "tn": 2354,
+      "fp": 29,
+      "fn": 15,
+      "precision": 0.5671641791044776,
+      "recall": 0.7169811320754716,
+      "f1": 0.6333333333333333,
+      "f2": 0.6810035842293907,
+      "accuracy": 0.9819376026272578,
+      "false_positive_rate": 0.012169534200587495,
+      "unresolved_count": 0,
+      "average_precision": 0.7068637314077789,
+      "roc_auc": 0.9116620084086177
+    },
+    {
+      "publisher_origin": "Rollo3A",
+      "n": 560,
+      "tp": 30,
+      "tn": 504,
+      "fp": 13,
+      "fn": 13,
+      "precision": 0.6976744186046512,
+      "recall": 0.6976744186046512,
+      "f1": 0.6976744186046512,
+      "f2": 0.6976744186046512,
+      "accuracy": 0.9535714285714286,
+      "false_positive_rate": 0.025145067698259187,
+      "unresolved_count": 0,
+      "average_precision": 0.7502914487012046,
+      "roc_auc": 0.8829112500562277
+    }
+  ],
+  "positive_mask_size_recall": [
+    {
+      "size_bin": "<=1% mask area",
+      "positives": 19,
+      "missed": 12,
+      "recall": 0.3684210526315789
+    },
+    {
+      "size_bin": "1%-5% mask area",
+      "positives": 40,
+      "missed": 11,
+      "recall": 0.725
+    },
+    {
+      "size_bin": ">5% mask area",
+      "positives": 37,
+      "missed": 5,
+      "recall": 0.8648648648648649
+    }
+  ],
+  "recommendations": [
+    {
+      "action": "routine_inspection",
+      "patches": 2858,
+      "fraction": 0.9539385847797063,
+      "defects": 28,
+      "normal": 2830
+    },
+    {
+      "action": "manual_review",
+      "patches": 116,
+      "fraction": 0.03871829105473965,
+      "defects": 46,
+      "normal": 70
+    },
+    {
+      "action": "priority_hold",
+      "patches": 22,
+      "fraction": 0.007343124165554072,
+      "defects": 22,
+      "normal": 0
+    }
+  ],
+  "recommendation_thresholds": {
+    "low": 0.8447646290063858,
+    "high": 0.9988340735435486,
+    "assumed_costs": {
+      "missed_routine_defect": 10,
+      "manual_review": 1,
+      "normal_priority_hold": 3
+    },
+    "validation_mean_cost": 0.11607142857142858,
+    "validation_review_or_hold_fraction": 0.05011520737327189,
+    "validation_routine_missed_defects": 23
+  },
+  "missed_defects_in_routine_band": 28,
+  "review_or_hold_fraction": 0.04606141522029372,
+  "brier_score": 0.1313881273970175,
+  "limitations": [
+    "Only two held-out publisher origin groups; group bootstrap intervals are coarse, not reliable factory-population coverage.",
+    "Mask size is publisher annotation area, not a verified severity/cost rating.",
+    "Origin identifiers do not establish individual physical rolls or unseen manufacturers.",
+    "Recommendation costs are coursework assumptions, not measured company costs; routine inspection never means certified defect-free."
+  ]
+}

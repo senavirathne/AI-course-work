@@ -1,0 +1,132 @@
+{
+  "status": "PASS",
+  "audited_at": "2026-10-11T21:02:58.348752+00:00",
+  "partition": "val",
+  "comparisons": [
+    {
+      "factor": "AdamW learning rate",
+      "attempt": "ann-search-001",
+      "control": "ann-search-000",
+      "changes": [
+        "learning_rate"
+      ],
+      "validation_f2": 0.08040201005025126,
+      "maximum_epochs": 4,
+      "gradient_updates_per_full_epoch": 419
+    },
+    {
+      "factor": "AdamW learning rate",
+      "attempt": "ann-search-002",
+      "control": "ann-search-000",
+      "changes": [
+        "learning_rate"
+      ],
+      "validation_f2": 0.09413067552602436,
+      "maximum_epochs": 4,
+      "gradient_updates_per_full_epoch": 419
+    },
+    {
+      "factor": "AdamW learning rate",
+      "attempt": "ann-search-003",
+      "control": "ann-search-000",
+      "changes": [
+        "learning_rate"
+      ],
+      "validation_f2": 0.088134135855546,
+      "maximum_epochs": 4,
+      "gradient_updates_per_full_epoch": 419
+    },
+    {
+      "factor": "batch size",
+      "attempt": "ann-search-004",
+      "control": "ann-search-000",
+      "changes": [
+        "batch_size"
+      ],
+      "validation_f2": 0.0894805761676124,
+      "maximum_epochs": 4,
+      "gradient_updates_per_full_epoch": 837
+    },
+    {
+      "factor": "batch size",
+      "attempt": "ann-search-005",
+      "control": "ann-search-000",
+      "changes": [
+        "batch_size"
+      ],
+      "validation_f2": 0.09386733416770963,
+      "maximum_epochs": 4,
+      "gradient_updates_per_full_epoch": 210
+    },
+    {
+      "factor": "actual depth",
+      "attempt": "ann-search-006",
+      "control": "ann-search-000",
+      "changes": [
+        "model.depth"
+      ],
+      "validation_f2": 0.07933194154488518,
+      "maximum_epochs": 4,
+      "gradient_updates_per_full_epoch": 419
+    },
+    {
+      "factor": "actual depth",
+      "attempt": "ann-search-007",
+      "control": "ann-search-000",
+      "changes": [
+        "model.depth"
+      ],
+      "validation_f2": 0.17985611510791366,
+      "maximum_epochs": 4,
+      "gradient_updates_per_full_epoch": 419
+    },
+    {
+      "factor": "optimiser-specific learning-rate ranges",
+      "attempt": "ann-search-008",
+      "control": "ann-search-000",
+      "changes": [
+        "optimizer"
+      ],
+      "validation_f2": 0.0823045267489712,
+      "maximum_epochs": 4,
+      "gradient_updates_per_full_epoch": 419
+    },
+    {
+      "factor": "optimiser-specific learning-rate ranges",
+      "attempt": "ann-search-009",
+      "control": "ann-search-000",
+      "changes": [
+        "learning_rate",
+        "optimizer"
+      ],
+      "validation_f2": 0.08598452278589853,
+      "maximum_epochs": 4,
+      "gradient_updates_per_full_epoch": 419
+    },
+    {
+      "factor": "optimiser-specific learning-rate ranges",
+      "attempt": "ann-search-010",
+      "control": "ann-search-000",
+      "changes": [
+        "learning_rate",
+        "optimizer"
+      ],
+      "validation_f2": 0.0833754421424962,
+      "maximum_epochs": 4,
+      "gradient_updates_per_full_epoch": 419
+    },
+    {
+      "factor": "optimiser-specific learning-rate ranges",
+      "attempt": "ann-search-011",
+      "control": "ann-search-000",
+      "changes": [
+        "learning_rate",
+        "optimizer"
+      ],
+      "validation_f2": 0.12738853503184713,
+      "maximum_epochs": 4,
+      "gradient_updates_per_full_epoch": 419
+    }
+  ],
+  "scope": "Observed scientific configuration changes checked against the declared matched controls. Fixed epochs across batch sizes are not fixed numbers of updates; optimiser and its learning-rate range change jointly."
+}

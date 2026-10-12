@@ -1,0 +1,40 @@
+Completed ANN screening configurations: 5/20
+Completed ANN screening configurations: 6/20
+Completed ANN screening configurations: 7/20
+Completed ANN screening configurations: 8/20
+Completed ANN screening configurations: 9/20
+Completed ANN screening configurations: 10/20
+Completed ANN screening configurations: 11/20
+Completed ANN screening configurations: 12/20
+Completed ANN screening configurations: 13/20
+Completed ANN screening configurations: 14/20
+Completed ANN screening configurations: 15/20
+Completed ANN screening configurations: 16/20
+Completed ANN screening configurations: 17/20
+Completed ANN screening configurations: 18/20
+Completed ANN screening configurations: 19/20
+Completed ANN screening configurations: 20/20
+Running tools/refine_ann.py
+ann-search-020 epoch 1/12: train loss=0.9116, val loss=0.7790, val F2=0.3355
+ann-search-020 epoch 2/12: train loss=0.5316, val loss=1.0514, val F2=0.4856
+ann-search-020 epoch 3/12: train loss=0.3139, val loss=1.5073, val F2=0.3834
+ann-search-020 epoch 4/12: train loss=0.2142, val loss=0.5912, val F2=0.3909
+ann-search-020 epoch 5/12: train loss=0.1955, val loss=1.2805, val F2=0.4733
+ann-search-020: val F2=0.4856, 815.2s, RAW-FABRID_V1
+Running scripts/select_models.py
+Selected ann-search-018 using validation only. Bundle: artifacts/serving-bundle.json
+Running scripts/repeat_seeds.py
+ann-repeat-123 epoch 1/4: train loss=0.8574, val loss=1.0110, val F2=0.0707
+ann-repeat-123 epoch 2/4: train loss=0.4919, val loss=0.7361, val F2=0.3704
+ann-repeat-123 epoch 3/4: train loss=0.3092, val loss=0.7844, val F2=0.3704
+ann-repeat-123 epoch 4/4: train loss=0.1951, val loss=0.8578, val F2=0.2698
+ann-repeat-123: val F2=0.3704, 660.1s, RAW-FABRID_V1
+ann-repeat-2026 epoch 1/4: train loss=0.8900, val loss=0.8236, val F2=0.0864
+ann-repeat-2026 epoch 2/4: train loss=0.4750, val loss=0.6997, val F2=0.4527
+ann-repeat-2026 epoch 3/4: train loss=0.3066, val loss=0.6773, val F2=0.4321
+ann-repeat-2026 epoch 4/4: train loss=0.1990, val loss=1.0988, val F2=0.3909
+ann-repeat-2026: val F2=0.4527, 693.0s, RAW-FABRID_V1
+Running scripts/xai_validate.py
+Validated 36 cases, 18 actual errors
+Running scripts/make_figures.py
+Generated figures from recorded runs; no held-out examples accessed

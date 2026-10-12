@@ -1,0 +1,262 @@
+{
+  "provenance": "RAW-FABRID_V1",
+  "comparisons": [
+    {
+      "run_id": "ann-repeat-123",
+      "control_run_id": "ann-search-000",
+      "config_changes": {
+        "model": {
+          "name": "mobilenet"
+        },
+        "learning_rate": 0.0003,
+        "seed": 123,
+        "augment": false,
+        "pretrained": true
+      },
+      "validation_f2_delta": 0.27811114444777807,
+      "interpretation": "Recorded validation F2 difference +0.278111 against ann-search-000. Changes: {'model': {'name': 'mobilenet'}, 'learning_rate': 0.0003, 'seed': 123, 'augment': False, 'pretrained': True}. This is a controlled single-factor comparison only when the substantive configuration difference is one factor; seed/refinement/multi-factor variants require separate interpretation. No held-out selection."
+    },
+    {
+      "run_id": "ann-repeat-2026",
+      "control_run_id": "ann-search-000",
+      "config_changes": {
+        "model": {
+          "name": "mobilenet"
+        },
+        "learning_rate": 0.0003,
+        "seed": 2026,
+        "augment": false,
+        "pretrained": true
+      },
+      "validation_f2_delta": 0.36041567119674933,
+      "interpretation": "Recorded validation F2 difference +0.360416 against ann-search-000. Changes: {'model': {'name': 'mobilenet'}, 'learning_rate': 0.0003, 'seed': 2026, 'augment': False, 'pretrained': True}. This is a controlled single-factor comparison only when the substantive configuration difference is one factor; seed/refinement/multi-factor variants require separate interpretation. No held-out selection."
+    },
+    {
+      "run_id": "ann-search-001",
+      "control_run_id": "ann-search-000",
+      "config_changes": {
+        "learning_rate": 0.0001
+      },
+      "validation_f2_delta": -0.011857215872340995,
+      "interpretation": "Recorded validation F2 difference -0.011857 against ann-search-000. Changes: {'learning_rate': 0.0001}. This is a controlled single-factor comparison only when the substantive configuration difference is one factor; seed/refinement/multi-factor variants require separate interpretation. No held-out selection."
+    },
+    {
+      "run_id": "ann-search-002",
+      "control_run_id": "ann-search-000",
+      "config_changes": {
+        "learning_rate": 0.0003
+      },
+      "validation_f2_delta": 0.001871449603432107,
+      "interpretation": "Recorded validation F2 difference +0.001871 against ann-search-000. Changes: {'learning_rate': 0.0003}. This is a controlled single-factor comparison only when the substantive configuration difference is one factor; seed/refinement/multi-factor variants require separate interpretation. No held-out selection."
+    },
+    {
+      "run_id": "ann-search-003",
+      "control_run_id": "ann-search-000",
+      "config_changes": {
+        "learning_rate": 0.003
+      },
+      "validation_f2_delta": -0.004125090067046255,
+      "interpretation": "Recorded validation F2 difference -0.004125 against ann-search-000. Changes: {'learning_rate': 0.003}. This is a controlled single-factor comparison only when the substantive configuration difference is one factor; seed/refinement/multi-factor variants require separate interpretation. No held-out selection."
+    },
+    {
+      "run_id": "ann-search-004",
+      "control_run_id": "ann-search-000",
+      "config_changes": {
+        "batch_size": 16
+      },
+      "validation_f2_delta": -0.0027786497549798506,
+      "interpretation": "Recorded validation F2 difference -0.002779 against ann-search-000. Changes: {'batch_size': 16}. This is a controlled single-factor comparison only when the substantive configuration difference is one factor; seed/refinement/multi-factor variants require separate interpretation. No held-out selection."
+    },
+    {
+      "run_id": "ann-search-005",
+      "control_run_id": "ann-search-000",
+      "config_changes": {
+        "batch_size": 64
+      },
+      "validation_f2_delta": 0.0016081082451173817,
+      "interpretation": "Recorded validation F2 difference +0.001608 against ann-search-000. Changes: {'batch_size': 64}. This is a controlled single-factor comparison only when the substantive configuration difference is one factor; seed/refinement/multi-factor variants require separate interpretation. No held-out selection."
+    },
+    {
+      "run_id": "ann-search-006",
+      "control_run_id": "ann-search-000",
+      "config_changes": {
+        "model": {
+          "name": "custom",
+          "depth": 2,
+          "width": 8,
+          "dropout": 0.2
+        }
+      },
+      "validation_f2_delta": -0.012927284377707071,
+      "interpretation": "Recorded validation F2 difference -0.012927 against ann-search-000. Changes: {'model': {'name': 'custom', 'depth': 2, 'width': 8, 'dropout': 0.2}}. This is a controlled single-factor comparison only when the substantive configuration difference is one factor; seed/refinement/multi-factor variants require separate interpretation. No held-out selection."
+    },
+    {
+      "run_id": "ann-search-007",
+      "control_run_id": "ann-search-000",
+      "config_changes": {
+        "model": {
+          "name": "custom",
+          "depth": 4,
+          "width": 8,
+          "dropout": 0.2
+        }
+      },
+      "validation_f2_delta": 0.08759688918532141,
+      "interpretation": "Recorded validation F2 difference +0.087597 against ann-search-000. Changes: {'model': {'name': 'custom', 'depth': 4, 'width': 8, 'dropout': 0.2}}. This is a controlled single-factor comparison only when the substantive configuration difference is one factor; seed/refinement/multi-factor variants require separate interpretation. No held-out selection."
+    },
+    {
+      "run_id": "ann-search-008",
+      "control_run_id": "ann-search-000",
+      "config_changes": {
+        "optimizer": "sgd"
+      },
+      "validation_f2_delta": -0.00995469917362106,
+      "interpretation": "Recorded validation F2 difference -0.009955 against ann-search-000. Changes: {'optimizer': 'sgd'}. This is a controlled single-factor comparison only when the substantive configuration difference is one factor; seed/refinement/multi-factor variants require separate interpretation. No held-out selection."
+    },
+    {
+      "run_id": "ann-search-009",
+      "control_run_id": "ann-search-000",
+      "config_changes": {
+        "optimizer": "sgd",
+        "learning_rate": 0.01
+      },
+      "validation_f2_delta": -0.006274703136693718,
+      "interpretation": "Recorded validation F2 difference -0.006275 against ann-search-000. Changes: {'optimizer': 'sgd', 'learning_rate': 0.01}. This is a controlled single-factor comparison only when the substantive configuration difference is one factor; seed/refinement/multi-factor variants require separate interpretation. No held-out selection."
+    },
+    {
+      "run_id": "ann-search-010",
+      "control_run_id": "ann-search-000",
+      "config_changes": {
+        "optimizer": "sgd",
+        "learning_rate": 0.03
+      },
+      "validation_f2_delta": -0.00888378378009605,
+      "interpretation": "Recorded validation F2 difference -0.008884 against ann-search-000. Changes: {'optimizer': 'sgd', 'learning_rate': 0.03}. This is a controlled single-factor comparison only when the substantive configuration difference is one factor; seed/refinement/multi-factor variants require separate interpretation. No held-out selection."
+    },
+    {
+      "run_id": "ann-search-011",
+      "control_run_id": "ann-search-000",
+      "config_changes": {
+        "optimizer": "sgd",
+        "learning_rate": 0.1
+      },
+      "validation_f2_delta": 0.03512930910925488,
+      "interpretation": "Recorded validation F2 difference +0.035129 against ann-search-000. Changes: {'optimizer': 'sgd', 'learning_rate': 0.1}. This is a controlled single-factor comparison only when the substantive configuration difference is one factor; seed/refinement/multi-factor variants require separate interpretation. No held-out selection."
+    },
+    {
+      "run_id": "ann-search-012",
+      "control_run_id": "ann-search-000",
+      "config_changes": {
+        "weighted_loss": false
+      },
+      "validation_f2_delta": 0.0037488589687670187,
+      "interpretation": "Recorded validation F2 difference +0.003749 against ann-search-000. Changes: {'weighted_loss': False}. This is a controlled single-factor comparison only when the substantive configuration difference is one factor; seed/refinement/multi-factor variants require separate interpretation. No held-out selection."
+    },
+    {
+      "run_id": "ann-search-013",
+      "control_run_id": "ann-search-000",
+      "config_changes": {
+        "augment": false
+      },
+      "validation_f2_delta": -0.0013904315963511188,
+      "interpretation": "Recorded validation F2 difference -0.001390 against ann-search-000. Changes: {'augment': False}. This is a controlled single-factor comparison only when the substantive configuration difference is one factor; seed/refinement/multi-factor variants require separate interpretation. No held-out selection."
+    },
+    {
+      "run_id": "ann-search-014",
+      "control_run_id": "ann-search-000",
+      "config_changes": {
+        "model": {
+          "name": "custom",
+          "depth": 3,
+          "width": 16,
+          "dropout": 0.2
+        }
+      },
+      "validation_f2_delta": 0.007408548163786485,
+      "interpretation": "Recorded validation F2 difference +0.007409 against ann-search-000. Changes: {'model': {'name': 'custom', 'depth': 3, 'width': 16, 'dropout': 0.2}}. This is a controlled single-factor comparison only when the substantive configuration difference is one factor; seed/refinement/multi-factor variants require separate interpretation. No held-out selection."
+    },
+    {
+      "run_id": "ann-search-015",
+      "control_run_id": "ann-search-000",
+      "config_changes": {
+        "model": {
+          "name": "custom",
+          "depth": 3,
+          "width": 8,
+          "dropout": 0
+        }
+      },
+      "validation_f2_delta": 0.017480143076036,
+      "interpretation": "Recorded validation F2 difference +0.017480 against ann-search-000. Changes: {'model': {'name': 'custom', 'depth': 3, 'width': 8, 'dropout': 0}}. This is a controlled single-factor comparison only when the substantive configuration difference is one factor; seed/refinement/multi-factor variants require separate interpretation. No held-out selection."
+    },
+    {
+      "run_id": "ann-search-016",
+      "control_run_id": "ann-search-000",
+      "config_changes": {
+        "model": {
+          "name": "mobilenet"
+        },
+        "learning_rate": 0.0001,
+        "augment": false,
+        "pretrained": true
+      },
+      "validation_f2_delta": 0.1826098840250517,
+      "interpretation": "Recorded validation F2 difference +0.182610 against ann-search-000. Changes: {'model': {'name': 'mobilenet'}, 'learning_rate': 0.0001, 'augment': False, 'pretrained': True}. This is a controlled single-factor comparison only when the substantive configuration difference is one factor; seed/refinement/multi-factor variants require separate interpretation. No held-out selection."
+    },
+    {
+      "run_id": "ann-search-017",
+      "control_run_id": "ann-search-000",
+      "config_changes": {
+        "model": {
+          "name": "mobilenet"
+        },
+        "learning_rate": 0.0001,
+        "pretrained": true
+      },
+      "validation_f2_delta": 0.24320403286335027,
+      "interpretation": "Recorded validation F2 difference +0.243204 against ann-search-000. Changes: {'model': {'name': 'mobilenet'}, 'learning_rate': 0.0001, 'pretrained': True}. This is a controlled single-factor comparison only when the substantive configuration difference is one factor; seed/refinement/multi-factor variants require separate interpretation. No held-out selection."
+    },
+    {
+      "run_id": "ann-search-018",
+      "control_run_id": "ann-search-000",
+      "config_changes": {
+        "model": {
+          "name": "mobilenet"
+        },
+        "learning_rate": 0.0003,
+        "augment": false,
+        "pretrained": true
+      },
+      "validation_f2_delta": 0.3933522848687746,
+      "interpretation": "Recorded validation F2 difference +0.393352 against ann-search-000. Changes: {'model': {'name': 'mobilenet'}, 'learning_rate': 0.0003, 'augment': False, 'pretrained': True}. This is a controlled single-factor comparison only when the substantive configuration difference is one factor; seed/refinement/multi-factor variants require separate interpretation. No held-out selection."
+    },
+    {
+      "run_id": "ann-search-019",
+      "control_run_id": "ann-search-000",
+      "config_changes": {
+        "model": {
+          "name": "mobilenet"
+        },
+        "learning_rate": 0.0003,
+        "pretrained": true
+      },
+      "validation_f2_delta": 0.32140983882560914,
+      "interpretation": "Recorded validation F2 difference +0.321410 against ann-search-000. Changes: {'model': {'name': 'mobilenet'}, 'learning_rate': 0.0003, 'pretrained': True}. This is a controlled single-factor comparison only when the substantive configuration difference is one factor; seed/refinement/multi-factor variants require separate interpretation. No held-out selection."
+    },
+    {
+      "run_id": "ann-search-020",
+      "control_run_id": "ann-search-000",
+      "config_changes": {
+        "model": {
+          "name": "mobilenet"
+        },
+        "learning_rate": 0.0003,
+        "epochs": 12,
+        "augment": false,
+        "pretrained": true
+      },
+      "validation_f2_delta": 0.3933522848687746,
+      "interpretation": "Recorded validation F2 difference +0.393352 against ann-search-000. Changes: {'model': {'name': 'mobilenet'}, 'learning_rate': 0.0003, 'epochs': 12, 'augment': False, 'pretrained': True}. This is a controlled single-factor comparison only when the substantive configuration difference is one factor; seed/refinement/multi-factor variants require separate interpretation. No held-out selection."
+    }
+  ]
+}

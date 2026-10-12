@@ -1,0 +1,180 @@
+{
+  "format": 1,
+  "method": "Ordered raw byte parts; no Git LFS account or external mutable download required.",
+  "files": [
+    {
+      "path": "artifacts/svm-search-042.joblib",
+      "bytes": 231616566,
+      "sha256": "fbca2a302f2c9a9c054f2529c01971238c19859b8cf68031aca2d6eb095d29e8",
+      "parts": [
+        {
+          "path": "repository-assets/fbca2a302f2c9a9c054f2529c01971238c19859b8cf68031aca2d6eb095d29e8.part000",
+          "bytes": 8388608,
+          "sha256": "0f986cd5f4033ea96c9937bae9ae7c100127b2fd0b93a741e5799ecf2a94715e"
+        },
+        {
+          "path": "repository-assets/fbca2a302f2c9a9c054f2529c01971238c19859b8cf68031aca2d6eb095d29e8.part001",
+          "bytes": 8388608,
+          "sha256": "a42b57333c00314150f63e010535507706cdd64f692a2fac6a48530d7de0017a"
+        },
+        {
+          "path": "repository-assets/fbca2a302f2c9a9c054f2529c01971238c19859b8cf68031aca2d6eb095d29e8.part002",
+          "bytes": 8388608,
+          "sha256": "c85365f90b27bde4530ff878cce25d0f74d7cbbff39f3b2ed8cd4e643539bc4a"
+        },
+        {
+          "path": "repository-assets/fbca2a302f2c9a9c054f2529c01971238c19859b8cf68031aca2d6eb095d29e8.part003",
+          "bytes": 8388608,
+          "sha256": "966354a5903dcbf0c11701ea94ab6829548a79d7dcbb5a9cead48e931ad7cc07"
+        },
+        {
+          "path": "repository-assets/fbca2a302f2c9a9c054f2529c01971238c19859b8cf68031aca2d6eb095d29e8.part004",
+          "bytes": 8388608,
+          "sha256": "6bae5f2bddbfa1321f6794f4f84faba5ae40df200418f0685846af2d288252f1"
+        },
+        {
+          "path": "repository-assets/fbca2a302f2c9a9c054f2529c01971238c19859b8cf68031aca2d6eb095d29e8.part005",
+          "bytes": 8388608,
+          "sha256": "1a75520f831b13a1625ce5250c2bb828704d746c549ef55c9fe4259cb4edc644"
+        },
+        {
+          "path": "repository-assets/fbca2a302f2c9a9c054f2529c01971238c19859b8cf68031aca2d6eb095d29e8.part006",
+          "bytes": 8388608,
+          "sha256": "7b8b2b50cb9bb1f74099f30424cea44452ec406efabf3b9900e718b4686ce74b"
+        },
+        {
+          "path": "repository-assets/fbca2a302f2c9a9c054f2529c01971238c19859b8cf68031aca2d6eb095d29e8.part007",
+          "bytes": 8388608,
+          "sha256": "d9508470ce16bdc2c2b3636ed769899ba6184930942c0f418af219c27de3bee4"
+        },
+        {
+          "path": "repository-assets/fbca2a302f2c9a9c054f2529c01971238c19859b8cf68031aca2d6eb095d29e8.part008",
+          "bytes": 8388608,
+          "sha256": "056b2283f5bfe4539df4abc5d430f2608a35e50055d67cbe4157b801aec8da6f"
+        },
+        {
+          "path": "repository-assets/fbca2a302f2c9a9c054f2529c01971238c19859b8cf68031aca2d6eb095d29e8.part009",
+          "bytes": 8388608,
+          "sha256": "a51a465cd3b95dbc35c08d1e76ecece1aac867b09f4f9ac5b0b954a1834bb50b"
+        },
+        {
+          "path": "repository-assets/fbca2a302f2c9a9c054f2529c01971238c19859b8cf68031aca2d6eb095d29e8.part010",
+          "bytes": 8388608,
+          "sha256": "5b18f8b6eef2bc78dc4c9067423a242c99ad39f2410052217b39cde53fa8a013"
+        },
+        {
+          "path": "repository-assets/fbca2a302f2c9a9c054f2529c01971238c19859b8cf68031aca2d6eb095d29e8.part011",
+          "bytes": 8388608,
+          "sha256": "112a20eb8b46b207e5979a8f8a2edce1497bcb944a63b41161f3784fcc45da9d"
+        },
+        {
+          "path": "repository-assets/fbca2a302f2c9a9c054f2529c01971238c19859b8cf68031aca2d6eb095d29e8.part012",
+          "bytes": 8388608,
+          "sha256": "ada56b83829d28978a6a990dc496174bcdc3b1e5aaa2730cb0d71419d15b2ee3"
+        },
+        {
+          "path": "repository-assets/fbca2a302f2c9a9c054f2529c01971238c19859b8cf68031aca2d6eb095d29e8.part013",
+          "bytes": 8388608,
+          "sha256": "44914fd1cd59fa036e5c397e075dd72a2a0abe0ba713f6ea424d580df676527f"
+        },
+        {
+          "path": "repository-assets/fbca2a302f2c9a9c054f2529c01971238c19859b8cf68031aca2d6eb095d29e8.part014",
+          "bytes": 8388608,
+          "sha256": "33686a13a7671341b6d5089bef1f486407b1cb313b83efad290e8416596c8345"
+        },
+        {
+          "path": "repository-assets/fbca2a302f2c9a9c054f2529c01971238c19859b8cf68031aca2d6eb095d29e8.part015",
+          "bytes": 8388608,
+          "sha256": "be39bf7638f77bd91863910eb02365a6ec0f4748327cd44832a4cff43b9b2b96"
+        },
+        {
+          "path": "repository-assets/fbca2a302f2c9a9c054f2529c01971238c19859b8cf68031aca2d6eb095d29e8.part016",
+          "bytes": 8388608,
+          "sha256": "88984876669585cb862b863f1ce579718a68ffb8d5248cfaefea28006fbff4dc"
+        },
+        {
+          "path": "repository-assets/fbca2a302f2c9a9c054f2529c01971238c19859b8cf68031aca2d6eb095d29e8.part017",
+          "bytes": 8388608,
+          "sha256": "6ccf55ceabdb52f17c977f47e7b302b266ca8bdbb4d00219f40203de70e86fca"
+        },
+        {
+          "path": "repository-assets/fbca2a302f2c9a9c054f2529c01971238c19859b8cf68031aca2d6eb095d29e8.part018",
+          "bytes": 8388608,
+          "sha256": "fae491d37d7999a483c3d84ce8b5ba64f3729338d474cf735f2afee46cfec0b0"
+        },
+        {
+          "path": "repository-assets/fbca2a302f2c9a9c054f2529c01971238c19859b8cf68031aca2d6eb095d29e8.part019",
+          "bytes": 8388608,
+          "sha256": "10f492758d24f32d04825422bdfd080e056f6aca59392b4ae66b7daf30c339bb"
+        },
+        {
+          "path": "repository-assets/fbca2a302f2c9a9c054f2529c01971238c19859b8cf68031aca2d6eb095d29e8.part020",
+          "bytes": 8388608,
+          "sha256": "b5f5015544488ed5741d6477cfee47dc9eab78ed8319d37ebda10d2053ff904a"
+        },
+        {
+          "path": "repository-assets/fbca2a302f2c9a9c054f2529c01971238c19859b8cf68031aca2d6eb095d29e8.part021",
+          "bytes": 8388608,
+          "sha256": "1ea2a003b9df5cb59f68ace6835094fe7e06c1b6d4c124ee9cd980b18110d5a6"
+        },
+        {
+          "path": "repository-assets/fbca2a302f2c9a9c054f2529c01971238c19859b8cf68031aca2d6eb095d29e8.part022",
+          "bytes": 8388608,
+          "sha256": "501447f61f76379f08353ef60883b8537280f7328d73c1a54fae52b86bf78a6c"
+        },
+        {
+          "path": "repository-assets/fbca2a302f2c9a9c054f2529c01971238c19859b8cf68031aca2d6eb095d29e8.part023",
+          "bytes": 8388608,
+          "sha256": "ccd08f74acc050b4cd7b8c323e1f911f7675ddd7f1ce3d8d5681940cd48a3641"
+        },
+        {
+          "path": "repository-assets/fbca2a302f2c9a9c054f2529c01971238c19859b8cf68031aca2d6eb095d29e8.part024",
+          "bytes": 8388608,
+          "sha256": "ab144a6d74e71eefad569331b6986227aa23ad5419be89b4a8a51d3c3fab97f3"
+        },
+        {
+          "path": "repository-assets/fbca2a302f2c9a9c054f2529c01971238c19859b8cf68031aca2d6eb095d29e8.part025",
+          "bytes": 8388608,
+          "sha256": "3ac6dd18e1e06853814aea0784c510780e2d725341c1125c7bfe37286528e2e3"
+        },
+        {
+          "path": "repository-assets/fbca2a302f2c9a9c054f2529c01971238c19859b8cf68031aca2d6eb095d29e8.part026",
+          "bytes": 8388608,
+          "sha256": "08173d5f3e33dce2a650243be71f17d16ab97ec0b4dc12edf898421c62245df3"
+        },
+        {
+          "path": "repository-assets/fbca2a302f2c9a9c054f2529c01971238c19859b8cf68031aca2d6eb095d29e8.part027",
+          "bytes": 5124150,
+          "sha256": "0e842fc7a44c6f2ba5adf4bd259c12bf21a78efe19ee67e699268f069dab3423"
+        }
+      ]
+    },
+    {
+      "path": "data/manifests/split.csv",
+      "bytes": 25956698,
+      "sha256": "af7daf13d0854ceeba004f1a06182bac778ac716021dec3d8fc40edf265aa76f",
+      "parts": [
+        {
+          "path": "repository-assets/af7daf13d0854ceeba004f1a06182bac778ac716021dec3d8fc40edf265aa76f.part000",
+          "bytes": 8388608,
+          "sha256": "624ba36f0b33719605485bb28790924d7cf741b939c22b7bc30e43ed78a33ee8"
+        },
+        {
+          "path": "repository-assets/af7daf13d0854ceeba004f1a06182bac778ac716021dec3d8fc40edf265aa76f.part001",
+          "bytes": 8388608,
+          "sha256": "fbffb8dea4b1dd5b910319a251e7c75333c566ef73d0cdfe416baca5430ae59c"
+        },
+        {
+          "path": "repository-assets/af7daf13d0854ceeba004f1a06182bac778ac716021dec3d8fc40edf265aa76f.part002",
+          "bytes": 8388608,
+          "sha256": "b4be015a0c41bfb05eda0c016fd804e75b9530188b5315cfdcdbdea31c3b1fb0"
+        },
+        {
+          "path": "repository-assets/af7daf13d0854ceeba004f1a06182bac778ac716021dec3d8fc40edf265aa76f.part003",
+          "bytes": 790874,
+          "sha256": "80c0b20627214068c6b276142776e8bee9d815bc6bba2a857cc179056f3f3a79"
+        }
+      ]
+    }
+  ]
+}
