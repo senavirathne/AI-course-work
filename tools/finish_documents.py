@@ -18,7 +18,11 @@ def main():
     lines = [
         "# Risk-aware, explainable fabric defect detection",
         "",
-        "The approved application supports a textile Quality Assurance Inspector with patch-level classification, inspection priority and actual Grad-CAM. Lecturer approval was confirmed by the student. All assessed results use the complete publisher RAW-FABRID V1 release, one source/origin-grouped supervised split and one final held-out evaluation.",
+        "The approved application supports a textile Quality Assurance Inspector with patch-level classification, inspection priority and actual Grad-CAM. Lecturer approval was confirmed by the student. All assessed results use the complete publisher RAW-FABRID V1 release and one frozen source/origin-grouped supervised split. The identical held-out evaluation was physically computed twice after result files were lost; this exception is disclosed below.",
+        "",
+        "## Git checkout and large files",
+        "",
+        "Repository: https://github.com/senavirathne/AI-course-work. After cloning, run `python3 tools/restore_repository_assets.py` before reviewing the notebooks or full evaluation evidence. The selected SVM checkpoint and full split CSV are stored in numbered raw-byte parts under `repository-assets/`; the restore command checks every part and each reassembled SHA-256. All other necessary weights, experiment records, raw VLM responses, sample images and the video are tracked directly. A portable submission ZIP already contains the restored originals. `.gitignore` excludes downloaded raw data, environments, caches, credentials and internal browser recordings.",
         "",
         "## Quick verification and application",
         "",
@@ -60,7 +64,7 @@ def main():
         "",
         "The local VLM uses genuine SmolVLM-256M-Instruct at revision `7e3e67edbbed1bf9888184d9df282b700a323964`, bfloat16 CPU, 256 pixels, no splitting, matching 16 visual tokens and greedy generation. Two prompts use every validation patch. The selected prompt and all final comparisons use every one of the 2,996 frozen test examples. Raw outputs, retries and unresolved decisions are retained. Labels/masks/filenames/ANN scores are never sent to VLM inference. No VLM probability or ranking score is invented. Pretrained weights download from the publishers on first use.",
         "",
-        "A temporary-runtime reset during a user pause lost the first completed final-evaluation files and recording. The identical frozen protocol was physically recomputed to reconstruct these artifacts: no training, model selection, cutoff, prompt or split changed. Every delivered prediction is from actual reconstructed inference, with original observed confusion counts used only for cross-checks. `docs/engineering-runs/final-results-workspace-reset.json` discloses both computations. This is one benchmark population, not independent repeated validation; the original frozen plan's count of one describes its intended protocol. Delivered timings are freshly measured, and the video is a new actual recording.",
+        "A temporary-runtime reset during a user pause lost the first completed final-evaluation files and recording. The identical frozen protocol was physically recomputed to reconstruct these artifacts: no training, model selection, cutoff, prompt or split changed. Every delivered prediction is from actual reconstructed inference, with original observed confusion counts used only for cross-checks. `docs/engineering-runs/final-results-workspace-reset.json` records two physical computations. The brief requires evaluating the final models only once; this reconstruction is a disclosed exception requiring lecturer assessment. Acceptance of that exception is not asserted. Delivered timings are freshly measured, and the video is a new actual recording.",
         "",
         "A fresh full reproduction is expensive on CPU and can take several hours. It shares the verified raw release and immutable split, writes all new results into an empty folder and freezes its own evaluation once:",
         "",
@@ -93,7 +97,7 @@ def main():
             "",
             f"Selected ANN: `{bundle['run_id']}`, {final['architecture']['total_parameters']:,} parameters, frozen cutoff {bundle['classification_threshold']:.6f}. The report explains predictive weaknesses, origin/mask-size errors, uncalibrated scores and the assumed recommendation policy. It does not certify production safety.",
             "",
-            "- `reports/final_report.pdf` and `.md`: Questions 1-6, real numbers, learning/optimisation evidence and AI-use appendices.\n- `reports/experiment-log.csv` and `.md`, `experiments/`: full measured configurations, histories, lessons and hashes.\n- `reports/final-evaluation/`: frozen one-shot test outputs, seed repetitions, raw VLM generations and actual XAI.\n- `docs/three-xai-errors.json` and `.md`: three genuine incorrect predictions and measured occlusion.\n- `reports/application-verification/`: real HTTP/browser checks.\n- `reports/demonstration.mp4`, transcript and metadata: actual application recording.\n- `verification.json`, `docs/requirements-matrix.md`: technical completion evidence.",
+            "- `reports/final_report.pdf` and `.md`: Questions 1-6, real numbers, learning/optimisation evidence and AI-use appendices.\n- `reports/experiment-log.csv` and `.md`, `experiments/`: full measured configurations, histories, lessons and hashes.\n- `reports/final-evaluation/`: frozen-protocol reconstructed outputs, seed repetitions, raw VLM generations and actual XAI.\n- `docs/three-xai-errors.json` and `.md`: three genuine incorrect predictions and measured occlusion.\n- `reports/application-verification/`: real HTTP/browser checks.\n- `reports/demonstration.mp4`, transcript and metadata: actual application recording.\n- `verification.json`, `docs/requirements-matrix.md`: technical completion evidence and disclosed protocol exception.",
             "",
             f"Verification: {checks['pytest_passed']} tests passed; compilation/lint, four notebook executions and live application checks passed. Video duration {video['duration_seconds']:.1f}s (maximum 480s). The student's review, individual understanding and live presentation remain human responsibilities. AI assistance and scripted recording are declared in `docs/ai-use-declaration.md`.",
             "",
@@ -183,7 +187,7 @@ def main():
             "report Q6.b; actual token/latency/failure logs",
         ),
         (
-            "Single split, test isolation, seeds and complete logs",
+            "Single split, validation-only selection, seeds and complete logs",
             "final-evaluation-manifest.json; exclusive COMPLETE test-access guard; three frozen seeds",
         ),
         (
@@ -212,6 +216,7 @@ def main():
     text.extend(f"| {criterion} | {evidence} | COMPLETE |" for criterion, evidence in matrix)
     text.extend(
         [
+            "| Strictly one physical held-out evaluation | Two identical frozen computations after result loss; docs/engineering-runs/final-results-workspace-reset.json | DISCLOSED EXCEPTION; lecturer acceptance unverified |",
             "| Individual review, understanding and live defence | Student review and live presentation; docs/viva-guide.md | HUMAN TASK |",
             "",
             f"Updated {now()}. Real results and adverse findings are retained; weak performance is not concealed.",
@@ -219,7 +224,7 @@ def main():
     )
     Path("docs/requirements-matrix.md").write_text("\n".join(text) + "\n")
     Path("docs/progress.md").write_text(
-        f"# Technical submission status\n\nAll technical coursework deliverables are complete and verified in verification.json. {checks['pytest_passed']} tests passed; four notebooks and live HTTP/browser checks passed. Full test evaluation status COMPLETE, same 2,996 examples for every comparison. Selected ANN {bundle['run_id']}. Three genuine incorrect predictions are analysed with XAI. Actual video duration {video['duration_seconds']:.1f}s.\n\nThe final report includes all six questions, four actual unsuccessful attempts including two substantive approaches, and honest comparison/limitations. Full raw data are supplied through a verified download script plus an authentic engineering sample.\n\nThe student's personal review and individual live presentation remain human tasks.\n"
+        f"# Technical submission status\n\nAll technical coursework deliverables are complete and verified in verification.json. {checks['pytest_passed']} tests passed; four notebooks and live HTTP/browser checks passed. Full test evaluation status COMPLETE, same 2,996 examples for every comparison. Selected ANN {bundle['run_id']}. Three genuine incorrect predictions are analysed with XAI. Actual video duration {video['duration_seconds']:.1f}s.\n\nThe final report includes all six questions, four actual unsuccessful attempts including two substantive approaches, and honest comparison/limitations. Full raw data are supplied through a verified download script plus an authentic engineering sample.\n\nThe frozen evaluation was physically computed twice to reconstruct lost files. This is an exception to the brief's once-only rule; lecturer acceptance has not been verified. Technical completion is not a claim of unconditional coursework compliance. The student's personal review and individual live presentation remain human tasks.\n"
     )
     guide = f"""# Individual viva preparation
 

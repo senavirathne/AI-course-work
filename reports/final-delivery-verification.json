@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "technical_status": "COMPLETE",
+  "completed_at": "2026-10-12T11:39:11.759050+00:00",
+  "github_repository": "https://github.com/senavirathne/AI-course-work",
+  "initial_progress_commit": "43bd65e4dc4810a84a39dee84247081672207711",
+  "source_sha256": "351c100577969134ae95ac2cd0323b29a5cc84e5787b970ca40c446928506c50",
+  "automated_tests_passed": 52,
+  "notebooks": {
+    "executed": 4,
+    "code_cells": 19,
+    "rich_outputs_retained": true
+  },
+  "fresh_live_application": {
+    "http_checks_passed": 13,
+    "browser_checks_passed": 6,
+    "genuine_incorrect_prediction_shown": true
+  },
+  "technical_evidence_checks_passed": 12,
+  "report": {
+    "main_pages": 24,
+    "appendix_pages": 2,
+    "all_pages_visually_checked": true
+  },
+  "demonstration_seconds": 130.04,
+  "portable_archive": {
+    "status": "PASS",
+    "verified_at": "2026-10-12T11:37:13.579914+00:00",
+    "archive_sha256": "ec820860787851c2381bd9106ed03ea259f54c9334cf8e575309d5d380d90fcd",
+    "archive_bytes": 327903892,
+    "archive_members": 861,
+    "crc": "PASS",
+    "safe_extraction": "PASS",
+    "separate_directory_smoke": {
+      "status": "PASS",
+      "sample_images": 168,
+      "fresh_prediction_cases": 3,
+      "run_id": "ann-search-018",
+      "checked_packaged_file_hashes": 860,
+      "source_hash": "351c100577969134ae95ac2cd0323b29a5cc84e5787b970ca40c446928506c50"
+    },
+    "scope": "Every indexed delivered file hash, authentic sample paths/bytes and selected checkpoint fresh inference in a separately extracted directory. No held-out metric rerun or model selection."
+  },
+  "git_large_file_restoration": "PASS: all 32 parts and two restored original files; SVM deserialization passed",
+  "protocol_exception": {
+    "requirement": "Evaluate the final models only once on the held-out test set",
+    "physical_test_computation_count": 2,
+    "reason": "Identical frozen inference reconstructed lost result files after a runtime reset",
+    "selection_or_protocol_parameters_changed": false,
+    "evidence": "docs/engineering-runs/final-results-workspace-reset.json",
+    "lecturer_acceptance": "UNVERIFIED"
+  },
+  "remaining_assessment": "Lecturer assessment of the disclosed once-only rule exception; student review, understanding and individual live defence.",
+  "delivery_note": "The portable archive contains restored large originals. Git checkouts use tools/restore_repository_assets.py. Final archive-verification records are added to Git after checking the already-built ZIP to avoid a circular self-hash."
+}

@@ -12,4 +12,8 @@ The immutable assignment was created before fitting: 13,384 train, 3,472 validat
 
 All preprocessing fits, training, capacity/optimiser searches, calibration, classification thresholds, recommendation cutoffs, VLM prompts and XAI settings use train/validation only. Test access before final scoring is limited to integrity checks and split accounting. The planned final evaluation scores every frozen comparison on the same held-out examples, logs partial failures and permits no silent second attempt.
 
-If later evidence requires changing the approved problem, dataset or comparison protocol, record the change and obtain the lecturer's decision before implementing it. No such change has been made in this revision.
+If later evidence requires changing the approved problem, dataset or comparison protocol, record the change and obtain the lecturer's decision before implementing it. The intended supervised model-selection protocol is unchanged. The subsequent result-recovery exception is documented below.
+
+## Recorded recovery exception
+
+The once-only final-evaluation plan remains the original pre-test record. After the first completed result files were lost in a temporary-workspace reset, the identical frozen inference was physically recomputed to reconstruct them. The original trained weights, model selections, thresholds, prompts and split were unchanged. `docs/engineering-runs/final-results-workspace-reset.json` records both computations and the actual outputs. This is an exception to the coursework brief's strict once-only checklist; lecturer acceptance of the exception has not been verified. The proposal approval does not establish acceptance of this later event. No further population evaluation is performed to finish the submission.

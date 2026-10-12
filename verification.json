@@ -1,33 +1,98 @@
 {
-  "technical_status": "IN PROGRESS",
-  "updated_at": "2026-10-11T20:24:23.994166+00:00",
-  "source_checks": {
-    "pytest": "52 passed, one dependency deprecation warning",
-    "log": "docs/execution-logs/completion-source-tests.log",
-    "code_sha256_at_last_tests": "99485bb398e57d0a1aabf557dd9cabdc90493b7586c222f2e2b000d83a47cff5"
-  },
-  "dataset": "Full verified RAW-FABRID V1 acquired; frozen real split; authentic 168-patch sample",
-  "experiments": {
-    "ann_screening_completed": 16,
-    "ann_screening_planned": 20,
-    "classical_completed_including_pilots": 19,
-    "classical_main_planned": 24,
-    "classical_pilots": 4,
-    "vlm_validation_complete_prompts": 2,
-    "vlm_validation_examples_each": 3472,
-    "test_access": "Not started"
-  },
-  "pending_technical": [
-    "Full study and seed repeats",
-    "Single frozen final evaluation",
-    "Real XAI error analysis",
-    "Final application recording",
-    "Executed final notebooks",
-    "Final numerical page-checked report"
+  "technical_status": "COMPLETE",
+  "coursework_compliance_status": "TECHNICAL_COMPLETE_WITH_DISCLOSED_PROTOCOL_EXCEPTION",
+  "verified_at": "2026-10-12T11:34:08.586903+00:00",
+  "provenance": "RAW-FABRID_V1",
+  "code_sha256": "351c100577969134ae95ac2cd0323b29a5cc84e5787b970ca40c446928506c50",
+  "split_sha256": "af7daf13d0854ceeba004f1a06182bac778ac716021dec3d8fc40edf265aa76f",
+  "checks": [
+    {
+      "check": "Full authentic data, publisher labels and source/origin isolation",
+      "status": "PASS",
+      "evidence": "data/manifests/split.json and split.csv"
+    },
+    {
+      "check": "Authentic engineering sample, paths and mask-label agreement",
+      "status": "PASS",
+      "evidence": "data/sample-manifests/split.json: 168 images, original assignments"
+    },
+    {
+      "check": "Full ANN/classical searches and four genuine unsuccessful attempts",
+      "status": "PASS",
+      "evidence": "21 ANN candidates, 24 main classical configurations + 4 pilots; docs/failed-approaches.json"
+    },
+    {
+      "check": "Frozen single held-out evaluation with shared examples and reproducible metrics",
+      "status": "PASS",
+      "evidence": "final-evaluation-manifest.json; test-access.json; all 2,996 IDs and per-example metrics"
+    },
+    {
+      "check": "Three genuine selected-model repetitions",
+      "status": "PASS",
+      "evidence": "artifacts/seed-variability.json and frozen seed-repeat test results"
+    },
+    {
+      "check": "Actual pinned generative model, full validation/test outputs, no simulated scores",
+      "status": "PASS",
+      "evidence": "vlm-validation-0/1.json; final-evaluation/vlm.json and raw responses"
+    },
+    {
+      "check": "Three genuine wrong predictions, actual visual analysis and XAI sensitivity",
+      "status": "PASS",
+      "evidence": "docs/three-xai-errors.json; three rendered image/mask/CAM panels"
+    },
+    {
+      "check": "Working application, fresh prediction/explanation and browser verification",
+      "status": "PASS",
+      "evidence": "13 live HTTP checks plus browser checks and real erroneous prediction"
+    },
+    {
+      "check": "Clean Git large-file restoration and current-runtime live application",
+      "status": "PASS",
+      "evidence": "reports/repository-assets-verification.json; final-runtime-application-verification/results.json"
+    },
+    {
+      "check": "Actual application demonstration, <=8 minutes, full-frame decode and visual QA",
+      "status": "PASS",
+      "evidence": "reports/demonstration.mp4 and demonstration-metadata.json"
+    },
+    {
+      "check": "All automated tests, compilation/lint and four executed notebooks",
+      "status": "PASS",
+      "evidence": "reports/execution-checks.json; notebook-verification.json; notebooks/*.ipynb"
+    },
+    {
+      "check": "Question-ordered report, all pages visually checked, complete logs and truthful documentation",
+      "status": "PASS",
+      "evidence": "24 main pages + 2 appendices; final_report.pdf; experiment-log.csv; requirements matrix"
+    }
   ],
-  "human_assessment": "Student must understand and defend the work in the live presentation",
-  "notebooks": {
-    "dataset_eda_code_cells": "5 executed successfully through isolated IPython, rich outputs retained",
-    "final_four_notebook_gate": "Pending final artifacts"
-  }
+  "pytest_passed": 52,
+  "dataset": {
+    "patches": 19852,
+    "source_images": 709,
+    "positive_patches": 687,
+    "test_examples": 2996
+  },
+  "experiments": {
+    "ann_candidates": 21,
+    "classical_configurations_including_pilots": 28,
+    "selected_model_seeds": 3,
+    "vlm_validation_prompts": 2
+  },
+  "report": {
+    "pages": 26,
+    "main_pages": 24
+  },
+  "demonstration_seconds": 130.04,
+  "pending_technical": [],
+  "protocol_exception": {
+    "requirement": "Evaluate the final models only once on the held-out test set",
+    "physical_test_computation_count": 2,
+    "reason": "Identical frozen inference reconstructed lost result files after a runtime reset",
+    "selection_or_protocol_parameters_changed": false,
+    "evidence": "docs/engineering-runs/final-results-workspace-reset.json",
+    "lecturer_acceptance": "UNVERIFIED"
+  },
+  "human_assessment": "Student must personally review, understand and defend the work in the individual live presentation. The lecturer must assess the disclosed once-only evaluation exception. Technical verification does not certify acceptance, a grade or completed oral defence."
 }

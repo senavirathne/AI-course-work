@@ -61,7 +61,7 @@ def main():
         # They are not the named, hashed scientific checkpoints.
         if p.name.endswith(".tmp") or (parts[0] == "artifacts" and p.name.startswith(".")):
             continue
-        if parts[0] == "output" or "recording" in parts:
+        if parts[0] in {"output", "repository-assets", "work", "tmp"} or "recording" in parts:
             continue
         if p.name in ["internal-browser-qa.png", "browser-spec.json"]:
             continue
@@ -90,7 +90,8 @@ def main():
         "raw_dataset": "Excluded because archive exceeds 500 MB; checksum-verified download script and authentic sample included.",
         "hashing": "SHA-256 of the exact bytes streamed into each ZIP member; safe for active progress logs",
     }
-    records = [p for p in records if p != index]
+    checksums = Path("submission-files.sha256")
+    records = [p for p in records if p not in {index, checksums}]
     args.destination.parent.mkdir(parents=True, exist_ok=True)
     tmp = args.destination.with_suffix(".assembling")
     prefix = "fabric_defect_detection_coursework3"
@@ -112,6 +113,10 @@ def main():
             add_file(p, p.as_posix())
         for name, p in extra_logs.items():
             add_file(p, name)
+        checksums.write_text(
+            "".join(f"{digest}  {name}\n" for name, digest in sorted(file_hashes.items()))
+        )
+        add_file(checksums, checksums.as_posix())
         index_record["file_sha256"] = file_hashes
         write_json(index, index_record)
         archive.write(index, f"{prefix}/{index.as_posix()}")
@@ -125,7 +130,7 @@ def main():
         {
             "archive": str(args.destination.resolve()),
             "bytes": args.destination.stat().st_size,
-            "files": len(records) + len(extra_logs) + 1,
+            "files": len(records) + len(extra_logs) + 2,
             "sha256": sha256(args.destination),
             "progress": args.progress,
         }

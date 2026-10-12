@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "timestamp": "2026-10-12T11:30:10.799368+00:00",
+  "scope": "Clean Git-tracked asset export without original files; complete byte reconstruction and restored checkpoint deserialization",
+  "large_files": [
+    {
+      "path": "artifacts/svm-search-042.joblib",
+      "bytes": 231616566,
+      "sha256": "fbca2a302f2c9a9c054f2529c01971238c19859b8cf68031aca2d6eb095d29e8"
+    },
+    {
+      "path": "data/manifests/split.csv",
+      "bytes": 25956698,
+      "sha256": "af7daf13d0854ceeba004f1a06182bac778ac716021dec3d8fc40edf265aa76f"
+    }
+  ],
+  "split_rows": 19852,
+  "defective": 687,
+  "model_load": "PASS",
+  "part_checks": "All 32 parts verified before any original file is installed"
+}

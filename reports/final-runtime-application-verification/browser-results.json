@@ -1,0 +1,46 @@
+{
+  "started_at": "2026-10-12T11:31:26.584Z",
+  "checks": [
+    "Real model ready; development banner hidden; empty input disabled",
+    "Fresh UI inference and Grad-CAM parity: case 1",
+    "Fresh UI inference and Grad-CAM parity: case 2",
+    "Fresh UI inference and Grad-CAM parity: case 3",
+    "Invalid input rejected with visible error; UI remains usable",
+    "No browser JavaScript errors"
+  ],
+  "events": [
+    {
+      "seconds": 0.791,
+      "case_index": 0,
+      "patch_id": "Rollo1A_0000001_D_07-05-2024_10-30-55.085_0_0.png",
+      "label": 0,
+      "prediction": "defect_free",
+      "score": 0.12496597319841385,
+      "incorrect": false,
+      "model_version": "8726ee0f5dfb"
+    },
+    {
+      "seconds": 1.12,
+      "case_index": 1,
+      "patch_id": "Rollo1A_0000001_D_07-05-2024_10-30-55.085_0_1.png",
+      "label": 1,
+      "prediction": "defective",
+      "score": 0.9953402280807495,
+      "incorrect": false,
+      "model_version": "8726ee0f5dfb"
+    },
+    {
+      "seconds": 1.269,
+      "case_index": 2,
+      "patch_id": "Rollo1A_0000005_D_07-05-2024_10-31-00.029_2_5.png",
+      "label": 1,
+      "prediction": "defect_free",
+      "score": 0.7905393838882447,
+      "incorrect": true,
+      "model_version": "8726ee0f5dfb"
+    }
+  ],
+  "status": "PASS",
+  "finished_at": "2026-10-12T11:31:28.550Z",
+  "wall_seconds": 1.475
+}

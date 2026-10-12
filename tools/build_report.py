@@ -148,7 +148,7 @@ def main():
     )
     p(
         items,
-        "The purpose is reproducible evidence and defensible reasoning. Predictive weakness, limited origin coverage, uncalibrated scores and adverse XAI findings are reported directly. This is a research prototype, not an operational quality guarantee.",
+        "The purpose is reproducible evidence and defensible reasoning. Predictive weakness, limited origin coverage, uncalibrated scores and adverse XAI findings are reported directly. This is a research prototype, not an operational quality guarantee. The frozen evaluation was physically computed twice after files were lost. This is a disclosed exception to the brief's once-only rule; lecturer acceptance is unverified.",
     )
 
     items = page("Q1 | Dataset, provenance and target", "Source and audited release structure")
@@ -581,7 +581,7 @@ def main():
     )
     p(
         items,
-        f"Validation mean {seed['mean']:.4f}, sample SD {seed['sample_std']:.4f}, range {seed['range']:.4f}; material-variation rule: range >0.02, observed {seed['material']}. All three repetitions are frozen and evaluated once. Held-out mean F2 {comparison['test_seed_repetitions']['mean']:.4f}, sample SD {comparison['test_seed_repetitions']['sample_std']:.4f}. The serving seed remains 42 regardless of test rankings.",
+        f"Validation mean {seed['mean']:.4f}, sample SD {seed['sample_std']:.4f}, range {seed['range']:.4f}; material-variation rule: range >0.02, observed {seed['material']}. All three configurations were frozen before test access; artifact reconstruction changes no seed choice. Held-out mean F2 {comparison['test_seed_repetitions']['mean']:.4f}, sample SD {comparison['test_seed_repetitions']['sample_std']:.4f}. The serving seed remains 42 regardless of test rankings.",
     )
 
     items = page(
@@ -628,7 +628,7 @@ def main():
     )
 
     items = page(
-        "Q3.a | Single held-out model comparison",
+        "Q3.a | Frozen held-out model comparison",
         "All 2,996 shared test examples; validation-frozen decisions",
     )
     rows = []
@@ -704,7 +704,7 @@ def main():
     )
     p(
         items,
-        "Timing: Linux x86_64, CPU only, eight allocated cores; common one-thread final inference, batch one, three warmups per model. Per-image time includes decode, preprocessing and prediction; startup/model loading are excluded. VLM parsing/retries are included. Timings here are fresh reconstruction measurements: the first result files were lost during a runtime reset. No model, threshold or prompt changed, and all per-example outputs were genuinely recomputed. Historical confusion counts are cross-checks only, never substituted for inference. Constant outputs have no meaningful measured latency. VLM task-specific training is absent; pretrained training cost is unknown.",
+        "Timing: Linux x86_64, CPU only, eight allocated cores; common one-thread final inference, batch one, three warmups per model. Per-image time includes decode, preprocessing and prediction; startup/model loading are excluded. VLM parsing/retries are included. Timings here are fresh reconstruction measurements: the first result files were lost during a runtime reset. No model, threshold or prompt changed, and all per-example outputs were genuinely recomputed. Background checkpoint saving and application recording/encoding overlapped part of VLM inference, so these timings are descriptive, not an isolated benchmark. Historical confusion counts are cross-checks only, never substituted for inference. Constant outputs have no meaningful measured latency. VLM task-specific training is absent; pretrained training cost is unknown.",
     )
     ci = by_name["final_ann"]["uncertainty"]
     p(
@@ -1063,7 +1063,7 @@ def main():
             ["Architecture and curves", "reports/*-architecture.csv; reports/figures/"],
             ["Four failures", "docs/failed-approaches.json"],
             [
-                "Final single-test protocol",
+                "Frozen protocol / reconstruction",
                 "artifacts/final-evaluation-manifest.json; reports/final-evaluation/test-access.json",
             ],
             [
@@ -1086,6 +1086,9 @@ def main():
         [135, 330],
     )
     assert len(pages) == 26, len(pages)
+    assert all(page["title"].startswith("Q3.a") for page in pages[14:16])
+    assert all(page["title"].startswith("Q3.b") for page in pages[10:14])
+    pages = pages[:10] + pages[14:16] + pages[10:14] + pages[16:]
 
     # Consistent portable text typography; chart pixels retain their scientific labels.
     def plain_hyphens(value):

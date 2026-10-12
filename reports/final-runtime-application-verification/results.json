@@ -1,0 +1,250 @@
+{
+  "status": "PASS",
+  "timestamp": "2026-10-12T11:31:28.558173+00:00",
+  "model_version": "8726ee0f5dfb",
+  "run_id": "ann-search-018",
+  "bundle": "artifacts/serving-bundle.json",
+  "http_checks": [
+    {
+      "check": "readiness and static routes",
+      "status": "PASS"
+    },
+    {
+      "check": "original grayscale PNG direct/HTTP parity",
+      "status": "PASS",
+      "result": {
+        "class": "defect_free",
+        "defect_score": 0.12496597319841385,
+        "score_kind": "uncalibrated_model_score",
+        "recommendation": "routine_inspection",
+        "model_version": "8726ee0f5dfb",
+        "run_id": "ann-search-018",
+        "provenance": "RAW-FABRID_V1",
+        "model_inference_ms": 36.42167399993923,
+        "device": "cpu",
+        "classification_threshold": 0.8952339208126068,
+        "recommendation_cutoffs": {
+          "low": 0.8447646290063858,
+          "high": 0.9988340735435486
+        },
+        "input_checks": {
+          "mean_gray": 118.304443359375,
+          "std_gray": 48.31858256334084,
+          "ood_detection": "Not implemented or claimed"
+        },
+        "limitations": "Patch-level decision support only. Unseen fabrics, phone lighting, blur and tiny defects can cause errors. The inspector decides.",
+        "request_processing_ms": 44.4835470000271
+      }
+    },
+    {
+      "check": "RGB PNG direct/HTTP parity",
+      "status": "PASS",
+      "result": {
+        "class": "defect_free",
+        "defect_score": 0.12496597319841385,
+        "score_kind": "uncalibrated_model_score",
+        "recommendation": "routine_inspection",
+        "model_version": "8726ee0f5dfb",
+        "run_id": "ann-search-018",
+        "provenance": "RAW-FABRID_V1",
+        "model_inference_ms": 8.255766000047515,
+        "device": "cpu",
+        "classification_threshold": 0.8952339208126068,
+        "recommendation_cutoffs": {
+          "low": 0.8447646290063858,
+          "high": 0.9988340735435486
+        },
+        "input_checks": {
+          "mean_gray": 118.304443359375,
+          "std_gray": 48.31858256334084,
+          "ood_detection": "Not implemented or claimed"
+        },
+        "limitations": "Patch-level decision support only. Unseen fabrics, phone lighting, blur and tiny defects can cause errors. The inspector decides.",
+        "request_processing_ms": 10.68620500018369
+      }
+    },
+    {
+      "check": "grayscale JPEG direct/HTTP parity",
+      "status": "PASS",
+      "result": {
+        "class": "defect_free",
+        "defect_score": 0.1982259601354599,
+        "score_kind": "uncalibrated_model_score",
+        "recommendation": "routine_inspection",
+        "model_version": "8726ee0f5dfb",
+        "run_id": "ann-search-018",
+        "provenance": "RAW-FABRID_V1",
+        "model_inference_ms": 7.2013330000118,
+        "device": "cpu",
+        "classification_threshold": 0.8952339208126068,
+        "recommendation_cutoffs": {
+          "low": 0.8447646290063858,
+          "high": 0.9988340735435486
+        },
+        "input_checks": {
+          "mean_gray": 118.24641418457031,
+          "std_gray": 48.388625111501966,
+          "ood_detection": "Not implemented or claimed"
+        },
+        "limitations": "Patch-level decision support only. Unseen fabrics, phone lighting, blur and tiny defects can cause errors. The inspector decides.",
+        "request_processing_ms": 8.501085000034436
+      }
+    },
+    {
+      "check": "empty bytes",
+      "status": "PASS",
+      "http_status": 422,
+      "detail": {
+        "detail": "Upload must contain an image no larger than 5 MiB"
+      }
+    },
+    {
+      "check": "malformed bytes",
+      "status": "PASS",
+      "http_status": 422,
+      "detail": {
+        "detail": "Invalid or unsafe image content"
+      }
+    },
+    {
+      "check": "wrong size",
+      "status": "PASS",
+      "http_status": 422,
+      "detail": {
+        "detail": "Provide a 256 x 256 fabric patch; full images are not resized"
+      }
+    },
+    {
+      "check": "alpha channels",
+      "status": "PASS",
+      "http_status": 422,
+      "detail": {
+        "detail": "Use a single 8-bit grayscale or RGB image without transparency"
+      }
+    },
+    {
+      "check": "paletted input",
+      "status": "PASS",
+      "http_status": 422,
+      "detail": {
+        "detail": "Use a single 8-bit grayscale or RGB image without transparency"
+      }
+    },
+    {
+      "check": "oversize upload",
+      "status": "PASS",
+      "http_status": 413,
+      "detail": {
+        "detail": "Image exceeds the 5 MiB limit"
+      }
+    },
+    {
+      "check": "invalid explanation opacity",
+      "status": "PASS",
+      "http_status": 422
+    },
+    {
+      "check": "uniform blank",
+      "status": "PASS",
+      "result": {
+        "class": "defect_free",
+        "defect_score": 0.07435661554336549,
+        "score_kind": "uncalibrated_model_score",
+        "recommendation": "routine_inspection",
+        "model_version": "8726ee0f5dfb",
+        "run_id": "ann-search-018",
+        "provenance": "RAW-FABRID_V1",
+        "model_inference_ms": 6.866658000035386,
+        "device": "cpu",
+        "classification_threshold": 0.8952339208126068,
+        "recommendation_cutoffs": {
+          "low": 0.8447646290063858,
+          "high": 0.9988340735435486
+        },
+        "input_checks": {
+          "mean_gray": 128.0,
+          "std_gray": 0.0,
+          "ood_detection": "Not implemented or claimed"
+        },
+        "limitations": "Patch-level decision support only. Unseen fabrics, phone lighting, blur and tiny defects can cause errors. The inspector decides.",
+        "request_processing_ms": 7.986919999893871
+      },
+      "meaning": "Finite response and explicit OOD limitation; no claim that this is a meaningful defect label"
+    },
+    {
+      "check": "random noise",
+      "status": "PASS",
+      "result": {
+        "class": "defect_free",
+        "defect_score": 0.0014705669600516558,
+        "score_kind": "uncalibrated_model_score",
+        "recommendation": "routine_inspection",
+        "model_version": "8726ee0f5dfb",
+        "run_id": "ann-search-018",
+        "provenance": "RAW-FABRID_V1",
+        "model_inference_ms": 6.830754000020534,
+        "device": "cpu",
+        "classification_threshold": 0.8952339208126068,
+        "recommendation_cutoffs": {
+          "low": 0.8447646290063858,
+          "high": 0.9988340735435486
+        },
+        "input_checks": {
+          "mean_gray": 126.76312255859375,
+          "std_gray": 73.9412706397709,
+          "ood_detection": "Not implemented or claimed"
+        },
+        "limitations": "Patch-level decision support only. Unseen fabrics, phone lighting, blur and tiny defects can cause errors. The inspector decides.",
+        "request_processing_ms": 7.914140000139014
+      },
+      "meaning": "Finite response and explicit OOD limitation; no claim that this is a meaningful defect label"
+    }
+  ],
+  "browser": {
+    "started_at": "2026-10-12T11:31:26.584Z",
+    "checks": [
+      "Real model ready; development banner hidden; empty input disabled",
+      "Fresh UI inference and Grad-CAM parity: case 1",
+      "Fresh UI inference and Grad-CAM parity: case 2",
+      "Fresh UI inference and Grad-CAM parity: case 3",
+      "Invalid input rejected with visible error; UI remains usable",
+      "No browser JavaScript errors"
+    ],
+    "events": [
+      {
+        "seconds": 0.791,
+        "case_index": 0,
+        "patch_id": "Rollo1A_0000001_D_07-05-2024_10-30-55.085_0_0.png",
+        "label": 0,
+        "prediction": "defect_free",
+        "score": 0.12496597319841385,
+        "incorrect": false,
+        "model_version": "8726ee0f5dfb"
+      },
+      {
+        "seconds": 1.12,
+        "case_index": 1,
+        "patch_id": "Rollo1A_0000001_D_07-05-2024_10-30-55.085_0_1.png",
+        "label": 1,
+        "prediction": "defective",
+        "score": 0.9953402280807495,
+        "incorrect": false,
+        "model_version": "8726ee0f5dfb"
+      },
+      {
+        "seconds": 1.269,
+        "case_index": 2,
+        "patch_id": "Rollo1A_0000005_D_07-05-2024_10-31-00.029_2_5.png",
+        "label": 1,
+        "prediction": "defect_free",
+        "score": 0.7905393838882447,
+        "incorrect": true,
+        "model_version": "8726ee0f5dfb"
+      }
+    ],
+    "status": "PASS",
+    "finished_at": "2026-10-12T11:31:28.550Z",
+    "wall_seconds": 1.475
+  },
+  "scope": "Fresh real checkpoint inference, input validation, direct/HTTP/browser parity, visible explanations and recorded genuine incorrect prediction when requested"
+}

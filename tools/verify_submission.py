@@ -226,6 +226,24 @@ def main():
         "13 live HTTP checks plus browser checks and real erroneous prediction",
     )
 
+    current_app = read_json(Path("reports/final-runtime-application-verification/results.json"))
+    assert current_app["status"] == "PASS" and len(current_app["http_checks"]) == 13
+    assert current_app["browser"]["status"] == "PASS"
+    assert len(current_app["browser"]["checks"]) == 6
+    assert current_app["run_id"] == app["run_id"]
+    assert current_app["model_version"] == app["model_version"]
+    assert any(event.get("incorrect") for event in current_app["browser"]["events"])
+
+    repository_assets = read_json(Path("reports/repository-assets-verification.json"))
+    assert repository_assets["status"] == "PASS" and repository_assets["model_load"] == "PASS"
+    assert repository_assets["split_rows"] == len(rows)
+    for entry in repository_assets["large_files"]:
+        assert sha256(Path(entry["path"])) == entry["sha256"]
+    passed(
+        "Clean Git large-file restoration and current-runtime live application",
+        "reports/repository-assets-verification.json; final-runtime-application-verification/results.json",
+    )
+
     video = read_json(Path("reports/demonstration-metadata.json"))
     assert video["status"] == "PASS" and 0 < video["duration_seconds"] <= 480
     assert video["video_sha256"] == sha256(Path(video["path"]))
@@ -281,6 +299,7 @@ def main():
         Path("verification.json"),
         {
             "technical_status": "COMPLETE",
+            "coursework_compliance_status": "TECHNICAL_COMPLETE_WITH_DISCLOSED_PROTOCOL_EXCEPTION",
             "verified_at": now(),
             "provenance": REAL,
             "code_sha256": frozen["code_sha256"],
@@ -302,7 +321,15 @@ def main():
             "report": {"pages": pdf["pages"], "main_pages": pdf["main_pages"]},
             "demonstration_seconds": video["duration_seconds"],
             "pending_technical": [],
-            "human_assessment": "Student must personally review, understand and defend the work in the individual live presentation. Technical verification does not certify a grade or completed oral defence.",
+            "protocol_exception": {
+                "requirement": "Evaluate the final models only once on the held-out test set",
+                "physical_test_computation_count": 2,
+                "reason": "Identical frozen inference reconstructed lost result files after a runtime reset",
+                "selection_or_protocol_parameters_changed": False,
+                "evidence": "docs/engineering-runs/final-results-workspace-reset.json",
+                "lecturer_acceptance": "UNVERIFIED",
+            },
+            "human_assessment": "Student must personally review, understand and defend the work in the individual live presentation. The lecturer must assess the disclosed once-only evaluation exception. Technical verification does not certify acceptance, a grade or completed oral defence.",
         },
     )
     print(f"COMPLETE: {len(checks)} technical evidence checks passed")

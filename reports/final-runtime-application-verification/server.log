@@ -1,0 +1,32 @@
+INFO:     Started server process [26]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8765 (Press CTRL+C to quit)
+INFO:     127.0.0.1:54630 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54630 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54630 - "GET /static/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54630 - "GET /static/style.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54630 - "POST /predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54630 - "POST /predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54630 - "POST /predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54630 - "POST /predict HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:54630 - "POST /predict HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:54630 - "POST /predict HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:54630 - "POST /predict HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:54630 - "POST /predict HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:54630 - "POST /predict HTTP/1.1" 413 Request Entity Too Large
+INFO:     127.0.0.1:54630 - "POST /explain HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:54630 - "POST /predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54630 - "POST /predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58562 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58562 - "GET /static/style.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58574 - "GET /static/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58574 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58574 - "POST /explain HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58574 - "POST /explain HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58574 - "POST /explain HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58574 - "POST /explain HTTP/1.1" 422 Unprocessable Entity
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [26]
