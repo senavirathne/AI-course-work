@@ -42,3 +42,6 @@ data/manifests/split.csv
 # Keep experiment logs, genuine predictions, authentic sample images/masks,
 # final reports, demonstration.mp4, frozen source ZIPs and remaining model weights.
 
+
+# ZIP is preserved by committed parts; ignore the reassembled large file.
+/submission/AI-course-work-submission.zip

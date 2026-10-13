@@ -102,3 +102,7 @@ Selected ANN: `ann-search-018`, 1,518,881 parameters, frozen cutoff 0.895234. Th
 Verification: 52 tests passed; compilation/lint, four notebook executions and live application checks passed. Video duration 130.0s (maximum 480s). The student's review, individual understanding and live presentation remain human responsibilities. AI assistance and scripted recording are declared in `docs/ai-use-declaration.md`.
 
 Historical `development-run/` and `data/development/` are explicitly synthetic engineering checks, excluded from assessed results. Nonselected large SVM artifacts may be omitted from the archive; every run record is included, with retained final/failure-control checkpoints identified in `docs/packaged-artifacts.json`.
+
+## Committed submission ZIP and demonstration
+
+The complete submission ZIP is preserved in [submission/](submission/README.md) as checksum-verified parts. Run `python3 tools/restore_submission_zip.py` to create `submission/AI-course-work-submission.zip`. The [demo video](submission/demonstration.mp4) is committed alongside the archive parts and is also included in the ZIP.

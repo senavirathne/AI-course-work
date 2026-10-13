@@ -1,0 +1,217 @@
+{
+  "format": 1,
+  "archive_name": "AI-course-work-submission.zip",
+  "archive_bytes": 327903892,
+  "archive_sha256": "ec820860787851c2381bd9106ed03ea259f54c9334cf8e575309d5d380d90fcd",
+  "archive_members": 861,
+  "source_commit": "049a9c9e0c9928e422cdb7c4852e11722c4b6594",
+  "parts": [
+    {
+      "path": "submission/AI-course-work-submission.zip.parts/part-000",
+      "bytes": 8388608,
+      "sha256": "50b1a9d524928ca57bac0c3cc4d33e8c6bfdfbcbffe6692237e4aa8338a2d1ab"
+    },
+    {
+      "path": "submission/AI-course-work-submission.zip.parts/part-001",
+      "bytes": 8388608,
+      "sha256": "86ada970fc876373aa7867545cd9d2c246a6280639cd4d9c87c2be4f807cc5a0"
+    },
+    {
+      "path": "submission/AI-course-work-submission.zip.parts/part-002",
+      "bytes": 8388608,
+      "sha256": "8de9bc0e42192219293f63fcefcb72f1818daf2a3fed1a83830bd6060d0a4ee2"
+    },
+    {
+      "path": "submission/AI-course-work-submission.zip.parts/part-003",
+      "bytes": 8388608,
+      "sha256": "814b65fb25578561814e5e4327255a554b11b129a4c0b97bcc5eb90c258f7df0"
+    },
+    {
+      "path": "submission/AI-course-work-submission.zip.parts/part-004",
+      "bytes": 8388608,
+      "sha256": "1786fa93b5d7d1a768c23dcf43e838bc23ab614d7e16e0d5f22a20577ac44800"
+    },
+    {
+      "path": "submission/AI-course-work-submission.zip.parts/part-005",
+      "bytes": 8388608,
+      "sha256": "336dd87b566a944a39a88f39bae967cc4bdef36a94b44d18372f5ab64ebb461c"
+    },
+    {
+      "path": "submission/AI-course-work-submission.zip.parts/part-006",
+      "bytes": 8388608,
+      "sha256": "43ce4d39bb9681ae217f15c8ba87d7e3711958c8a1fedb89b157ccf06ea1ad37"
+    },
+    {
+      "path": "submission/AI-course-work-submission.zip.parts/part-007",
+      "bytes": 8388608,
+      "sha256": "e634ceb31fb314625aa97bbe691df25fcd7123d77d5515d9846daa84d2f7aafa"
+    },
+    {
+      "path": "submission/AI-course-work-submission.zip.parts/part-008",
+      "bytes": 8388608,
+      "sha256": "f6477342f519a8a88676b1a5560e2c963582405408cb5a9af47a8e0209bbb2da"
+    },
+    {
+      "path": "submission/AI-course-work-submission.zip.parts/part-009",
+      "bytes": 8388608,
+      "sha256": "394ccaefcdcc8d969989ac71c0b919737474210c4b4f9539fd9be2681ed8e566"
+    },
+    {
+      "path": "submission/AI-course-work-submission.zip.parts/part-010",
+      "bytes": 8388608,
+      "sha256": "2943d5f347095ebb8bf3d1dbc7dbec3a74dcfb9cc915ac45e5a894f8ea736682"
+    },
+    {
+      "path": "submission/AI-course-work-submission.zip.parts/part-011",
+      "bytes": 8388608,
+      "sha256": "dc13fd45d8c6f6020b18db5b7b560d92d129067dfcf2f6b60d551f6a02d55ba5"
+    },
+    {
+      "path": "submission/AI-course-work-submission.zip.parts/part-012",
+      "bytes": 8388608,
+      "sha256": "7b470cc22f9243fc24641921c121f4105a521ec287516e57415df2400a654b7e"
+    },
+    {
+      "path": "submission/AI-course-work-submission.zip.parts/part-013",
+      "bytes": 8388608,
+      "sha256": "b3a1250f1dc04561ecd8b93e206700ce095d5ad758c4ae68e33d14279e935eb8"
+    },
+    {
+      "path": "submission/AI-course-work-submission.zip.parts/part-014",
+      "bytes": 8388608,
+      "sha256": "eb1f0d253ea93b3d15076b709b901a029d37d260fb783f938617c2767826476a"
+    },
+    {
+      "path": "submission/AI-course-work-submission.zip.parts/part-015",
+      "bytes": 8388608,
+      "sha256": "44d9b666346513b2489dbb27371acd135699237c8f21566482e44064cb44650b"
+    },
+    {
+      "path": "submission/AI-course-work-submission.zip.parts/part-016",
+      "bytes": 8388608,
+      "sha256": "76d36a200f1335d9aa9ded9495942bd490f685fd67e0c9da93fca52ff307c245"
+    },
+    {
+      "path": "submission/AI-course-work-submission.zip.parts/part-017",
+      "bytes": 8388608,
+      "sha256": "b7f29487c71894bda3bfb1dc83f7a83858bdc19a7828e4806b31fd3c15823df8"
+    },
+    {
+      "path": "submission/AI-course-work-submission.zip.parts/part-018",
+      "bytes": 8388608,
+      "sha256": "09e0562840c64d37c9df76b0012df7061f3ec6ea2631a9bd743132674c633a7c"
+    },
+    {
+      "path": "submission/AI-course-work-submission.zip.parts/part-019",
+      "bytes": 8388608,
+      "sha256": "4d39f76a78ff33e65f7861c9611dd10c13bdd85497384d8a6f3d3c308f1266f7"
+    },
+    {
+      "path": "submission/AI-course-work-submission.zip.parts/part-020",
+      "bytes": 8388608,
+      "sha256": "a733841bd6e565379719baec2e88ef295fb51afe07abb40b25d0ddfa53c3d37b"
+    },
+    {
+      "path": "submission/AI-course-work-submission.zip.parts/part-021",
+      "bytes": 8388608,
+      "sha256": "8a752f87045a361eb388d4989735325b349c60c9c52fa52cf363b05de5d3dd30"
+    },
+    {
+      "path": "submission/AI-course-work-submission.zip.parts/part-022",
+      "bytes": 8388608,
+      "sha256": "4f459da30d4a97e5c5dbda152b73677143e486490f1262ba673c11dca719adc6"
+    },
+    {
+      "path": "submission/AI-course-work-submission.zip.parts/part-023",
+      "bytes": 8388608,
+      "sha256": "e47ce2ee77fab075700a2d172a0bf71485772fd1acfe1e0b62c51490a88660c2"
+    },
+    {
+      "path": "submission/AI-course-work-submission.zip.parts/part-024",
+      "bytes": 8388608,
+      "sha256": "bbe3de8cfd5e1fd61ec7594baa5b743c86a56cb7683b9aa37677b97985bc44f5"
+    },
+    {
+      "path": "submission/AI-course-work-submission.zip.parts/part-025",
+      "bytes": 8388608,
+      "sha256": "a3b300acc5d8c253b23e070790e741c0642ad0da8a4bf6b89e13f626a3e6f415"
+    },
+    {
+      "path": "submission/AI-course-work-submission.zip.parts/part-026",
+      "bytes": 8388608,
+      "sha256": "b7bc47c1d54784afa4a512ac69d6461b6b379b98678547fec826d8e376217b3e"
+    },
+    {
+      "path": "submission/AI-course-work-submission.zip.parts/part-027",
+      "bytes": 8388608,
+      "sha256": "29f8ecf2db22bb3e0839b198d28e5f23f2d70297c5464efa06821d0e66cd1317"
+    },
+    {
+      "path": "submission/AI-course-work-submission.zip.parts/part-028",
+      "bytes": 8388608,
+      "sha256": "eaa773c1e4061c685860441cae0a09908015ee67052b9ee1302e0cf05f739081"
+    },
+    {
+      "path": "submission/AI-course-work-submission.zip.parts/part-029",
+      "bytes": 8388608,
+      "sha256": "be7730ccb341804ab42b3acbba0d0cbc1d1416618e9af833ad287137f8b9d4d3"
+    },
+    {
+      "path": "submission/AI-course-work-submission.zip.parts/part-030",
+      "bytes": 8388608,
+      "sha256": "94910a4112cf3e2d7e59fd6f2a11a4e3e2008396b304934218c7db37125b4be5"
+    },
+    {
+      "path": "submission/AI-course-work-submission.zip.parts/part-031",
+      "bytes": 8388608,
+      "sha256": "82ebc2737bbf4068523ba47f53ad3052162254f6ba5371be870395235647d0ea"
+    },
+    {
+      "path": "submission/AI-course-work-submission.zip.parts/part-032",
+      "bytes": 8388608,
+      "sha256": "03f3c5de9da21e96a761c48d0ad2a3831f215fd72637b75951d2cef2720cb4fa"
+    },
+    {
+      "path": "submission/AI-course-work-submission.zip.parts/part-033",
+      "bytes": 8388608,
+      "sha256": "424baacee3937cbd881daa26dae0add8a9097684d628015bb2c297d5e3eb0014"
+    },
+    {
+      "path": "submission/AI-course-work-submission.zip.parts/part-034",
+      "bytes": 8388608,
+      "sha256": "4e9dd94cd8bbd4460e5aa1e908b080adc1751961ce61a646d4a5246d45964e99"
+    },
+    {
+      "path": "submission/AI-course-work-submission.zip.parts/part-035",
+      "bytes": 8388608,
+      "sha256": "f25f2074b2a2901f7e060c1ba58007f5e43fc3b782ea1c99d1aea156e54ae2a4"
+    },
+    {
+      "path": "submission/AI-course-work-submission.zip.parts/part-036",
+      "bytes": 8388608,
+      "sha256": "1b76b825850bc8edbfbb6fbbd0917035982c7692c41e79f1ec75da9b7baeec82"
+    },
+    {
+      "path": "submission/AI-course-work-submission.zip.parts/part-037",
+      "bytes": 8388608,
+      "sha256": "c1891d46f159e916648aff45d98b656a52b7b98ec92cb16a1d48484ab449b979"
+    },
+    {
+      "path": "submission/AI-course-work-submission.zip.parts/part-038",
+      "bytes": 8388608,
+      "sha256": "9a822bf465b9e96345c71a53f21f4d44217288e8f1263e6ae7f35de95cbf18b3"
+    },
+    {
+      "path": "submission/AI-course-work-submission.zip.parts/part-039",
+      "bytes": 748180,
+      "sha256": "79092fdd35255e629daaebd4bee12dde152118df96af84ad18f3688439a87346"
+    }
+  ],
+  "demo_video": {
+    "path": "reports/demonstration.mp4",
+    "bytes": 6953767,
+    "sha256": "aa7b905ee0861df3bd4c27871c4429c22f4b66e723da0deab67c1bb2ebb98568",
+    "committed_copy_path": "submission/demonstration.mp4"
+  },
+  "note": "Exact original verified submission ZIP; source files, report and model results are unchanged."
+}

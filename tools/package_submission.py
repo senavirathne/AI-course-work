@@ -61,7 +61,7 @@ def main():
         # They are not the named, hashed scientific checkpoints.
         if p.name.endswith(".tmp") or (parts[0] == "artifacts" and p.name.startswith(".")):
             continue
-        if parts[0] in {"output", "repository-assets", "work", "tmp"} or "recording" in parts:
+        if parts[0] in {"output", "repository-assets", "submission", "work", "tmp"} or "recording" in parts:
             continue
         if p.name in ["internal-browser-qa.png", "browser-spec.json"]:
             continue
