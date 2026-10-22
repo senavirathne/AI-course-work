@@ -4,8 +4,6 @@ venv/
 __pycache__/
 *.py[cod]
 *.egg-info/
-.pytest_cache/
-.ruff_cache/
 .ipynb_checkpoints/
 node_modules/
 
@@ -34,14 +32,4 @@ artifacts/.*
 !.env.example
 .DS_Store
 
-# Large files are preserved in repository-assets/ with SHA-256 verification.
-# Restore their exact original bytes with: python tools/restore_repository_assets.py
-artifacts/svm-search-042.joblib
-data/manifests/split.csv
-
-# Keep experiment logs, genuine predictions, authentic sample images/masks,
-# final reports, demonstration.mp4, frozen source ZIPs and remaining model weights.
-
-
-# ZIP is preserved by committed parts; ignore the reassembled large file.
-/submission/AI-course-work-submission.zip
+# The selected ANN checkpoint and assessed evidence are deliberately tracked.

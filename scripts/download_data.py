@@ -52,6 +52,7 @@ def main():
             "version": 1,
             "doi": "10.17632/db6g85xsyg.1",
             "source": "https://data.mendeley.com/datasets/db6g85xsyg/1",
+            "download_url": args.url,
             "license": "CC BY 4.0",
             "authors": "Pérez-Llorens, Albero-Albero and Silvestre-Blanes (2026)",
             "recorded_at": now(),

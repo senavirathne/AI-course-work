@@ -21,4 +21,4 @@ Read the report, run the app and inspect the actual code. These notes do not dem
 17. Discuss local compute/download cost and privacy, label-format failures, compressed tiny detail, possible unknown pretrained-data overlap and a bounded inspection-note extension.
 18. Declare the ChatGPT/Codex assistance and scripted real browser video. Review code/results personally and give the individual live presentation under institutional requirements.
 
-Useful evidence: README.md; docs/requirements-matrix.md; reports/final_report.pdf; reports/experiment-log.csv; artifacts/final-evaluation-manifest.json; reports/final-evaluation/; docs/three-xai-errors.json; verification.json.
+Useful evidence: README.md; docs/requirements-matrix.md; reports/final_report.pdf; reports/experiment-log.csv; artifacts/final-evaluation-manifest.json; reports/final-evaluation/; docs/three-xai-errors.json; reports/application-verification/results.json.

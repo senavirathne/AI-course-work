@@ -3,7 +3,7 @@
   "run_id": "ann-search-018",
   "cases": [
     {
-      "path": "data/demo/1-Rollo1A_0000001_D_07-05-2024_10-30-55.085_0_0.png",
+      "path": "data/sample/MVTec/test/good/Rollo1A_0000001_D_07-05-2024_10-30-55.085_0_0.png",
       "label": 0,
       "patch_id": "Rollo1A_0000001_D_07-05-2024_10-30-55.085_0_0.png",
       "expected_score": 0.12496597319841385,
@@ -13,25 +13,25 @@
       "publisher_origin": "Rollo1A"
     },
     {
-      "path": "data/demo/2-Rollo1A_0000001_D_07-05-2024_10-30-55.085_0_1.png",
+      "path": "data/sample/MVTec/test/defect/Rollo1A_0000001_D_07-05-2024_10-30-55.085_0_1.png",
       "label": 1,
       "patch_id": "Rollo1A_0000001_D_07-05-2024_10-30-55.085_0_1.png",
       "expected_score": 0.9953402280807495,
       "incorrect": false,
-      "mask_path": "data/demo/2-Rollo1A_0000001_D_07-05-2024_10-30-55.085_0_1-mask.png",
+      "mask_path": "data/sample/MVTec/ground_truth/defect/Rollo1A_0000001_D_07-05-2024_10-30-55.085_0_1.png",
       "image_sha256": "40b150bf23b053cdaff9eb4865ce08783af9c3f156afdd5ce1f3b41cb60dc1f8",
       "publisher_origin": "Rollo1A"
     },
     {
-      "path": "data/demo/3-Rollo1A_0000005_D_07-05-2024_10-31-00.029_2_5.png",
+      "path": "data/sample/MVTec/test/defect/Rollo1A_0000005_D_07-05-2024_10-31-00.029_2_5.png",
       "label": 1,
       "patch_id": "Rollo1A_0000005_D_07-05-2024_10-31-00.029_2_5.png",
       "expected_score": 0.7905393838882447,
       "incorrect": true,
-      "mask_path": "data/demo/3-Rollo1A_0000005_D_07-05-2024_10-31-00.029_2_5-mask.png",
+      "mask_path": "data/sample/MVTec/ground_truth/defect/Rollo1A_0000005_D_07-05-2024_10-31-00.029_2_5.png",
       "image_sha256": "c7ec3b651e7cca641ecff1920225811a8b1ade5b0fb986187c8bae6f30b37645",
       "publisher_origin": "Rollo1A"
     }
   ],
-  "note": "Authentic examples copied after final evaluation solely for app verification and demonstration. They do not change any split or metric."
+  "note": "Authentic examples selected after final evaluation solely for app verification and demonstration, referenced from the representative sample without duplication. They do not change any split or metric."
 }

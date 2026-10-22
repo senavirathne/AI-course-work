@@ -100,6 +100,11 @@ def main():
     parser.add_argument("--output", type=Path, default=Path("."))
     args = parser.parse_args()
     os.chdir(args.output)
+    out = Path("reports/experiment-log.csv")
+    existing_rows = []
+    if out.exists():
+        with out.open(newline="") as stream:
+            existing_rows = list(csv.DictReader(stream))
     records = []
     for pattern in ["ann-search-*.json", "ann-repeat-*.json", "svm-search-*.json"]:
         for p in sorted(Path("experiments").glob(pattern)):
@@ -130,6 +135,9 @@ def main():
         "checkpoint_sha256",
         "outcome",
         "lesson",
+        "evaluation_partition",
+        "test_f2",
+        "test_ap",
     ]
     rows = []
     for p, r in records:
@@ -140,6 +148,7 @@ def main():
         row = {k: r.get(k, "") for k in fields}
         row.update(
             family="ANN" if r["run_id"].startswith("ann") else "SVM",
+            evaluation_partition="validation",
             seed=r.get("seed", r["config"].get("seed")),
             config=json.dumps(r["config"], sort_keys=True),
             validation_f2=m["f2"],
@@ -149,61 +158,119 @@ def main():
             fn=m["fn"],
         )
         rows.append(row)
-    out = Path("reports/experiment-log.csv")
+    selection_path = Path("artifacts/vlm-selection.json")
+    selection = read_json(selection_path) if selection_path.exists() else {}
+    selected_prompt = selection.get("config", {}).get("prompt_index")
+    for index in range(2):
+        path = Path(f"experiments/vlm-validation-{index}.json")
+        if not path.exists():
+            continue
+        run = read_json(path)
+        if run.get("status") != "COMPLETE":
+            continue
+        metrics = run["metrics"]
+        elapsed = sum(
+            example.get("end_to_end_ms", 0.0) for example in run.get("examples", [])
+        ) / 1000
+        rows.append(
+            {
+                "run_id": f"vlm-validation-{index}",
+                "family": "VLM",
+                "status": run["status"],
+                "started_at": "",
+                "finished_at": run.get("timestamp", ""),
+                "seed": "",
+                "split_sha256": selection.get("split_sha256", ""),
+                "code_sha256": selection.get("code_sha256", ""),
+                "hypothesis": f"Evaluate prompt {index} on the complete validation partition before test access.",
+                "config": json.dumps(run["config"], sort_keys=True),
+                "epochs_completed": "",
+                "selected_epoch": "",
+                "validation_f2": metrics["f2"],
+                "validation_ap": "",
+                "tp": metrics["tp"],
+                "fp": metrics["fp"],
+                "fn": metrics["fn"],
+                "training_seconds": elapsed,
+                "checkpoint": f"{run['config']['model_id']}@{run['config']['revision']}",
+                "checkpoint_sha256": "",
+                "outcome": "Selected on validation" if index == selected_prompt else "Not selected on validation",
+                "lesson": (
+                    f"Full validation F2={metrics['f2']:.4f}; unresolved outputs="
+                    f"{metrics['unresolved_count']}. Prompt selection used validation F2, "
+                    "then lower failure rate, never held-out test results."
+                ),
+                "evaluation_partition": "validation",
+                "test_f2": "",
+                "test_ap": "",
+            }
+        )
+    comparison_path = Path("reports/final-evaluation/comparison.json")
+    if comparison_path.exists():
+        comparison = read_json(comparison_path)
+        summaries = {
+            item["model"]: {
+                "f2": item["metrics"]["f2"],
+                "average_precision": item["metrics"].get("average_precision"),
+            }
+            for item in comparison["comparisons"]
+        }
+        final_ann = next(
+            item for item in comparison["comparisons"] if item["model"] == "final_ann"
+        )
+        access_path = Path("reports/final-evaluation/test-access.json")
+        access = read_json(access_path) if access_path.exists() else {}
+        rows.append(
+            {
+                "run_id": "frozen-final-evaluation",
+                "family": "FINAL_EVALUATION",
+                "status": comparison["status"],
+                "started_at": "",
+                "finished_at": comparison.get("timestamp", ""),
+                "seed": "",
+                "split_sha256": selection.get("split_sha256", ""),
+                "code_sha256": "",
+                "hypothesis": "Execute the frozen held-out comparison without model, prompt, or threshold selection.",
+                "config": json.dumps(
+                    {
+                        "comparison_file": comparison_path.as_posix(),
+                        "models": summaries,
+                        "physical_test_computation_count": access.get(
+                            "physical_test_computation_count"
+                        ),
+                    },
+                    sort_keys=True,
+                ),
+                "epochs_completed": "",
+                "selected_epoch": "",
+                "validation_f2": "",
+                "validation_ap": "",
+                "tp": final_ann["metrics"]["tp"],
+                "fp": final_ann["metrics"]["fp"],
+                "fn": final_ann["metrics"]["fn"],
+                "training_seconds": "",
+                "checkpoint": comparison_path.as_posix(),
+                "checkpoint_sha256": "",
+                "outcome": "Frozen held-out comparison; identically recomputed after workspace loss",
+                "lesson": (
+                    "Final ANN, initial ANN, classical, trivial, seed-repeat, and VLM results "
+                    "are retained in the referenced comparison. No test result selected a model, "
+                    "prompt, or threshold."
+                ),
+                "evaluation_partition": "test",
+                "test_f2": final_ann["metrics"]["f2"],
+                "test_ap": final_ann["metrics"].get("average_precision", ""),
+            }
+        )
+    generated = {row["run_id"]: row for row in rows}
+    merged = [generated.pop(row["run_id"], row) for row in existing_rows]
+    merged.extend(generated.values())
+    rows = merged
     with out.open("w", newline="") as stream:
-        writer = csv.DictWriter(stream, fieldnames=fields)
+        writer = csv.DictWriter(stream, fieldnames=fields, lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
-    lines = [
-        "# Complete measured experiment log",
-        "",
-        "All numbers below use the frozen RAW-FABRID validation partition. Full configurations, histories, environment, timestamps and hashes are in the referenced JSON records. Engineering interruptions are retained separately and are not scientific failures.",
-        "",
-        "| Run | Configuration | Val F2 | Val AP | TP / FP / FN | Seconds |",
-        "| --- | --- | ---: | ---: | --- | ---: |",
-    ]
-    for _, r in records:
-        cfg = r["config"]
-        m = r["validation_metrics"]
-        if r["run_id"].startswith("ann"):
-            short = f"{cfg['model']}; {cfg['optimizer']} lr={cfg['learning_rate']}; batch={cfg['batch_size']}; seed={cfg['seed']}; aug={cfg['augment']}; weighted={cfg['weighted_loss']}"
-        else:
-            short = f"{cfg['features']}; {r.get('solver', 'SVC pilot')}; {cfg['kernel']}; C={cfg['C']}; weight={cfg['class_weight']}"
-        lines.append(
-            f"| {r['run_id']} | {short} | {m['f2']:.4f} | {m['average_precision']:.4f} | {m['tp']} / {m['fp']} / {m['fn']} | {r['training_seconds']:.1f} |"
-        )
-    lines.extend(["", "## Recorded lessons", ""])
-    for _, r in records:
-        lines.extend([f"### {r['run_id']}", "", r["lesson"], ""])
-    lines.extend(
-        [
-            "## Actual VLM validation",
-            "",
-            "| Prompt | Examples | F2 | Unresolved | Mean total latency (ms) |",
-            "| --- | ---: | ---: | ---: | ---: |",
-        ]
-    )
-    for index in range(2):
-        p = Path(f"experiments/vlm-validation-{index}.json")
-        if p.exists():
-            r = read_json(p)
-            m = r["metrics"]
-            lines.append(
-                f"| {index} | {m['n']} | {m['f2']:.4f} | {m['unresolved_count']} | {r['mean_latency_ms']:.1f} |"
-            )
-    lines.extend(
-        [
-            "",
-            "Raw VLM decisions, exact prompts, processor/model revision, attempts and token counts are retained in JSON and JSONL. All completed prompts are scored on every validation example. Partial execution logs never select the prompt.",
-            "",
-            "## Engineering history",
-            "",
-            "`docs/engineering-runs/` preserves actual CPU profiling, solver amendments, interrupted attempts and control-resolution notes. `development-run/` preserves the earlier artificial sample checks, explicitly excluded from assessed results.",
-            "",
-        ]
-    )
-    Path("reports/experiment-log.md").write_text("\n".join(lines))
-    print(f"Summarised {len(rows)} completed real training runs")
+    print(f"Summarised {len(rows)} completed real experiment/evaluation records")
 
 
 if __name__ == "__main__":

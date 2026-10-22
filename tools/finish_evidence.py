@@ -289,13 +289,6 @@ def post_test():
             "selection": "From the predeclared deterministic explanation sample; two FN and one FP where available. No further tuning.",
         },
     )
-    Path("docs/three-xai-errors.md").write_text(
-        "# Three genuine incorrect predictions with XAI\n\n"
-        + "\n\n".join(
-            "## " + c["case_name"] + "\n\n" + c["analysis"] + "\n\n![](../" + c["panel"] + ")"
-            for c in panels
-        )
-    )
     demo = Path("data/demo")
     demo.mkdir(parents=True, exist_ok=True)
     pp_by_id = {p["patch_id"]: p for p in predictions}

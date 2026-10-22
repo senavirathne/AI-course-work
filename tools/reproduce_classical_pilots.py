@@ -49,7 +49,7 @@ def main():
             "environment": environment(),
             "code_sha256": code_hash(Path(".")),
             "execution_tool_sha256": sha256(Path(__file__)),
-            "original_protocol_source": "docs/source-versions/sources-957ae7314bb7.zip",
+            "original_protocol_source": "reports/experiment-log.csv and retained pilot JSON templates",
             "hypothesis": template["hypothesis"],
             "device": "cpu",
         }
