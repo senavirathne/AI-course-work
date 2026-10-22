@@ -1,58 +1,63 @@
-# Simplification summary
+# Final reduction record
 
-This is the reduced coursework version of the fabric-defect project. It was audited directly against the supplied ten-page **AI Coursework 2025 Batch** brief. It keeps the files needed to demonstrate each assessed requirement and omits development-only, duplicated, or packaging-only material.
+This tree is the smallest submission-safe version produced from the supplied
+ten-page **AI Coursework 2025 Batch** brief. The checkpoint immediately before
+this reduction is Git commit `4ba51e3`.
 
-## Implementation changes
+## Final tree
 
-- Reduced the deliverable at the project/file level instead of rewriting the evidence-producing scientific code after final evaluation.
-- Removed the unused test and report-builder dependency groups and configuration because those omitted utilities are not coursework deliverables.
-- Kept one environment definition for the core application plus only the VLM and notebook extras required to reproduce Questions 1–6.
-- Kept the real-data checks, validation/test isolation, input validation, experiment logging, Grad-CAM validation, and VLM protocol because the brief explicitly requires them.
-- Kept the model architecture, preprocessing, experiment configurations, metrics, selected checkpoint, and saved results unchanged.
+- 103 tracked files, 58.87 MiB.
+- 844 tracked files removed from the 947-file checkpoint tree.
+- 15 authentic sample patches and eight masks instead of 168 patches and 84
+  masks. The reduced sample still covers all seven publisher origins, both
+  labels, every assessed split, and all three demonstration cases.
+- The full 19,852-row frozen split CSV is retained because deleting or changing
+  it would break the recorded split hash and study reproducibility.
 
-## What is retained
+## Removed
 
-- `README.md`, `pyproject.toml`, and `requirements.txt` for setup and reproduction.
-- `src/` and `scripts/` for data preparation, ANN/SVM training, model selection, evaluation, explainability, and VLM comparison.
-- `app/` plus `artifacts/ann-search-018.pt` and `artifacts/serving-bundle.json` for request-time trained-model inference and Grad-CAM.
-- Four executed notebooks for the assessed walkthrough.
-- The authentic representative dataset sample, fixed split manifests, provenance audit, and download script. The publisher archive is over 500 MB and is therefore not included.
-- The selected experiment records, complete experiment table, final comparison, error analysis, XAI evidence, VLM evidence, and required report figures.
-- `reports/final_report.pdf` and the 130-second `reports/demonstration.mp4`.
-- The AI-use declaration, protocol records, requirements matrix, and disclosed held-out-evaluation recovery exception.
+- synthetic development data and development-run outputs;
+- 22 non-selected ANN checkpoints, repeat checkpoints, redundant SVM artifacts,
+  and duplicated prediction exports;
+- repository-asset chunks, restore material, submission ZIP parts, and duplicate
+  copies of the report/video;
+- automated tests, browser-recording internals, report/notebook builders,
+  packaging tools, recovery tools, and repeated verification reports;
+- intermediate figures already embedded in the final PDF, transcripts, Markdown
+  report copies, execution logs, screenshots, and redundant learning notes;
+- all but the key initial/final ANN and two VLM experiment JSON files;
+- duplicated demo images (the demo now uses the representative sample directly).
 
-## What is omitted
+## Retained because the brief requires them
 
-- Synthetic development data and development-run outputs.
-- Non-selected model checkpoints and duplicated prediction exports.
-- The original automated test suite, report-building utilities, recording internals, screenshots, transcripts, and repeated verification reports.
-- Repository-restore helpers, split archive parts, submission ZIP parts, and other packaging machinery.
-- Markdown copies of evidence already present in the final PDF or structured JSON/CSV files.
+- `src/` and `scripts/`: data preparation, EDA, ANN/SVM training, selection,
+  repeat seeds, XAI, VLM comparison, freezing, and held-out evaluation;
+- `notebooks/`: four executed notebooks with saved outputs;
+- `app/`: functional frontend and backend performing request-time inference;
+- the selected ANN checkpoint/bundle, fixed split, leakage audit, full experiment
+  log, key raw comparison evidence, and three-error XAI analysis;
+- the representative sample and reproducible download procedure;
+- the 24-main-page report and 130-second demonstration video;
+- a concise requirement matrix and the necessary approval/recovery disclosures.
 
-These omissions do not replace assessed results. The retained `reports/experiment-log.csv` still includes successful and unsuccessful configurations, while the retained JSON evidence contains the measured comparisons used by the report.
+## Integrity decision
 
-## Requirement coverage
+The evaluated scientific source was not rewritten merely to reduce line count.
+After removing one post-evaluation provenance-only field, its current executable
+source SHA-256 is
+`351c100577969134ae95ac2cd0323b29a5cc84e5787b970ca40c446928506c50`,
+exactly matching `artifacts/final-evaluation-manifest.json`. A smaller rewritten
+model pipeline would no longer be the implementation that produced the reported
+results and would require retraining and a new held-out study.
 
-The direct mapping from each coursework requirement to a retained file is in `docs/requirements-matrix.md`. The only non-complete items are already disclosed there:
+## Remaining non-software obligations
 
-- lecturer approval is student-confirmed, but the student must retain the original correspondence;
-- the held-out protocol was physically rerun after its first result files were lost; and
-- personal understanding and the live individual defence must be completed by the student.
+- The student must retain the lecturer's real approval correspondence.
+- The live presentation and defence must be completed by the student.
+- The identical frozen held-out protocol was physically run twice after the
+  first result files were lost. The exception remains disclosed and lecturer
+  acceptance is not claimed.
 
-No software edit can resolve these items, so they are not presented as complete.
-
-## Verification performed on the reduced version
-
-- All retained Python files compile successfully.
-- All four notebooks are valid JSON, contain saved outputs, and contain no saved exception output.
-- The retained JSON files parse and the CSV files have consistent row widths.
-- All 168 representative patches and 84 masks match the SHA-256 values in the sample manifest.
-- The model bundle points to the included checkpoint, whose SHA-256 matches the bundle.
-- Every demonstration path in `data/demo/cases.json` resolves to an included sample image or mask.
-- The report has 26 PDF pages; Appendix A starts on page 25, leaving 24 assessed main pages.
-- The demonstration MP4 is playable and 130.040 seconds long, below the 480-second limit.
-- The application could not be executed in the simplification environment because its third-party Python packages were not installed. A previously measured passing application run remains in `reports/application-verification/results.json`; rerun the application after following the README setup commands.
-
-## Result
-
-The reduced worktree is the submission-oriented project. The sibling `AI-course-work` repository was not changed.
+No adverse ANN, classical, VLM, XAI, invalid-input, OOD, or incorrect-prediction
+result was removed. Requirement coverage is mapped in
+`docs/requirements-matrix.md`.

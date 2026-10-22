@@ -1,3 +1,0 @@
-Extracting training-only engineering subset
-{'dual': True, 'seconds': 5.548128505000022, 'iterations': 200, 'warnings': ['Liblinear failed to converge, increase the number of iterations.']}
-{'dual': False, 'seconds': 22.02088523600014, 'iterations': 200, 'warnings': ['Liblinear failed to converge, increase the number of iterations.']}

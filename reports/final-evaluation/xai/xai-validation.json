@@ -47,7 +47,6 @@
         "degenerate_zero_cam": false,
         "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
       },
-      "overlay": "case-0000.png",
       "interpretation": "Measured defect-logit drops: top=+5.092145, low=+5.195260, random=-0.283907. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
     },
     {
@@ -81,7 +80,6 @@
         "degenerate_zero_cam": false,
         "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
       },
-      "overlay": "case-0001.png",
       "interpretation": "Measured defect-logit drops: top=+6.521844, low=+1.033612, random=+0.865592. Nondegenerate top-region deletion decreases the logit more than both controls: True. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
     },
     {
@@ -115,7 +113,6 @@
         "degenerate_zero_cam": false,
         "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
       },
-      "overlay": "case-0002.png",
       "interpretation": "Measured defect-logit drops: top=+2.948695, low=+1.731614, random=+2.167031. Nondegenerate top-region deletion decreases the logit more than both controls: True. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
     },
     {
@@ -149,7 +146,6 @@
         "degenerate_zero_cam": false,
         "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
       },
-      "overlay": "case-0003.png",
       "interpretation": "Measured defect-logit drops: top=+5.515372, low=+2.267069, random=+2.042819. Nondegenerate top-region deletion decreases the logit more than both controls: True. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
     },
     {
@@ -183,7 +179,6 @@
         "degenerate_zero_cam": false,
         "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
       },
-      "overlay": "case-0004.png",
       "interpretation": "Measured defect-logit drops: top=+6.006926, low=+0.450507, random=+0.189385. Nondegenerate top-region deletion decreases the logit more than both controls: True. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
     },
     {
@@ -217,7 +212,6 @@
         "degenerate_zero_cam": false,
         "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
       },
-      "overlay": "case-0005.png",
       "interpretation": "Measured defect-logit drops: top=+3.992306, low=+3.161559, random=+0.926549. Nondegenerate top-region deletion decreases the logit more than both controls: True. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
     },
     {
@@ -251,7 +245,6 @@
         "degenerate_zero_cam": false,
         "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
       },
-      "overlay": "case-0006.png",
       "interpretation": "Measured defect-logit drops: top=+5.158219, low=+5.786752, random=+1.755664. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
     },
     {
@@ -285,7 +278,6 @@
         "degenerate_zero_cam": false,
         "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
       },
-      "overlay": "case-0007.png",
       "interpretation": "Measured defect-logit drops: top=+4.497452, low=+3.424349, random=+1.316918. Nondegenerate top-region deletion decreases the logit more than both controls: True. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
     },
     {
@@ -319,7 +311,6 @@
         "degenerate_zero_cam": false,
         "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
       },
-      "overlay": "case-0008.png",
       "interpretation": "Measured defect-logit drops: top=+5.552819, low=+5.016073, random=-0.427022. Nondegenerate top-region deletion decreases the logit more than both controls: True. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
     },
     {
@@ -353,7 +344,6 @@
         "degenerate_zero_cam": false,
         "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
       },
-      "overlay": "case-0009.png",
       "interpretation": "Measured defect-logit drops: top=+1.591740, low=+2.704260, random=+0.498417. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
     },
     {
@@ -387,7 +377,6 @@
         "degenerate_zero_cam": false,
         "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
       },
-      "overlay": "case-0010.png",
       "interpretation": "Measured defect-logit drops: top=-0.427480, low=-0.421962, random=-0.641229. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
     },
     {
@@ -421,7 +410,6 @@
         "degenerate_zero_cam": false,
         "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
       },
-      "overlay": "case-0011.png",
       "interpretation": "Measured defect-logit drops: top=-0.049500, low=+1.824674, random=+1.615900. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
     },
     {
@@ -455,7 +443,6 @@
         "degenerate_zero_cam": false,
         "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
       },
-      "overlay": "case-0012.png",
       "interpretation": "Measured defect-logit drops: top=+1.103387, low=+0.660340, random=+0.066990. Nondegenerate top-region deletion decreases the logit more than both controls: True. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
     },
     {
@@ -489,7 +476,6 @@
         "degenerate_zero_cam": false,
         "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
       },
-      "overlay": "case-0013.png",
       "interpretation": "Measured defect-logit drops: top=+0.979435, low=+1.270141, random=-0.655195. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
     },
     {
@@ -523,7 +509,6 @@
         "degenerate_zero_cam": false,
         "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
       },
-      "overlay": "case-0014.png",
       "interpretation": "Measured defect-logit drops: top=-0.843148, low=-1.230124, random=-1.727139. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
     },
     {
@@ -557,7 +542,6 @@
         "degenerate_zero_cam": false,
         "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
       },
-      "overlay": "case-0015.png",
       "interpretation": "Measured defect-logit drops: top=-0.491551, low=+0.159495, random=-0.240144. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
     },
     {
@@ -591,7 +575,6 @@
         "degenerate_zero_cam": false,
         "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
       },
-      "overlay": "case-0016.png",
       "interpretation": "Measured defect-logit drops: top=-1.228428, low=+0.318001, random=-1.517513. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
     },
     {
@@ -625,7 +608,6 @@
         "degenerate_zero_cam": false,
         "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
       },
-      "overlay": "case-0017.png",
       "interpretation": "Measured defect-logit drops: top=-0.493253, low=+0.354302, random=-0.327050. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
     },
     {
@@ -656,7 +638,6 @@
         "degenerate_zero_cam": false,
         "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
       },
-      "overlay": "case-0018.png",
       "interpretation": "Measured defect-logit drops: top=+2.779529, low=+3.000914, random=-0.592691. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
     },
     {
@@ -687,7 +668,6 @@
         "degenerate_zero_cam": false,
         "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
       },
-      "overlay": "case-0019.png",
       "interpretation": "Measured defect-logit drops: top=+3.452040, low=+3.975292, random=+1.099907. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
     },
     {
@@ -718,7 +698,6 @@
         "degenerate_zero_cam": false,
         "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
       },
-      "overlay": "case-0020.png",
       "interpretation": "Measured defect-logit drops: top=+4.036187, low=+3.671198, random=-0.271894. Nondegenerate top-region deletion decreases the logit more than both controls: True. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
     },
     {
@@ -749,7 +728,6 @@
         "degenerate_zero_cam": false,
         "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
       },
-      "overlay": "case-0021.png",
       "interpretation": "Measured defect-logit drops: top=+3.689750, low=+3.323122, random=+1.888883. Nondegenerate top-region deletion decreases the logit more than both controls: True. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
     },
     {
@@ -780,7 +758,6 @@
         "degenerate_zero_cam": false,
         "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
       },
-      "overlay": "case-0022.png",
       "interpretation": "Measured defect-logit drops: top=+4.560039, low=+4.458160, random=+0.349884. Nondegenerate top-region deletion decreases the logit more than both controls: True. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
     },
     {
@@ -811,7 +788,6 @@
         "degenerate_zero_cam": false,
         "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
       },
-      "overlay": "case-0023.png",
       "interpretation": "Measured defect-logit drops: top=+2.698801, low=+3.489711, random=+2.530357. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
     },
     {
@@ -842,7 +818,6 @@
         "degenerate_zero_cam": false,
         "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
       },
-      "overlay": "case-0024.png",
       "interpretation": "Measured defect-logit drops: top=+3.819131, low=+3.716506, random=+1.316188. Nondegenerate top-region deletion decreases the logit more than both controls: True. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
     },
     {
@@ -873,7 +848,6 @@
         "degenerate_zero_cam": false,
         "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
       },
-      "overlay": "case-0025.png",
       "interpretation": "Measured defect-logit drops: top=+2.964684, low=+2.790953, random=-1.033748. Nondegenerate top-region deletion decreases the logit more than both controls: True. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
     },
     {
@@ -904,7 +878,6 @@
         "degenerate_zero_cam": false,
         "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
       },
-      "overlay": "case-0026.png",
       "interpretation": "Measured defect-logit drops: top=+2.780493, low=+2.792443, random=-0.091748. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
     },
     {
@@ -935,7 +908,6 @@
         "degenerate_zero_cam": false,
         "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
       },
-      "overlay": "case-0027.png",
       "interpretation": "Measured defect-logit drops: top=-0.919365, low=-1.287291, random=-0.237453. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
     },
     {
@@ -966,7 +938,6 @@
         "degenerate_zero_cam": false,
         "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
       },
-      "overlay": "case-0028.png",
       "interpretation": "Measured defect-logit drops: top=-1.548493, low=-1.170888, random=-1.611851. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
     },
     {
@@ -997,7 +968,6 @@
         "degenerate_zero_cam": false,
         "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
       },
-      "overlay": "case-0029.png",
       "interpretation": "Measured defect-logit drops: top=-1.619232, low=-1.845128, random=-0.583336. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
     },
     {
@@ -1028,7 +998,6 @@
         "degenerate_zero_cam": false,
         "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
       },
-      "overlay": "case-0030.png",
       "interpretation": "Measured defect-logit drops: top=-0.175873, low=+0.480956, random=+0.457300. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
     },
     {
@@ -1059,7 +1028,6 @@
         "degenerate_zero_cam": false,
         "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
       },
-      "overlay": "case-0031.png",
       "interpretation": "Measured defect-logit drops: top=-1.709721, low=-0.812908, random=+0.131785. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
     },
     {
@@ -1090,7 +1058,6 @@
         "degenerate_zero_cam": false,
         "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
       },
-      "overlay": "case-0032.png",
       "interpretation": "Measured defect-logit drops: top=-1.495551, low=+0.122658, random=-0.311605. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
     },
     {
@@ -1121,7 +1088,6 @@
         "degenerate_zero_cam": false,
         "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
       },
-      "overlay": "case-0033.png",
       "interpretation": "Measured defect-logit drops: top=-0.983020, low=-0.891354, random=+0.130373. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
     },
     {
@@ -1152,7 +1118,6 @@
         "degenerate_zero_cam": false,
         "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
       },
-      "overlay": "case-0034.png",
       "interpretation": "Measured defect-logit drops: top=-1.351402, low=-1.211272, random=-0.791855. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
     },
     {
@@ -1183,12 +1148,12 @@
         "degenerate_zero_cam": false,
         "interpretation": "More positive top-region drop than controls supports sensitivity; no causal claim"
       },
-      "overlay": "case-0035.png",
       "interpretation": "Measured defect-logit drops: top=-0.930876, low=-0.492661, random=-0.250624. Nondegenerate top-region deletion decreases the logit more than both controls: False. Mask correspondence and this unnatural mean-fill perturbation do not prove causality."
     }
   ],
   "genuine_error_count": 18,
   "three_error_requirement": "ANALYSED IN docs/three-xai-errors.json",
   "sanity_check_cases": 36,
-  "limitations": "Mask correspondence is not faithfulness; coarse maps and mean-fill occlusion can mislead"
+  "limitations": "Mask correspondence is not faithfulness; coarse maps and mean-fill occlusion can mislead",
+  "visual_evidence": "Explanation images and the three required error panels are embedded in reports/final_report.pdf, Question 5."
 }

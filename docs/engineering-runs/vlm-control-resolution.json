@@ -1,7 +1,0 @@
-{
-  "recorded_at": "2026-10-11T16:32:34.701736+00:00",
-  "process_absence_verified": true,
-  "remaining_response_records": 748,
-  "scientific_failed_approach": false,
-  "resolution": "Verified no remaining VLM process before moving the final partial log. Restart command uses exec to give the model process direct command ownership. Partial results never used for prompt selection."
-}

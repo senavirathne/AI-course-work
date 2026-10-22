@@ -1,8 +1,0 @@
-{
-  "status": "VERIFIED",
-  "documented_at": "2026-10-11T21:22:07.324746+00:00",
-  "change": "Clarified the hero, overlay description and accessible image text before freeze: positive model attribution does not prove a cause.",
-  "scientific_numerical_change": false,
-  "code_sha256": "351c100577969134ae95ac2cd0323b29a5cc84e5787b970ca40c446928506c50",
-  "verification": "All 52 tests, lint, compilation and JS syntax passed after the UI wording changes."
-}

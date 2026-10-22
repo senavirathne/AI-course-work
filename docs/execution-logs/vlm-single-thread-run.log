@@ -1,9 +1,0 @@
-Traceback (most recent call last):
-  File "/workspace/scratch/881bf92802b6/fabric_defect_detection_coursework3/scripts/vlm_validate.py", line 67, in <module>
-    main()
-  File "/workspace/scratch/881bf92802b6/fabric_defect_detection_coursework3/scripts/vlm_validate.py", line 38, in main
-    result = benchmark(
-             ^^^^^^^^^^
-  File "/workspace/scratch/881bf92802b6/fabric_defect_detection_coursework3/src/fabric_inspector/genai/vlm.py", line 151, in benchmark
-    raise FileExistsError("Benchmark output exists; preserve the original evidence")
-FileExistsError: Benchmark output exists; preserve the original evidence

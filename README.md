@@ -1,112 +1,96 @@
-# Risk-aware, explainable fabric defect detection
+# Fabric defect coursework
 
-This coursework supports a textile Quality Assurance Inspector with patch-level defect classification, inspection-priority guidance, and Grad-CAM explanations. The assessed study uses RAW-FABRID V1 and a single frozen source/origin-grouped train/validation/test split.
+Minimal coursework implementation for a textile QA inspector. A trained ANN
+classifies a 256 x 256 fabric patch, returns an inspection action, and provides
+a Grad-CAM explanation. The study compares the ANN with trivial references, a
+tuned HOG/LBP SVM, and SmolVLM-256M on one fixed source-grouped split.
 
-## Environment
+## Install and run
 
-The project requires Python 3.11 or newer. From the repository root:
+Python 3.11 or newer is required.
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-python -m pip install --upgrade pip
 python -m pip install -e '.[vlm,notebooks]'
+FABRIC_CPU_THREADS=1 python -m uvicorn app.main:app --host 127.0.0.1 --port 8000
 ```
 
-`requirements.txt` contains the core pinned runtime dependencies. `pyproject.toml` defines the local package and the additional VLM/notebook dependencies used by the submitted work.
+Open <http://127.0.0.1:8000> and upload a PNG or JPEG from
+`data/sample/MVTec/`. Each request runs the included trained model. The score
+is an uncalibrated model score, not guaranteed confidence; the UI states the
+deployment and out-of-distribution limitations.
 
-The live browser verification additionally requires Node.js, `playwright@1.62.0`, and a Playwright Chromium installation.
+## Data
 
-## Run the required web application
-
-The selected trained ANN bundle and checkpoint are included. Every request performs inference at request time.
-
-```bash
-FABRIC_BUNDLE=artifacts/serving-bundle.json \
-FABRIC_CPU_THREADS=1 \
-python -m uvicorn app.main:app --host 127.0.0.1 --port 8000
-```
-
-Open <http://127.0.0.1:8000> and upload a 256×256 PNG or JPEG from `data/sample/MVTec/test/`. The UI provides the model score, inspection recommendation, limitations, and Grad-CAM explanation. Scores are uncalibrated model scores and must not be interpreted as guaranteed confidence.
-
-## Dataset and fixed split
-
-Dataset: RAW-FABRID V1, Pérez-Llorens, Albero-Albero and Silvestre-Blanes (2026), DOI `10.17632/db6g85xsyg.1`, licensed CC BY 4.0.
-
-The publisher archive exceeds 500 MB, so this submission contains:
-
-- `scripts/download_data.py`, which records the exact publisher URL, version, checksum, licence, and provenance;
-- `data/sample/`, a representative authentic sample covering all seven publisher origins;
-- `data/sample-manifests/`, which maps and verifies the sample files; and
-- `data/manifests/`, the immutable assessed split and leakage audit.
-
-Download and extract the complete dataset before running full training or evaluation:
+The study uses RAW-FABRID V1 by Perez-Llorens, Albero-Albero and
+Silvestre-Blanes (2026), DOI `10.17632/db6g85xsyg.1`, CC BY 4.0. The publisher
+archive exceeds 500 MB. This repository therefore includes a download script,
+the immutable assessed split, and an authentic 15-patch/8-mask sample covering
+all seven publisher origins, both labels, every split, and the app examples.
 
 ```bash
 PYTHONPATH=src python scripts/download_data.py \
-  --url '<exact HTTPS Download All URL from the V1 publisher page>' \
+  --url '<V1 HTTPS download URL>' \
   --expected-sha256 f6b4f82cce2f0220bbab3968a74b5337ebf2bbfd5e33d0548d34e1ebf80f85b9
 python -m zipfile -e data/raw/RAW-FABRID-V1.zip data/raw/release
 ```
 
-The assessed split contains 13,384 training, 3,472 validation, and 2,996 held-out test patches. Related publisher origins, source images, and duplicate components do not cross partitions. The manifest files record the source schema, assignments, and leakage audit.
+The complete assessed split has 13,384 training, 3,472 validation, and 2,996
+held-out test patches. Publisher origins, source images, and detected duplicate
+components do not cross partitions. The small included sample is only for code
+and UI checks; it was not used to calculate reported metrics.
 
-## Reproducible scientific workflow
+## Reproduce the study
 
-The required entry points are:
+After downloading the full dataset, run the scripts in this order. Training
+and the VLM evaluation are computationally expensive. Use a fresh output copy:
 
 ```bash
+PYTHONPATH=src python scripts/prepare_data.py \
+  --release data/raw/release/RAW_FABRID \
+  --metadata data/raw/release/RAW_FABRID/RAW_FABRID_Patches_Metadata.csv \
+  --patch-column patch_name --source-column parent_raw \
+  --source-metadata data/raw/release/RAW_FABRID/RAW_FABRID_HighRes_Metadata.csv \
+  --area-column defect_area
 PYTHONPATH=src python scripts/eda.py
 PYTHONPATH=src python scripts/train.py ann --epochs 4 --device cpu
 PYTHONPATH=src python scripts/train.py svm --start-index 24
-PYTHONPATH=src python tools/refine_ann.py --device cpu
 PYTHONPATH=src python scripts/select_models.py
 PYTHONPATH=src python scripts/repeat_seeds.py --device cpu
 PYTHONPATH=src python scripts/vlm_validate.py --device cpu
 PYTHONPATH=src python scripts/xai_validate.py
 PYTHONPATH=src python scripts/make_figures.py
-PYTHONPATH=src python tools/summarize_experiments.py
 PYTHONPATH=src python scripts/freeze.py
 PYTHONPATH=src python scripts/final_evaluate.py
-PYTHONPATH=src python tools/finish_evidence.py --post-test
-PYTHONPATH=src python tools/verify_live_application.py --cases data/demo/cases.json
 ```
 
-Run the workflow in a fresh copy/output location. Training and foundation-model validation are computationally expensive. Model selection, thresholds, prompts, and hyperparameters use training/validation data only; the held-out test set is opened by the final evaluation step after the protocol is frozen.
+Model, threshold, prompt, and hyperparameter selection use only training and
+validation data. Do not rerun held-out evaluation for tuning. Four executed
+notebooks contain saved outputs for dataset/EDA, ANN optimisation, deployment
+and XAI, and the VLM/final protocol.
 
-The delivered held-out evaluation was physically computed twice because a workspace reset destroyed the first result files. The identical frozen protocol was rerun without changing the model, split, prompt, or thresholds. This disclosed exception is recorded in `docs/engineering-runs/final-results-workspace-reset.json` and requires assessor judgement against the brief's once-only checklist item.
+## Submitted evidence
 
-`tools/reproduce_classical_pilots.py` replays the four retained historical SVM pilot configurations into a separate output directory when those records also need to be regenerated.
+- `src/`, `scripts/`, and `notebooks/`: implementation and executed workflow.
+- `app/`, `artifacts/serving-bundle.json`, and
+  `artifacts/ann-search-018.pt`: working frontend/backend and selected ANN.
+- `data/manifests/`: frozen split and leakage audit.
+- `reports/experiment-log.csv`: 54 completed experiment records, including
+  unsuccessful attempts.
+- `reports/final-evaluation/`: shared held-out ANN/SVM/VLM and XAI evidence.
+- `reports/final_report.pdf`: 24 main pages plus two appendices.
+- `reports/demonstration.mp4`: 130-second live prediction/XAI/error demo.
+- `docs/requirements-matrix.md`: PDF requirement-to-evidence checklist.
+- `docs/simplification-summary.md`: exact record of this reduction.
 
-The four executed notebooks provide the assessed walkthrough:
+The final ANN has 1,518,881 parameters and a validation-selected threshold of
+`0.895234`. Its held-out defect-class F2 is `0.6883`.
 
-1. dataset, EDA, leakage checks, and modelling constraints;
-2. ANN/classical experiments, optimisation, failures, and error analysis;
-3. serving, Grad-CAM, occlusion checks, and incorrect predictions; and
-4. foundation-model validation and the frozen final protocol.
+## Required disclosures
 
-They can be opened and executed directly in Jupyter after installing the notebook dependencies above.
-
-Requirement-by-requirement study guides:
-
-- `docs/question-1-learning-material.md`: dataset, EDA, leakage, metric, and modelling constraints.
-- `docs/question-2-learning-material.md`: ANN architecture, design justifications, alternatives, and prior expectation.
-- `docs/question-3-learning-material.md`: model development, baselines, learning curves, error analysis, optimisation, and failed approaches.
-- `docs/question-4-learning-material.md`: functional frontend/backend deployment, trained-model inference, input testing, and limitations.
-- `docs/question-5-learning-material.md`: explainability alternatives, Grad-CAM, sanity checks, mask correspondence, and genuine model errors.
-- `docs/question-6-learning-material.md`: genuine VLM evaluation, prompt selection, ANN comparison, deployment trade-offs, and a safe extension.
-
-## Mandatory deliverables included
-
-- `src/`, `scripts/`, and the six retained `tools/` helpers: preprocessing, training, evaluation, experiment logging, application verification, XAI, GenAI, and deployment code.
-- `notebooks/`: four executed coursework notebooks with their evidence embedded in the saved outputs.
-- `app/`: required frontend and backend.
-- `artifacts/serving-bundle.json` and `artifacts/ann-search-018.pt`: selected model required by the application.
-- `reports/experiment-log.csv`: complete substantive experiment table, including unsuccessful runs.
-- `docs/`: the minimal protocol and evidence records required by the notebooks, frozen evaluation, and report traceability.
-- `data/`: reproducible download information, representative sample, fixed split, and leakage audit.
-- `reports/demonstration.mp4`: 130-second demonstration showing request-time prediction, explanations, and an incorrect prediction.
-- `reports/final_report.pdf`: final Questions 1–6 report with appendices, including the generative-AI-use declaration.
-- `docs/simplification-summary.md`: a record of what was retained, removed, and verified in this reduced version.
-
-The final ANN has 1,518,881 parameters and uses a validation-selected threshold of `0.895234`. The report documents predictive, calibration, dataset, XAI, privacy, and deployment limitations. This is coursework evidence, not a production-safety certification.
+Lecturer approval correspondence and the live defence remain student-owned
+requirements. The first held-out result files were lost and the identical
+frozen evaluation was physically rerun; this is disclosed in the report and
+requires lecturer judgement against the brief's once-only rule. No adverse
+classical, VLM, XAI, or incorrect-prediction result has been removed.

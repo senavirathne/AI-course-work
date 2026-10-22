@@ -1,4 +1,3 @@
-# Local environments and Python caches
 .venv/
 venv/
 __pycache__/
@@ -6,12 +5,7 @@ __pycache__/
 *.egg-info/
 .ipynb_checkpoints/
 node_modules/
-
-# Downloaded publisher data; keep acquisition provenance
-data/raw/*
-!data/raw/publisher-archive.json
-
-# Reproducible feature/model download caches and local scratch work
+data/raw/
 data/cache/
 data/features/
 .cache/
@@ -20,16 +14,9 @@ tmp/
 output/
 recording/
 **/recording/
-**/internal-browser-qa.png
-**/browser-spec.json
 *.tmp
-*.assembling
 artifacts/.*
-
-# Local credentials and machine configuration
 .env
 .env.*
 !.env.example
 .DS_Store
-
-# The selected ANN checkpoint and assessed evidence are deliberately tracked.

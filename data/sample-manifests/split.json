@@ -3,7 +3,7 @@
   "provenance": "RAW-FABRID_V1_REPRESENTATIVE_SAMPLE",
   "data_root": "../sample",
   "rows_csv": "split.csv",
-  "split_sha256": "e55a1e6349c832b2a136c735678570a1c000c3923e2fb8d47e3f3999b6a5b1b8",
+  "split_sha256": "33d9a6bf22f31bbde009ad605b0bd21d8018ee30d709ba157ce60098484827e9",
   "seed": 42,
   "integrity_only_split_draws": 128,
   "selected_draw": 32,
@@ -34,24 +34,24 @@
   },
   "counts": {
     "train": {
-      "patches": 96,
-      "positive": 48,
-      "source_images": 80,
+      "patches": 8,
+      "positive": 4,
+      "source_images": 6,
       "independent_groups": 4
     },
     "val": {
-      "patches": 24,
-      "positive": 12,
-      "source_images": 22,
+      "patches": 2,
+      "positive": 1,
+      "source_images": 2,
       "independent_groups": 1
     },
     "test": {
-      "patches": 48,
-      "positive": 24,
-      "source_images": 34,
+      "patches": 5,
+      "positive": 3,
+      "source_images": 3,
       "independent_groups": 2
     }
   },
   "sample_of_full_split_sha256": "af7daf13d0854ceeba004f1a06182bac778ac716021dec3d8fc40edf265aa76f",
-  "sample_note": "Authentic engineering sample; retains original full-study assignments. Deliberate class oversampling, not population prevalence. Never assessed final evidence."
+  "sample_note": "Authentic 15-patch code sample covering all seven publisher origins, both classes, all assessed partitions, and the three app demonstration cases. Not used for reported metrics."
 }

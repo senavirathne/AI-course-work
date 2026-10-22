@@ -1,6 +1,0 @@
-{"threads": 2, "deterministic": false, "batch_seconds": 0.6542473009999412}
-{"threads": 2, "deterministic": true, "batch_seconds": 0.6295501879999392}
-{"threads": 4, "deterministic": false, "batch_seconds": 0.4517854380001154}
-{"threads": 4, "deterministic": true, "batch_seconds": 0.5849871939999503}
-{"threads": 8, "deterministic": false, "batch_seconds": 0.4073988649997773}
-{"threads": 8, "deterministic": true, "batch_seconds": 0.5349010879999696}

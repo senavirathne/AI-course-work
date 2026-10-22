@@ -1,8 +1,0 @@
-Traceback (most recent call last):
-  File "/workspace/scratch/881bf92802b6/fabric_defect_detection_coursework3/scripts/train.py", line 65, in <module>
-    main()
-  File "/workspace/scratch/881bf92802b6/fabric_defect_detection_coursework3/scripts/train.py", line 32, in main
-    train_search(
-  File "/workspace/scratch/881bf92802b6/fabric_defect_detection_coursework3/src/fabric_inspector/models/classical.py", line 91, in train_search
-    raise ValueError("Resume requires an unchanged, completed configuration")
-ValueError: Resume requires an unchanged, completed configuration
