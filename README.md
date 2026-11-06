@@ -29,12 +29,16 @@ archive exceeds 500 MB. This repository therefore includes a download script,
 the immutable assessed split, and an authentic 15-patch/8-mask sample covering
 all seven publisher origins, both labels, every split, and the app examples.
 
+The direct publisher archive URL below is the exact URL recorded during the verified full-dataset download on 11 October 2026 (4,133,046,386 bytes). Its SHA-256 is checked before extraction. Run this from the repository root after installing the project dependencies.
+
 ```bash
 PYTHONPATH=src python scripts/download_data.py \
-  --url '<V1 HTTPS download URL>' \
+  --url 'https://data.mendeley.com/public-files/datasets/db6g85xsyg/files/93e17d48-b5e6-45f7-9064-be84cc5fb91c/file_downloaded' \
   --expected-sha256 f6b4f82cce2f0220bbab3968a74b5337ebf2bbfd5e33d0548d34e1ebf80f85b9
 python -m zipfile -e data/raw/RAW-FABRID-V1.zip data/raw/release
 ```
+
+If the publisher changes the direct download URL, obtain the complete V1 archive from [the official RAW-FABRID release page](https://data.mendeley.com/datasets/db6g85xsyg/1), save it as `data/raw/RAW-FABRID-V1.zip`, and run the same `download_data.py` command without `--url` to verify it before extraction. The extracted dataset is expected at `data/raw/release/RAW_FABRID/`.
 
 The complete assessed split has 13,384 training, 3,472 validation, and 2,996
 held-out test patches. Publisher origins, source images, and detected duplicate
